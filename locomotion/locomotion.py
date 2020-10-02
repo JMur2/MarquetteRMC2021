@@ -12,6 +12,7 @@ import odrive
 from odrive.enums import *
 import time
 import math
+import py_compile
 
 # print("Finding an ODrive...\n")
 # drive = odrive.find_any()
