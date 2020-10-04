@@ -48,8 +48,9 @@ if __name__ == '__main__':
     
     #odrv0 = odrive.find_any()
     
-    print("It is time to control the robot!\nThe controls are simple: wasd or the arrow keys move the robot directionally.\n")
-    print("Space will stop the robot in its tracks, and escape will end the control period altogether.\n")
+    print("It is time to control the robot!\nThe controls are simple: wasd or the arrow keys move the robot directionally.")
+    print("Space will stop the robot in its tracks, and escape will end the control period altogether.")
     listener = keyboard.Listener(on_press=key_press)
     listener.start()
     listener.join()
+    print("Ending program.")
