@@ -2,7 +2,7 @@
 The second locomotion test file for testing our robot's locomotion.
 Attempting to include keyboard operations to the motor's output, allowinf direct control over motion.
 
-@created: 10-4-2020
+@created: Oct 4, 2020
 """
 
 import odrive
@@ -28,25 +28,31 @@ def key_press(key):
         k = key.name
     
     if k in ['w', 'up']:
-        #up
-        print("UP")
+        odrv0.axis0.comtroller.input_vel = -50
+        odrv0.axis1.controller.input_vel = 50
+        #print("UP")
     elif k in ['a', 'left']:
-        #left
-        print("LEFT")
+        odrv0.axis0.controller.input_vel = 50
+        odrv0.axis1.controller.input_vel = 50
+        #print("LEFT")
     elif k in ['s', 'down']:
-        #down
-        print("DOWN")
+        odrv0.axis0.controller.input_vel = 50
+        odrv0.axis1.controller.input_vel = -50
+        #print("DOWN")
     elif k in ['d', 'right']:
-        #right
-        print("RIGHT")
+        odrv0.axis0.controller.input_vel = -50
+        odrv0.axis1.controller.input_vel = -50
+        #print("RIGHT")
     elif k in ['space']:
-        #stop
-        print("SPACE")
+        odrv0.axis0.controller.input_vel = 0
+        odrv0.axis1.controller.input_vel = 0
+        #print("SPACE")
     
         
 if __name__ == '__main__':
     
-    #odrv0 = odrive.find_any()
+    print("Searching for odrive, this may take a few seconds...\n")
+    odrv0 = odrive.find_any()
     
     print("It is time to control the robot!\nThe controls are simple: wasd or the arrow keys move the robot directionally.")
     print("Space will stop the robot in its tracks, and escape will end the control period altogether.")
