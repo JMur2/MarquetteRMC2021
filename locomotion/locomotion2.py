@@ -12,6 +12,9 @@ import math
 import py_compile
 from pynput import keyboard
 
+"""
+This function reads the keyboard input from the user and moves the robot in the according 
+"""
 def key_press(key):
     # stop looking for key inputs 
     if key == keyboard.Key.esc:
@@ -36,10 +39,11 @@ def key_press(key):
     elif k in ['d', 'right']:
         #right
         print("RIGHT\n")
+    elif k in ['space']:
+        #stop
+        print("SPACE\n")
     
         
-         
-    
 if __name__ == '__main__':
     
     #odrv0 = odrive.find_any()
