@@ -28,7 +28,7 @@ def key_press(key):
         k = key.name
     
     if k in ['w', 'up']:
-        odrv0.axis0.comtroller.input_vel = -50
+        odrv0.axis0.controller.input_vel = -50
         odrv0.axis1.controller.input_vel = 50
         #print("UP")
     elif k in ['a', 'left']:
