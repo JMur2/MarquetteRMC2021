@@ -24,14 +24,25 @@ def key_press(key):
         # meant for other keys - arrow keys, etc.
         k = key.name
     
-    if k in []:
+    if k in ['w', 'up']:
+        #up
+        print("UP\n")
+    elif k in ['a', 'left']:
+        #left
+        print("LEFT\n")
+    elif k in ['s', 'down']:
+        #down
+        print("DOWN\n")
+    elif k in ['d', 'right']:
+        #right
+        print("RIGHT\n")
+    
         
          
     
 if __name__ == '__main__':
     
-    
-    
+    #odrv0 = odrive.find_any()
     
     listener = keyboard.Listener(on_press=key_press)
     listener.start()
