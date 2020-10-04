@@ -47,6 +47,10 @@ def key_press(key):
         odrv0.axis0.controller.input_vel = 0
         odrv0.axis1.controller.input_vel = 0
         #print("SPACE")
+    elif k in ['e']:
+        odrv0.axis.encoder
+    elif k in ['m']:
+        odrv0.axis.motor
     
         
 if __name__ == '__main__':
