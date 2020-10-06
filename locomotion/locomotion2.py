@@ -20,6 +20,7 @@ def key_press(key):
     if key == keyboard.Key.esc:
         return False
     
+    
     try:
         # meant for single character keys - w, a, s, d etc.
         k = key.char
@@ -27,33 +28,44 @@ def key_press(key):
         # meant for other keys - arrow keys, etc.
         k = key.name
     
+    
     if k in ['w', 'up']:
-        odrv0.axis0.controller.input_vel = -50
-        odrv0.axis1.controller.input_vel = 50
-        #print("UP")
+        odrv0.axis0.controller.input_vel = -(speed)
+        odrv0.axis1.controller.input_vel = speed
+        
     elif k in ['a', 'left']:
-        odrv0.axis0.controller.input_vel = 50
-        odrv0.axis1.controller.input_vel = 50
-        #print("LEFT")
+        odrv0.axis0.controller.input_vel = speed
+        odrv0.axis1.controller.input_vel = speed
+        
     elif k in ['s', 'down']:
-        odrv0.axis0.controller.input_vel = 50
-        odrv0.axis1.controller.input_vel = -50
-        #print("DOWN")
+        odrv0.axis0.controller.input_vel = speed
+        odrv0.axis1.controller.input_vel = -(speed)
+        
     elif k in ['d', 'right']:
-        odrv0.axis0.controller.input_vel = -50
-        odrv0.axis1.controller.input_vel = -50
-        #print("RIGHT")
+        odrv0.axis0.controller.input_vel = -(speed)
+        odrv0.axis1.controller.input_vel = -(speed)
+        
     elif k in ['space']:
         odrv0.axis0.controller.input_vel = 0
         odrv0.axis1.controller.input_vel = 0
-        #print("SPACE")
+        
     elif k in ['e']:
         odrv0.axis.encoder
+        
     elif k in ['m']:
         odrv0.axis.motor
+        
+    elif k in ['plus']:
+        speed += 5
+        
+    elif k in ['minus']:
+        speed -= 5
     
         
 if __name__ == '__main__':
+    
+    # default speed value
+    speed = 50
     
     print("Searching for odrive, this may take a few seconds...\n")
     odrv0 = odrive.find_any()
