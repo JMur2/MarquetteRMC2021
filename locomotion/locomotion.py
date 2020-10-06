@@ -2,7 +2,6 @@
 This file is a test for the locomotion system. It is based on a demo file
 from the official ODrive github, which is linked below.  
 
-@author: Jake Murray
 @created: 9-25-2020
 
 Link to demo: https://github.com/madcowswe/ODrive/blob/master/tools/odrive_demo.py
