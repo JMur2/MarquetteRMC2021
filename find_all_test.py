@@ -7,5 +7,5 @@ from odrive.enums import *
 from pynput import keyboard
 
 if __name__ == '__main__':
-    stuff = list(odrive.find_all())
-    print(stuff)
+    odrv0 = odrive.find_any(serial_number="206430804648")
+    odrv1 = odrive.find_any(serial_number="20863880304E")
