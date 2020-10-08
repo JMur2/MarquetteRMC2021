@@ -66,14 +66,14 @@ def key_press(key):
         
     elif k in ['i']:
         # spin digging motor forward
-        odrv1.axis0.controller.input_vel = 10
+        odrv1.axis0.controller.input_vel = 67
         odrv1.axis0.motor
         odrv1.axis0.encoder
         print("i")
         
     elif k in ['k']:
         # spin digging motor backwards
-        odrv1.axis0.controller.input_vel = -10
+        odrv1.axis0.controller.input_vel = -67
         print("k")
 
 
