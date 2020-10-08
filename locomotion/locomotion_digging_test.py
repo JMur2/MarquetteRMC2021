@@ -72,11 +72,11 @@ def key_press(key):
 
 if __name__ == '__main__':
     
-    if not odrive.find_all():
-        print("find all failed")
-    
-    stuff = list(odrive.find_all())
-    print(stuff)
+    try:
+        odrv0 = odrive.find_any(serial_number="206430804648")
+        odrv1 = odrive.find_any(serial_number="20863880304E")
+    except:
+        print("finding odrive failed.")
     
     print("It is time to control the robot!\nThe controls are simple: wasd or the arrow keys move the robot directionally.")
     print("Space will stop the robot in its tracks, and escape will end the control period altogether.")
