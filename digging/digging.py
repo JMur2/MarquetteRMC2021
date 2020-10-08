@@ -21,9 +21,9 @@ def key_press(key):
         # meant for other keys - arrow keys, etc.
         k = key.name
         
-    if k in ['i']:
+    if k in ['w']:
         odrv0.axis0.controller.input_vel = 10
-    elif k in ['k']:
+    elif k in ['s']:
         odrv0.axis0.controller.input_vel = -10
     elif k in ['space']:
         odrv0.axis0.controller.input_vel = 0
