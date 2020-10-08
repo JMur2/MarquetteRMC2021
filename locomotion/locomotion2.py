@@ -30,20 +30,20 @@ def key_press(key):
     
     
     if k in ['w', 'up']:
-        odrv0.axis0.controller.input_vel = -(speed)
-        odrv0.axis1.controller.input_vel = speed
+        odrv0.axis0.controller.input_vel = -50
+        odrv0.axis1.controller.input_vel = 50
         
     elif k in ['a', 'left']:
-        odrv0.axis0.controller.input_vel = speed
-        odrv0.axis1.controller.input_vel = speed
+        odrv0.axis0.controller.input_vel = 50
+        odrv0.axis1.controller.input_vel = 50
         
     elif k in ['s', 'down']:
-        odrv0.axis0.controller.input_vel = speed
-        odrv0.axis1.controller.input_vel = -(speed)
+        odrv0.axis0.controller.input_vel = 50
+        odrv0.axis1.controller.input_vel = -50
         
     elif k in ['d', 'right']:
-        odrv0.axis0.controller.input_vel = -(speed)
-        odrv0.axis1.controller.input_vel = -(speed)
+        odrv0.axis0.controller.input_vel = -50
+        odrv0.axis1.controller.input_vel = -50
         
     elif k in ['space']:
         odrv0.axis0.controller.input_vel = 0
@@ -55,17 +55,17 @@ def key_press(key):
     elif k in ['m']:
         odrv0.axis.motor
         
-    elif k in ['plus']:
-        speed += 5
+#     elif k in ['plus']:
+#         speed += 5
         
-    elif k in ['minus']:
-        speed -= 5
+#     elif k in ['minus']:
+#         speed -= 5
     
         
 if __name__ == '__main__':
     
     # default speed value
-    speed = 50
+#     speed = 50
     
     print("Searching for odrive, this may take a few seconds...\n")
     odrv0 = odrive.find_any()
