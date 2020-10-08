@@ -34,9 +34,9 @@ odrv0 = odrive.find_any()
 
 print("Setting velocity to 20\n")
 odrv0.axis0.controller.input_vel = 50
-odrv0.axis1.controller.input_vel = -50
+#odrv0.axis1.controller.input_vel = -50
 
-time.sleep(15)
+time.sleep(5)
 
 odrv0.axis0.controller.input_vel = 0
-odrv0.axis1.controller.input_vel = -0
+#odrv0.axis1.controller.input_vel = -0
