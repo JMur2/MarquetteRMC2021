@@ -7,7 +7,7 @@ import math
 import py_compile
 
 from odrive.enums import *
-from pynput import keyboard
+#from pynput import keyboard
 
 if __name__ == '__main__':
     print("This is an ssh test")
