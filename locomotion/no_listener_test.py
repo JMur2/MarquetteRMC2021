@@ -16,7 +16,7 @@ def get_char():
     old_settings = termios.tcgetattr(file_descriptor)
     
     try:
-        tty.setraw(file_desriptor)
+        tty.setraw(file_descriptor)
         character = sys.stdin.read(1)
     finally:
         termios.tcsetattr(file_descriptor, termios.TCSADRAIN, old_settings)
