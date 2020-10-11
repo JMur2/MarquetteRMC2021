@@ -30,7 +30,7 @@ if __name__ == '__main__':
     try:
         while True:
             char = get_char()
-            ascii_val = ord(char)
+            char_val = ord(char)
             
             if char.lower() == "q":
                 break
@@ -50,6 +50,9 @@ if __name__ == '__main__':
                 odrv0.axis0.controller.input_vel = 0
                 odrv0.axis1.controller.input_vel = 0
     finally:
+        odrv0.axis0.controller.input_vel = 0
+        odrv0.axis1.controller.input_vel = 0
         print("------")
+    print("Program ending")
         
         
