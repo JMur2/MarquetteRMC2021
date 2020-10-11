@@ -12,7 +12,7 @@ import tty
 import termios
 
 def get_char():
-    file_descriptor = sys.sdtin.fileno()
+    file_descriptor = sys.stdin.fileno()
     old_settings = termios.tcgetattr(file_descriptor)
     
     try:
