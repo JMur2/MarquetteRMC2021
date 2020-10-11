@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
 The second locomotion test file for testing our robot's locomotion.
 Attempting to include keyboard operations to the motor's output, allowinf direct control over motion.
@@ -10,7 +12,6 @@ from odrive.enums import *
 import time
 import math
 import py_compile
-from Xlib.display import Display
 from pynput import keyboard
 
 """
