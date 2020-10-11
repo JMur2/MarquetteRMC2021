@@ -25,7 +25,7 @@ def get_char():
 if __name__ == '__main__':
     print("Searching for roboclaw, this may take a few seconds...\n")
     roboclaw = Roboclaw("COM11", 38400)
-	roboclaw.Open()
+    roboclaw.Open()
     print("Robot is ready to control, use WASD to control direction and Q to quit")
     try:
         while True:
@@ -37,8 +37,8 @@ if __name__ == '__main__':
             elif char.lower() == "w":
                 roboclaw.ForwardM1(0x80, 127)
             elif char.lower() == "s":
-				roboclaw.BackwardM1(0x80, 127)
-            elif char.lower() == "x":
+		roboclaw.BackwardM1(0x80, 127)
+	    elif char.lower() == "x":
                 roboclaw.ForwardM1(0x80, 0)
     finally:
         roboclaw.ForwardM1(0x80, 0)
