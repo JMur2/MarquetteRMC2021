@@ -46,6 +46,9 @@ if __name__ == '__main__':
             elif char.lower() == "d":
                 odrv0.axis0.controller.input_vel = -50
                 odrv0.axis1.controller.input_vel = -50
+            elif char.lower() == "x":
+                odrv0.axis0.controller.input_vel = 0
+                odrv0.axis1.controller.input_vel = 0
     finally:
         print("------")
         
