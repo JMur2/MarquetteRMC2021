@@ -1,5 +1,4 @@
-"""
-A new test scenario for robot control without pynput
+""" A new test scenario for robot control without pynput
 
 @created: 10-11-2020
 """
