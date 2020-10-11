@@ -27,6 +27,7 @@ if __name__ == '__main__':
     print("Searching for odrive, this may take a few seconds...\n")
     odrv0 = odrive.find_any()
     
+    print("Robot is ready to control, use WASD to control direction and Q to quit")
     try:
         while True:
             char = get_char()
