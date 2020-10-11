@@ -23,7 +23,7 @@ def get_char():
 
 if __name__ == '__main__':
     print("Searching for roboclaw, this may take a few seconds...\n")
-    roboclaw = Roboclaw("/dev/ttyS0", 38400)
+    roboclaw = Roboclaw("/dev/ttyS5", 38400)
     roboclaw.Open()
     print("Robot is ready to control, use WASD to control direction and Q to quit")
     try:
