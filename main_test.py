@@ -1,5 +1,5 @@
 """
-This is the main .py file for our RMC system.  It has references to all other files to get each functionality for each subsystem.
+This is the main test .py file for our RMC system.  It has references to all other files to get each functionality for each subsystem.
 
 @created: 10-4-2020
 """
