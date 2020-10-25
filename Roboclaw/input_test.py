@@ -36,14 +36,6 @@ if __name__ == '__main__':
             if char.lower() == "q":
                 break
             elif char.lower() == "w":
-<<<<<<< Updated upstream
-                roboclaw.ForwardM2(0x80, 127)
-            elif char.lower() == "s":
-                roboclaw.BackwardM2(0x80, 127)
-            elif char.lower() == "x":
-                roboclaw.ForwardM2(0x80, 0)
-    finally:
-=======
                 roboclaw.ForwardM1(0x80, 127)
                 roboclaw.ForwardM2(0x80, 127)
             elif char.lower() == "s":
@@ -54,7 +46,6 @@ if __name__ == '__main__':
                 roboclaw.ForwardM2(0x80, 0)
     finally:
         roboclaw.ForwardM1(0x80, 0)
->>>>>>> Stashed changes
         roboclaw.ForwardM2(0x80, 0)
         print("------")
     print("Program ending")
