@@ -55,5 +55,3 @@ if __name__ == '__main__':
         odrv0.axis1.controller.input_vel = 0
         print("------")
     print("Program ending")
-        
-        
