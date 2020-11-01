@@ -10,8 +10,6 @@ import sys
 import tty
 import termios
 
-from odrive.enums import *
-
 #from locomotion import locomotion_funcs
 #from digging import digging_funcs
 #from dumping import dumping_funcs
@@ -36,3 +34,31 @@ class HumanControl:
             termios.tcsetattr(file_descriptor, termios.TCSADRAIN, old_settings)
 
         return character
+
+    def control_robot(self):
+        try:
+            while True:
+                input_val = ord((self.get_char()).lower())
+                """
+                ord() takes a character and returns its ASCII value, 
+                allowing us to have more specific control with more keys.
+                """
+
+                if input_val == 27: # esc
+                    #stop all functions
+                    break
+                    print("esc")
+                elif input_val == 119: # w
+                    # locomotion forward
+                    print("forward")
+                elif input_val == 97:  # a
+                    # locomotion left
+                    print("left")
+                elif input_val == 115: # s
+                    # locomotion back
+                    print("back")
+                elif input_val == 100: # d
+                    # locomotion right
+                    print("right")
+        finally:
+            print("----------------------------")
