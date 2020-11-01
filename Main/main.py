@@ -10,8 +10,8 @@ import sys
 import tty
 import termios
 
-from MarquetteRMC2021.Main import human
-from MarquetteRMC2021.Main import states
+from main import human
+from main import states
 
 from odrive.enums import *
 
