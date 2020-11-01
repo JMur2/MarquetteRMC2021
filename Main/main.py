@@ -58,3 +58,6 @@ class Robot:
 
 if __name__ == "__main__":
     robot = Robot()
+    print("Robot control started")
+    robot.control_robot()
+    print("Robot control ended")
