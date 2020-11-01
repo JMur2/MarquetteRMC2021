@@ -22,13 +22,15 @@ def get_char():
     return character
 
 if __name__ == "__main__":
-    print("Identifying serial number for ODRIVES")
-    print("Finding odrive, this may take a few seconds...")
-    try:
-        odrv0 = odrive.find_any(serial_number="206430804648")
-    except:
-        print("Failed to find with serial number")
-        odrv0 = odrive.find_any()
+    # print("Identifying serial number for ODRIVES")
+    # print("Finding odrive, this may take a few seconds...")
+    # try:
+    #     odrv0 = odrive.find_any(serial_number="206430804648")
+    # except:
+    #     print("Failed to find with serial number")
+    #     odrv0 = odrive.find_any()
+    print("Finding an odrive, this may take a few seconds...")
+    odrv0 = odrive.find_any()
 
     print("Motor is ready to control")
     try:
