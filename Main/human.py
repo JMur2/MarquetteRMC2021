@@ -20,7 +20,7 @@ from odrive.enums import *
 
 class HumanControl:
         
-    control_state: str = ""
+    control_state = ""
 
     def __init__(self, state: str):
         # initializations

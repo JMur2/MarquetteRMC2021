@@ -6,7 +6,7 @@ Will allow for adjustments of the state, and will restrict certain actions depen
 """
 
 class State:
-    current_state: str = ""
+    current_state = ""
 
     def __init__(self, state):
         # initializations

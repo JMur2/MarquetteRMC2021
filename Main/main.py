@@ -21,7 +21,7 @@ class Robot:
     h = human.HumanControl()
     s = states.State()
 
-    current_state: str = ""
+    current_state = ""
 
     def __init__(self):
         # initializations
@@ -30,12 +30,26 @@ class Robot:
     def control_robot(self):
         try:
             while True:
-                c: str = self.h.get_char()
-                char_val: int = ord(c)
-                
+                input_val = ord((self.h.get_char()).lower()) # ord() takes a character and returns its ASCII value, allowing us to have more specific control
+
+                if input_val == 27: # esc
+                    #stop all functions
+                    break
+                    print("esc")
+                elif input_val == 119: # w
+                    # locomotion forward
+                    print("forward")
+                elif input_val == 97:  # a
+                    # locomotion left
+                    print("left")
+                elif input_val == 115: # s
+                    # locomotion back
+                    print("back")
+                elif input_val == 100: # d
+                    # locomotion right
+                    print("right")
         finally:
-            #stop everything, we are yeilding control at this point
-            print("finally")
+            print("----------------------------")
             
 
 if __name__ == "__main__":
