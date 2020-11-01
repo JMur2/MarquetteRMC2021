@@ -1,9 +1,7 @@
 import odrive
 from odrive.enums import *
 import time
-import math
 from pynput import keyboard
-
 
 def key_press(key):
     # stop looking for key inputs 
@@ -26,10 +24,7 @@ def key_press(key):
 
 if __name__ == "__main__":
     print("Finding an odrive, this may take a few seconds...")
-    try:
-        odrv0 = odrive.find_any()
-    except:
-        print("Finding odrive failed")
+    odrv0 = odrive.find_any()
     
     print("Ready to control")
     listener = keyboard.Listener(on_press=key_press )
