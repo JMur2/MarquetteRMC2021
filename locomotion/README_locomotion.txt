@@ -1,1 +1,0 @@
-This is the sub-directory for locomotion focused code.
