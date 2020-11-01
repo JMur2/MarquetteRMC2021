@@ -35,8 +35,8 @@ if __name__ == "__main__":
     print("Motor is ready to control")
     try:
         while True:
-            char: str = get_char()
-            char_val: int = ord(char)
+            char = get_char()
+            char_val = ord(char)
             
             if char_val == 27: # escape key
                 print("escape")
