@@ -21,7 +21,7 @@ class Robot:
     h = human.HumanControl()
     s = states.State()
 
-    current_state = ""
+    current_state: str = ""
 
     def __init__(self):
         # initializations
@@ -30,8 +30,8 @@ class Robot:
     def control_robot(self):
         try:
             while True:
-                char = self.h.get_char()
-                char_val = ord(char)
+                c: str = self.h.get_char()
+                char_val: int = ord(c)
                 
         finally:
             #stop everything, we are yeilding control at this point
