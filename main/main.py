@@ -10,15 +10,15 @@ import sys
 import tty
 import termios
 
-from .main import human.py
-from .main import states.py
+from main import human
+from main import states
 
 from odrive.enums import *
 
 class Robot:
     #each class below is initialized upon this object creation
     h = human.HumanControl()
-    s = states.State()
+    s = states.State("null")
 
     current_state = ""
 
@@ -57,6 +57,3 @@ class Robot:
 
 if __name__ == "__main__":
     robot = Robot()
-    print("Robot control started")
-    robot.control_robot()
-    print("Robot control ended")
