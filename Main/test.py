@@ -33,7 +33,7 @@ if __name__ == "__main__":
     #     print("Failed to find with serial number")
     #     odrv0 = odrive.find_any()
     print("Finding an odrive, this may take a few seconds...")
-    #odrv0 = odrive.find_any()
+    odrv0 = odrive.find_any()
 
     print("Motor is ready to control")
     try:
@@ -46,10 +46,10 @@ if __name__ == "__main__":
                 break
             elif char_val == 119: # W
                 print("W")
-                #odrv0.axis0.controller.input_vel = 50
+                odrv0.axis0.controller.input_vel = 50
             elif char_val == 115: # S
                 print("S")
-               # odrv0.asix0.controller.input_vel = 0 
+                odrv0.asix0.controller.input_vel = 0 
     finally:
         print("------")
     print("Program ending")
