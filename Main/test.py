@@ -8,6 +8,9 @@ import odrive
 from odrive.enums import *
 import time
 import math
+import sys
+import tty
+import termios
 
 def get_char():
     file_descriptor = sys.stdin.fileno()
