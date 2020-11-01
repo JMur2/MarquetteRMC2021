@@ -43,6 +43,7 @@ if __name__ == "__main__":
             
             if char_val == 27: # escape key
                 print("escape")
+                break
             elif char_val == 119: # W
                 print("W")
                 #odrv0.axis0.controller.input_vel = 50
