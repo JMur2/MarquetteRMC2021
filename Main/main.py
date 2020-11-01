@@ -30,7 +30,11 @@ class Robot:
     def control_robot(self):
         try:
             while True:
-                input_val = ord((self.h.get_char()).lower()) # ord() takes a character and returns its ASCII value, allowing us to have more specific control
+                input_val = ord((self.h.get_char()).lower())
+                """
+                ord() takes a character and returns its ASCII value, 
+                allowing us to have more specific control with more keys.
+                """
 
                 if input_val == 27: # esc
                     #stop all functions
