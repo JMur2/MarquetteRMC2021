@@ -11,7 +11,6 @@ import tty
 import termios
 
 from Main import human
-from Main import test
 from Main import states
 
 from odrive.enums import *

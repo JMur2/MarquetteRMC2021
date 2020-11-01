@@ -17,7 +17,6 @@ from odrive.enums import *
 #from dumping import dumping_funcs
 #from lidar import lidar_funcs
 
-
 class HumanControl:
         
     control_state = ""
