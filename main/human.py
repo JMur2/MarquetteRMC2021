@@ -10,6 +10,7 @@ import sys
 import tty
 import termios
 
+from states import State
 #from locomotion import locomotion_funcs
 #from digging import digging_funcs
 #from dumping import dumping_funcs
@@ -19,9 +20,9 @@ class HumanControl:
         
     control_state = ""
 
-    def __init__(self, state: str):
+    def __init__(self):
         # initializations
-        self.control_state = state
+        self.control_state = State.get_state()
         
     def get_char(self):
         file_descriptor = sys.stdin.fileno()
