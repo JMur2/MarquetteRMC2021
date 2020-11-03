@@ -17,8 +17,6 @@ from states import State
 #from lidar import lidar_funcs
 
 class HumanControl:
-        
-    control_state = ""
 
     def __init__(self):
         # initializations
@@ -36,30 +34,24 @@ class HumanControl:
 
         return character
 
-    def control_robot(self):
+    def control_robot(self, curr_state: str) -> str:
         try:
-            while True:
-                input_val = ord((self.get_char()).lower())
-                """
-                ord() takes a character and returns its ASCII value, 
-                allowing us to have more specific control with more keys.
-                """
+            input_char = (self.get_char()).lower()
+            input_val = ord(input_char)
+            """
+            ord() takes a character and returns its ASCII value, 
+            allowing us to have more specific control with more keys.
+            """
 
-                if input_val == 27: # esc
-                    #stop all functions
-                    break
-                    print("esc")
-                elif input_val == 119: # w
-                    # locomotion forward
-                    print("forward")
-                elif input_val == 97:  # a
-                    # locomotion left
-                    print("left")
-                elif input_val == 115: # s
-                    # locomotion back
-                    print("back")
-                elif input_val == 100: # d
-                    # locomotion right
-                    print("right")
+            if input_val == 27: # esc -- stop all functions
+                return "quit"
+            elif input_val == 119 and curr_state == "locomotion": # w -- forward
+                return "forward"
+            elif input_val == 97 and curr_state == "locomotion":  # a -- left
+                return "left"
+            elif input_val == 115 and curr_state == "locomotion": # s -- back
+                return "back"
+            elif input_val == 100 and curr_state == "locomotion": # d -- right
+                return "right"
         finally:
             print("----------------------------")

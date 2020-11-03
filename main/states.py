@@ -6,17 +6,17 @@ Will allow for adjustments of the state, and will restrict certain actions depen
 """
 
 class State:
-    current_state = ""
+    control_state = ""
 
     def __init__(self, state):
         # initializations
-        self.current_state = state
+        self.control_state = state
     
     @classmethod
     def get_state(cls) -> str:
-        return cls.current_state
+        return cls.control_state
     
     @classmethod
     def set_state(cls, new_state: str) -> str:
-        cls.current_state = new_state
-        return cls.current_state
+        cls.control_state = new_state
+        return cls.control_state

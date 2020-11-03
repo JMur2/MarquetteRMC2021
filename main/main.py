@@ -7,16 +7,19 @@ from human import HumanControl
 from states import State
 
 class Robot:
-    #each class below is initialized upon this object creation
-    h = HumanControl()
-
-    current_state = ""
 
     def __init__(self):
         self.current_state = State.set_state("startup")
+        self.loco_speed = 50
 
 if __name__ == "__main__":
     robot = Robot()
+    control = HumanControl()
 
-    #while True:
+    while True:
         # control loop
+        robot.current_state = State.get_state()
+        control_val = control.control_robot(robot.current_state)
+        
+        if control_val == "quit":
+            break
