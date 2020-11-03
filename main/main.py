@@ -9,7 +9,8 @@ from states import State
 class Robot:
 
     def __init__(self):
-        self.current_state = State.set_state("startup")
+        self.control_state = State.set_control_state("startup")
+        self.operation_state = State.set_operational_state("human")
         self.loco_speed = 50
 
 if __name__ == "__main__":
@@ -18,8 +19,13 @@ if __name__ == "__main__":
 
     while True:
         # control loop
-        robot.current_state = State.get_state()
-        control_val = control.control_robot(robot.current_state)
-        
-        if control_val == "quit":
-            break
+        robot.control_state = State.get_control_state()
+        robot.operation_state = State.get_operational_state()
+
+        char = control.get_char()
+
+        if robot.operation_state == "human":
+            control.control_robot(State.get_control_state)
+        elif robot.operation_state == "lidar":
+            # lidar junk
+            print("nothing")

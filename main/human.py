@@ -11,16 +11,20 @@ import tty
 import termios
 
 from states import State
-#from locomotion import locomotion_funcs
+from locomotion import Locomotion
 #from digging import digging_funcs
 #from dumping import dumping_funcs
 #from lidar import lidar_funcs
 
 class HumanControl:
 
+    loco = Locomotion(1) # need locomotion serial number
+    speed = 50
+
     def __init__(self):
         # initializations
-        self.control_state = State.get_state()
+        self.control_state = State.get_control_state()
+        # self.loco_speed = speed
         
     def get_char(self):
         file_descriptor = sys.stdin.fileno()
@@ -34,24 +38,22 @@ class HumanControl:
 
         return character
 
-    def control_robot(self, curr_state: str) -> str:
+    def control_robot(self, curr_state: str, char: str):
         try:
-            input_char = (self.get_char()).lower()
+            input_char = char.lower()
             input_val = ord(input_char)
             """
             ord() takes a character and returns its ASCII value, 
             allowing us to have more specific control with more keys.
             """
 
-            if input_val == 27: # esc -- stop all functions
-                return "quit"
-            elif input_val == 119 and curr_state == "locomotion": # w -- forward
-                return "forward"
-            elif input_val == 97 and curr_state == "locomotion":  # a -- left
-                return "left"
+            if   input_val == 119 and curr_state == "locomotion": # w -- forward
+                HumanControl.loco.loco_forward(HumanControl.speed)
+            elif input_val == 97  and curr_state == "locomotion": # a -- left
+                print("left")
             elif input_val == 115 and curr_state == "locomotion": # s -- back
-                return "back"
+                print("back")
             elif input_val == 100 and curr_state == "locomotion": # d -- right
-                return "right"
+                print("right")
         finally:
             print("----------------------------")
