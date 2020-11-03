@@ -12,11 +12,11 @@ class State:
         # initializations
         self.current_state = state
     
-    @staticmethod
-    def get_state() -> str:
-        return current_state
+    @classmethod
+    def get_state(cls) -> str:
+        return cls.current_state
     
-    @staticmethod
-    def set_state(new_state: str) -> str:
-        current_state = new_state
-        return current_state
+    @classmethod
+    def set_state(cls, new_state: str) -> str:
+        cls.current_state = new_state
+        return cls.current_state

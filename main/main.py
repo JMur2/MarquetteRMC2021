@@ -9,12 +9,10 @@ from states import State
 class Robot:
     #each class below is initialized upon this object creation
     h = HumanControl()
-    s = State("startup")
 
     current_state = ""
 
     def __init__(self):
-        # initializations
         self.current_state = State.set_state("startup")
 
 if __name__ == "__main__":
