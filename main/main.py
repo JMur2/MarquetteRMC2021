@@ -23,9 +23,14 @@ if __name__ == "__main__":
         robot.operation_state = State.get_operational_state()
 
         char = control.get_char()
+        ascii_val = ord(char)
+
+        if (ascii_val == 27): # esc -- stop whole program
+            break
 
         if robot.operation_state == "human":
-            control.control_robot(State.get_control_state)
+            control.control_robot(robot.control_state, char)
         elif robot.operation_state == "lidar":
-            # lidar junk
-            print("nothing")
+            print("nothing") # lidar junk
+
+    print("Ending Program...")
