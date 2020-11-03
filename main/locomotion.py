@@ -17,9 +17,8 @@ class Locomotion:
         """
 
     def __init__(self, serial_number: int):
-        # initializations
         self.odrv0 = odrive.find_any(serial_number=serial_number)
-        print("call config error checking")
+        # print("call config error checking")
 
     def loco_forward(self, speed: int):
         self.odrv0.axis0.controller.input_vel = speed
@@ -40,3 +39,6 @@ class Locomotion:
         self.odrv0.axis0.controller.input_vel = speed
         self.odrv0.axis1.controller.input_vel = speed
         # possible return
+    
+    def loco_config_check():
+        print(self.odrv0.axis0.encoder.mode)
