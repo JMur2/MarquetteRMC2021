@@ -61,6 +61,7 @@ if __name__ == "__main__":
 
             print("This is the Bus Current ", odrv0.ibus)                
     finally:
+        odrv0.axis0.controller.input_vel = 0
         print("------")
 
     print("Program ending")
