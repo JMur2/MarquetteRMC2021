@@ -10,7 +10,7 @@ class Robot:
 
     def __init__(self):
         self.control_state = State.set_control_state("startup")
-        self.operation_state = State.set_operational_state("human")
+        self.operation_state = State.set_operation_state("human")
         self.loco_speed = 50
 
 if __name__ == "__main__":
@@ -20,7 +20,7 @@ if __name__ == "__main__":
     while True:
         # control loop
         robot.control_state = State.get_control_state()
-        robot.operation_state = State.get_operational_state()
+        robot.operation_state = State.get_operation_state()
 
         char = control.get_char()
         ascii_val = ord(char)

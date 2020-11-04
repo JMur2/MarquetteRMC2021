@@ -23,10 +23,10 @@ class State:
         return cls.control_state
     
     @classmethod
-    def get_operational_state(cls) -> str:
+    def get_operation_state(cls) -> str:
         return cls.operation_state
 
     @classmethod
-    def set_operational_state(cls, new_state: str) -> str:
+    def set_operation_state(cls, new_state: str) -> str:
         cls.operation_state = new_state
         return cls.operation_state
