@@ -42,19 +42,20 @@ if __name__ == "__main__":
             char = get_char()
             char_val = ord(char)
 			
-            b = (odrv0.axis0.motor.current_meas_phB + odrv0.axis0.motor.current_meas_phC)
+            # b = (odrv0.axis0.motor.current_meas_phB + odrv0.axis0.motor.current_meas_phC)
 			
-            print("This is the Bus Current ", odrv0.ibus)
             if char_val == 27: # escape key
                 print("esc")
-                odrv0.asix0.controller.input_vel = 0
+                odrv0.axis0.controller.input_vel = 0
                 break
             elif char_val == 119: # W
                 print("w")
                 odrv0.axis0.controller.input_vel = 20
             elif char_val == 115: #S
                 print("s")
-                odrv0.axis0.controller.input_vel = -20                 
+                odrv0.axis0.controller.input_vel = -20 
+                
+            print("This is the Bus Current ", odrv0.ibus)                
     finally:
         print("------")
 
