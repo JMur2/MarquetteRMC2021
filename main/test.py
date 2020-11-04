@@ -11,6 +11,7 @@ import math
 import sys
 import tty
 import termios
+import numpy as np
 
 def get_char():
     file_descriptor = sys.stdin.fileno()
@@ -40,7 +41,10 @@ if __name__ == "__main__":
         while True:
             char = get_char()
             char_val = ord(char)
-            
+			
+			b = odrv0.axis0.motor.current_meas_phB + odrv0.axis0.motor.current_meas_phC
+			
+            print("This is the Bus Current ", b)
             if char_val == 27: # escape key
                 print("escape")
                 break
