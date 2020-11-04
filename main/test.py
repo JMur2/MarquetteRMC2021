@@ -42,7 +42,7 @@ if __name__ == "__main__":
             char = get_char()
             char_val = ord(char)
 			
-			b = odrv0.axis0.motor.current_meas_phB + odrv0.axis0.motor.current_meas_phC
+            b = (odrv0.axis0.motor.current_meas_phB + odrv0.axis0.motor.current_meas_phC)
 			
             print("This is the Bus Current ", b)
             if char_val == 27: # escape key
