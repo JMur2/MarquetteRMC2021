@@ -36,6 +36,8 @@ if __name__ == "__main__":
     print("Finding an odrive, this may take a few seconds...")
     odrv0 = odrive.find_any()
 
+    odrv0.axis0.controller.input_vel = 0
+
     print("Motor is ready to control")
     try:
         while True:
@@ -46,15 +48,17 @@ if __name__ == "__main__":
 			
             if char_val == 27: # escape key
                 print("esc")
-                odrv0.axis0.controller.input_vel = 0
                 break
-            elif char_val == 119: # W
+            elif char_val == 119: #W
                 print("w")
                 odrv0.axis0.controller.input_vel = 20
             elif char_val == 115: #S
                 print("s")
-                odrv0.axis0.controller.input_vel = -20 
-                
+                odrv0.axis0.controller.input_vel = -20
+            elif char_val == 113: #Q 
+                print("q")
+                odrv0.axis0.controller.input_vel = 0
+
             print("This is the Bus Current ", odrv0.ibus)                
     finally:
         print("------")
