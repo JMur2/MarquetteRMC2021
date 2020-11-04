@@ -46,14 +46,16 @@ if __name__ == "__main__":
 			
             print("This is the Bus Current ", b)
             if char_val == 27: # escape key
-                print("escape")
-				odrv0.asix0.controller.input_vel = 0
+                print("esc")
+                odrv0.asix0.controller.input_vel = 0
                 break
             elif char_val == 119: # W
-                print("W")
+                print("w")
                 odrv0.axis0.controller.input_vel = 20
-			elif char_val == 115: #S
-				odrv0.axis0.controller.input_vel = -20                 
+            elif char_val == 115: #S
+                print("s")
+                odrv0.axis0.controller.input_vel = -20                 
     finally:
         print("------")
+
     print("Program ending")
