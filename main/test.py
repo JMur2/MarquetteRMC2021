@@ -44,7 +44,7 @@ if __name__ == "__main__":
 			
             b = (odrv0.axis0.motor.current_meas_phB + odrv0.axis0.motor.current_meas_phC)
 			
-            print("This is the Bus Current ", b)
+            print("This is the Bus Current ", odrv0.ibus)
             if char_val == 27: # escape key
                 print("esc")
                 odrv0.asix0.controller.input_vel = 0
