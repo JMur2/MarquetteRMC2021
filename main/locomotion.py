@@ -13,7 +13,6 @@ class Locomotion:
         Points for team:
         - Do we want a dynamic speed, or should we always operate at max?
             - Which subsystems should be able to?
-        
         """
 
     def __init__(self, serial_number: int):
