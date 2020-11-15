@@ -1,0 +1,1 @@
+/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/gennodejs/lib/python2.7/dist-packages/gennodejs/__init__.py

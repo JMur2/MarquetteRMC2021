@@ -1,0 +1,6 @@
+Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/genpy/cmake/genpyConfig-version.cmake
+Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/genpy/cmake/genpyConfig.cmake
+Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/genpy/cmake/genpy-extras.cmake
+Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/lib/pkgconfig/genpy.pc
+Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/lib/python2.7/dist-packages/genpy/__init__.py
+Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/etc/ros/genmsg/genpy

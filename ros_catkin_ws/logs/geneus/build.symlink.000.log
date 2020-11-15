@@ -1,0 +1,7 @@
+Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/roseus/rospack_nosubdirs
+Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/geneus/cmake/geneusConfig.cmake
+Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/geneus/cmake/geneusConfig-version.cmake
+Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/geneus/cmake/geneus-extras.cmake
+Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/lib/pkgconfig/geneus.pc
+Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/lib/python2.7/dist-packages/geneus/__init__.py
+Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/etc/ros/genmsg/geneus

@@ -1,0 +1,69 @@
+[36mInstall the project...[0m
+-- Install configuration: "Release"
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/_setup_util.py
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/env.sh
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/setup.bash
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/local_setup.bash
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/setup.sh
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/local_setup.sh
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/setup.zsh
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/local_setup.zsh
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/.rosinstall
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/pkgconfig/rosgraph.pc
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/rosgraph/cmake/rosgraphConfig.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/rosgraph/cmake/rosgraphConfig-version.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/rosgraph/package.xml
++ cd /home/mars/MarquetteRMC2021/ros_catkin_ws/src/ros_comm/rosgraph
++ mkdir -p /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages
++ /usr/bin/env PYTHONPATH=/home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages:/home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosgraph/lib/python2.7/dist-packages:/home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages:/opt/ros/melodic/lib/python2.7/dist-packages CATKIN_BINARY_DIR=/home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosgraph /usr/bin/python2 /home/mars/MarquetteRMC2021/ros_catkin_ws/src/ros_comm/rosgraph/setup.py build --build-base /home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosgraph install --root=/ --install-layout=deb --prefix=/home/mars/MarquetteRMC2021/ros_catkin_ws/install --install-scripts=/home/mars/MarquetteRMC2021/ros_catkin_ws/install/bin
+running build
+running build_py
+creating /home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosgraph/lib.linux-x86_64-2.7
+creating /home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosgraph/lib.linux-x86_64-2.7/rosgraph
+copying src/rosgraph/__init__.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosgraph/lib.linux-x86_64-2.7/rosgraph
+copying src/rosgraph/rosenv.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosgraph/lib.linux-x86_64-2.7/rosgraph
+copying src/rosgraph/network.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosgraph/lib.linux-x86_64-2.7/rosgraph
+copying src/rosgraph/rosgraph_main.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosgraph/lib.linux-x86_64-2.7/rosgraph
+copying src/rosgraph/names.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosgraph/lib.linux-x86_64-2.7/rosgraph
+copying src/rosgraph/roslogging.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosgraph/lib.linux-x86_64-2.7/rosgraph
+copying src/rosgraph/masterapi.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosgraph/lib.linux-x86_64-2.7/rosgraph
+copying src/rosgraph/xmlrpc.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosgraph/lib.linux-x86_64-2.7/rosgraph
+creating /home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosgraph/lib.linux-x86_64-2.7/rosgraph/impl
+copying src/rosgraph/impl/__init__.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosgraph/lib.linux-x86_64-2.7/rosgraph/impl
+copying src/rosgraph/impl/graph.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosgraph/lib.linux-x86_64-2.7/rosgraph/impl
+running build_scripts
+creating /home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosgraph/scripts-2.7
+copying and adjusting scripts/rosgraph -> /home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosgraph/scripts-2.7
+changing mode of /home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosgraph/scripts-2.7/rosgraph from 644 to 755
+running install
+running install_lib
+creating /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages/rosgraph
+copying /home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosgraph/lib.linux-x86_64-2.7/rosgraph/__init__.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages/rosgraph
+copying /home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosgraph/lib.linux-x86_64-2.7/rosgraph/rosenv.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages/rosgraph
+copying /home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosgraph/lib.linux-x86_64-2.7/rosgraph/network.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages/rosgraph
+copying /home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosgraph/lib.linux-x86_64-2.7/rosgraph/rosgraph_main.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages/rosgraph
+copying /home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosgraph/lib.linux-x86_64-2.7/rosgraph/names.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages/rosgraph
+copying /home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosgraph/lib.linux-x86_64-2.7/rosgraph/roslogging.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages/rosgraph
+copying /home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosgraph/lib.linux-x86_64-2.7/rosgraph/masterapi.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages/rosgraph
+copying /home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosgraph/lib.linux-x86_64-2.7/rosgraph/xmlrpc.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages/rosgraph
+creating /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages/rosgraph/impl
+copying /home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosgraph/lib.linux-x86_64-2.7/rosgraph/impl/__init__.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages/rosgraph/impl
+copying /home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosgraph/lib.linux-x86_64-2.7/rosgraph/impl/graph.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages/rosgraph/impl
+byte-compiling /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages/rosgraph/__init__.py to __init__.pyc
+byte-compiling /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages/rosgraph/rosenv.py to rosenv.pyc
+byte-compiling /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages/rosgraph/network.py to network.pyc
+byte-compiling /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages/rosgraph/rosgraph_main.py to rosgraph_main.pyc
+byte-compiling /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages/rosgraph/names.py to names.pyc
+byte-compiling /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages/rosgraph/roslogging.py to roslogging.pyc
+byte-compiling /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages/rosgraph/masterapi.py to masterapi.pyc
+byte-compiling /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages/rosgraph/xmlrpc.py to xmlrpc.pyc
+byte-compiling /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages/rosgraph/impl/__init__.py to __init__.pyc
+byte-compiling /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages/rosgraph/impl/graph.py to graph.pyc
+running install_scripts
+copying /home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosgraph/scripts-2.7/rosgraph -> /home/mars/MarquetteRMC2021/ros_catkin_ws/install/bin
+changing mode of /home/mars/MarquetteRMC2021/ros_catkin_ws/install/bin/rosgraph to 755
+running install_egg_info
+Writing /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages/rosgraph-1.14.10.egg-info
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/etc/ros/python_logging.conf
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/rosgraph/conf/python_logging.conf
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/rosgraph/rosgraph

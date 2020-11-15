@@ -1,0 +1,45 @@
+[36mInstall the project...[0m
+-- Install configuration: "Release"
+-- Up-to-date: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/_setup_util.py
+-- Up-to-date: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/env.sh
+-- Up-to-date: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/setup.bash
+-- Up-to-date: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/local_setup.bash
+-- Up-to-date: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/setup.sh
+-- Up-to-date: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/local_setup.sh
+-- Up-to-date: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/setup.zsh
+-- Up-to-date: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/local_setup.zsh
+-- Up-to-date: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/.rosinstall
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/pkgconfig/smclib.pc
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/smclib/cmake/smclibConfig.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/smclib/cmake/smclibConfig-version.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/smclib/package.xml
++ cd /home/mars/MarquetteRMC2021/ros_catkin_ws/src/bond_core/smclib
++ mkdir -p /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages
++ /usr/bin/env PYTHONPATH=/home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages:/home/mars/MarquetteRMC2021/ros_catkin_ws/build/smclib/lib/python2.7/dist-packages:/home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages:/opt/ros/melodic/lib/python2.7/dist-packages CATKIN_BINARY_DIR=/home/mars/MarquetteRMC2021/ros_catkin_ws/build/smclib /usr/bin/python2 /home/mars/MarquetteRMC2021/ros_catkin_ws/src/bond_core/smclib/setup.py egg_info --egg-base /home/mars/MarquetteRMC2021/ros_catkin_ws/build/smclib build --build-base /home/mars/MarquetteRMC2021/ros_catkin_ws/build/smclib install --root=/ --install-layout=deb --prefix=/home/mars/MarquetteRMC2021/ros_catkin_ws/install --install-scripts=/home/mars/MarquetteRMC2021/ros_catkin_ws/install/bin
+running egg_info
+creating /home/mars/MarquetteRMC2021/ros_catkin_ws/build/smclib/smclib.egg-info
+writing /home/mars/MarquetteRMC2021/ros_catkin_ws/build/smclib/smclib.egg-info/PKG-INFO
+writing top-level names to /home/mars/MarquetteRMC2021/ros_catkin_ws/build/smclib/smclib.egg-info/top_level.txt
+writing dependency_links to /home/mars/MarquetteRMC2021/ros_catkin_ws/build/smclib/smclib.egg-info/dependency_links.txt
+writing manifest file '/home/mars/MarquetteRMC2021/ros_catkin_ws/build/smclib/smclib.egg-info/SOURCES.txt'
+reading manifest file '/home/mars/MarquetteRMC2021/ros_catkin_ws/build/smclib/smclib.egg-info/SOURCES.txt'
+writing manifest file '/home/mars/MarquetteRMC2021/ros_catkin_ws/build/smclib/smclib.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/mars/MarquetteRMC2021/ros_catkin_ws/build/smclib/lib.linux-x86_64-2.7
+creating /home/mars/MarquetteRMC2021/ros_catkin_ws/build/smclib/lib.linux-x86_64-2.7/smclib
+copying python/smclib/__init__.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/build/smclib/lib.linux-x86_64-2.7/smclib
+copying python/smclib/statemap.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/build/smclib/lib.linux-x86_64-2.7/smclib
+running install
+running install_lib
+creating /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages/smclib
+copying /home/mars/MarquetteRMC2021/ros_catkin_ws/build/smclib/lib.linux-x86_64-2.7/smclib/__init__.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages/smclib
+copying /home/mars/MarquetteRMC2021/ros_catkin_ws/build/smclib/lib.linux-x86_64-2.7/smclib/statemap.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages/smclib
+byte-compiling /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages/smclib/__init__.py to __init__.pyc
+byte-compiling /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages/smclib/statemap.py to statemap.pyc
+running install_egg_info
+Copying /home/mars/MarquetteRMC2021/ros_catkin_ws/build/smclib/smclib.egg-info to /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages/smclib-1.8.5.egg-info
+Skipping SOURCES.txt
+running install_scripts
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/include/smclib
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/include/smclib/statemap.h

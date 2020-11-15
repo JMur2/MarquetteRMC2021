@@ -1,0 +1,1 @@
+/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/geneus/lib/python2.7/dist-packages/geneus/__init__.py

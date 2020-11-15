@@ -1,0 +1,5 @@
+Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/genmsg/cmake/genmsgConfig-version.cmake
+Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/genmsg/cmake/genmsg-extras.cmake
+Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/genmsg/cmake/genmsgConfig.cmake
+Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/lib/pkgconfig/genmsg.pc
+Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/lib/python2.7/dist-packages/genmsg/__init__.py

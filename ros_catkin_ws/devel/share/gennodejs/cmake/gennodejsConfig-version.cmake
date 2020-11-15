@@ -1,0 +1,1 @@
+/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/gennodejs/share/gennodejs/cmake/gennodejsConfig-version.cmake

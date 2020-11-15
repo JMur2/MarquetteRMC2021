@@ -1,0 +1,8 @@
+prefix=/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/rosparam
+
+Name: rosparam
+Description: Description of rosparam
+Version: 1.14.10
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

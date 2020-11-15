@@ -1,0 +1,5 @@
+rosbag_migration_rule
+/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/rosbag_migration_rule/cmake.lock /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/./cmake.lock
+/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/rosbag_migration_rule/share/rosbag_migration_rule/cmake/rosbag_migration_ruleConfig.cmake /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/rosbag_migration_rule/cmake/rosbag_migration_ruleConfig.cmake
+/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/rosbag_migration_rule/share/rosbag_migration_rule/cmake/rosbag_migration_ruleConfig-version.cmake /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/rosbag_migration_rule/cmake/rosbag_migration_ruleConfig-version.cmake
+/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/rosbag_migration_rule/lib/pkgconfig/rosbag_migration_rule.pc /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/lib/pkgconfig/rosbag_migration_rule.pc

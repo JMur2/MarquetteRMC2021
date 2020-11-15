@@ -1,0 +1,6 @@
+Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/gennodejs/cmake/gennodejs-extras.cmake
+Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/gennodejs/cmake/gennodejsConfig-version.cmake
+Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/gennodejs/cmake/gennodejsConfig.cmake
+Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/lib/pkgconfig/gennodejs.pc
+Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/lib/python2.7/dist-packages/gennodejs/__init__.py
+Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/etc/ros/genmsg/gennodejs

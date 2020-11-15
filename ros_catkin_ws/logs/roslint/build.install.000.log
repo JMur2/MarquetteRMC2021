@@ -1,0 +1,45 @@
+[36mInstall the project...[0m
+-- Install configuration: "Release"
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/_setup_util.py
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/env.sh
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/setup.bash
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/local_setup.bash
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/setup.sh
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/local_setup.sh
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/setup.zsh
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/local_setup.zsh
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/.rosinstall
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/pkgconfig/roslint.pc
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/roslint/cmake/roslint-extras.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/roslint/cmake/roslintConfig.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/roslint/cmake/roslintConfig-version.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/roslint/package.xml
++ cd /home/mars/MarquetteRMC2021/ros_catkin_ws/src/roslint
++ mkdir -p /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages
++ /usr/bin/env PYTHONPATH=/home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages:/home/mars/MarquetteRMC2021/ros_catkin_ws/build/roslint/lib/python2.7/dist-packages:/home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages:/opt/ros/melodic/lib/python2.7/dist-packages CATKIN_BINARY_DIR=/home/mars/MarquetteRMC2021/ros_catkin_ws/build/roslint /usr/bin/python2 /home/mars/MarquetteRMC2021/ros_catkin_ws/src/roslint/setup.py build --build-base /home/mars/MarquetteRMC2021/ros_catkin_ws/build/roslint install --root=/ --install-layout=deb --prefix=/home/mars/MarquetteRMC2021/ros_catkin_ws/install --install-scripts=/home/mars/MarquetteRMC2021/ros_catkin_ws/install/bin
+running build
+running build_py
+creating /home/mars/MarquetteRMC2021/ros_catkin_ws/build/roslint/lib.linux-x86_64-2.7
+creating /home/mars/MarquetteRMC2021/ros_catkin_ws/build/roslint/lib.linux-x86_64-2.7/roslint
+copying src/roslint/__init__.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/build/roslint/lib.linux-x86_64-2.7/roslint
+copying src/roslint/cpplint_wrapper.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/build/roslint/lib.linux-x86_64-2.7/roslint
+copying src/roslint/pep8.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/build/roslint/lib.linux-x86_64-2.7/roslint
+copying src/roslint/cpplint.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/build/roslint/lib.linux-x86_64-2.7/roslint
+running install
+running install_lib
+creating /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages/roslint
+copying /home/mars/MarquetteRMC2021/ros_catkin_ws/build/roslint/lib.linux-x86_64-2.7/roslint/__init__.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages/roslint
+copying /home/mars/MarquetteRMC2021/ros_catkin_ws/build/roslint/lib.linux-x86_64-2.7/roslint/cpplint_wrapper.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages/roslint
+copying /home/mars/MarquetteRMC2021/ros_catkin_ws/build/roslint/lib.linux-x86_64-2.7/roslint/pep8.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages/roslint
+copying /home/mars/MarquetteRMC2021/ros_catkin_ws/build/roslint/lib.linux-x86_64-2.7/roslint/cpplint.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages/roslint
+byte-compiling /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages/roslint/__init__.py to __init__.pyc
+byte-compiling /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages/roslint/cpplint_wrapper.py to cpplint_wrapper.pyc
+byte-compiling /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages/roslint/pep8.py to pep8.pyc
+byte-compiling /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages/roslint/cpplint.py to cpplint.pyc
+running install_egg_info
+Writing /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages/roslint-0.11.2.egg-info
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/roslint/cpplint
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/roslint/pep8
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/roslint/test_wrapper
+-- Up-to-date: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/roslint/cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/roslint/cmake/roslint-extras.cmake.em

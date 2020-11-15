@@ -1,0 +1,1 @@
+/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/rosbag_migration_rule/share/rosbag_migration_rule/cmake/rosbag_migration_ruleConfig.cmake

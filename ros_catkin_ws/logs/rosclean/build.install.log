@@ -1,0 +1,46 @@
+[36mInstall the project...[0m
+-- Install configuration: "Release"
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/_setup_util.py
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/env.sh
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/setup.bash
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/local_setup.bash
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/setup.sh
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/local_setup.sh
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/setup.zsh
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/local_setup.zsh
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/.rosinstall
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/pkgconfig/rosclean.pc
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/rosclean/cmake/roscleanConfig.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/rosclean/cmake/roscleanConfig-version.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/rosclean/package.xml
++ cd /home/mars/MarquetteRMC2021/ros_catkin_ws/src/ros/rosclean
++ mkdir -p /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages
++ /usr/bin/env PYTHONPATH=/home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages:/home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosclean/lib/python2.7/dist-packages:/home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages:/opt/ros/melodic/lib/python2.7/dist-packages CATKIN_BINARY_DIR=/home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosclean /usr/bin/python2 /home/mars/MarquetteRMC2021/ros_catkin_ws/src/ros/rosclean/setup.py egg_info --egg-base /home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosclean build --build-base /home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosclean install --root=/ --install-layout=deb --prefix=/home/mars/MarquetteRMC2021/ros_catkin_ws/install --install-scripts=/home/mars/MarquetteRMC2021/ros_catkin_ws/install/bin
+running egg_info
+creating /home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosclean/rosclean.egg-info
+writing /home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosclean/rosclean.egg-info/PKG-INFO
+writing top-level names to /home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosclean/rosclean.egg-info/top_level.txt
+writing dependency_links to /home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosclean/rosclean.egg-info/dependency_links.txt
+writing manifest file '/home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosclean/rosclean.egg-info/SOURCES.txt'
+reading manifest file '/home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosclean/rosclean.egg-info/SOURCES.txt'
+writing manifest file '/home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosclean/rosclean.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosclean/lib.linux-x86_64-2.7
+creating /home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosclean/lib.linux-x86_64-2.7/rosclean
+copying src/rosclean/__init__.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosclean/lib.linux-x86_64-2.7/rosclean
+running build_scripts
+creating /home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosclean/scripts-2.7
+copying and adjusting scripts/rosclean -> /home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosclean/scripts-2.7
+changing mode of /home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosclean/scripts-2.7/rosclean from 644 to 755
+running install
+running install_lib
+creating /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages/rosclean
+copying /home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosclean/lib.linux-x86_64-2.7/rosclean/__init__.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages/rosclean
+byte-compiling /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages/rosclean/__init__.py to __init__.pyc
+running install_egg_info
+Copying /home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosclean/rosclean.egg-info to /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages/rosclean-1.14.9.egg-info
+Skipping SOURCES.txt
+running install_scripts
+copying /home/mars/MarquetteRMC2021/ros_catkin_ws/build/rosclean/scripts-2.7/rosclean -> /home/mars/MarquetteRMC2021/ros_catkin_ws/install/bin
+changing mode of /home/mars/MarquetteRMC2021/ros_catkin_ws/install/bin/rosclean to 755

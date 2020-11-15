@@ -1,0 +1,8 @@
+ros/rosclean
+/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/rosclean/cmake.lock /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/./cmake.lock
+/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/rosclean/share/rosclean/cmake/roscleanConfig.cmake /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/rosclean/cmake/roscleanConfig.cmake
+/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/rosclean/share/rosclean/cmake/roscleanConfig-version.cmake /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/rosclean/cmake/roscleanConfig-version.cmake
+/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/rosclean/lib/pkgconfig/rosclean.pc /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/lib/pkgconfig/rosclean.pc
+/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/rosclean/lib/python2.7/dist-packages/rosclean/__init__.py /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/lib/python2.7/dist-packages/rosclean/__init__.py
+/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/rosclean/bin/rosclean /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/bin/rosclean
+/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/rosclean/bin/cmake.lock /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/bin/cmake.lock

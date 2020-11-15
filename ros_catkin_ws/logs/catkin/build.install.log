@@ -1,0 +1,204 @@
+[36mInstall the project...[0m
+-- Install configuration: "Release"
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/_setup_util.py
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/env.sh
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/setup.bash
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/local_setup.bash
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/setup.sh
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/local_setup.sh
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/setup.zsh
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/local_setup.zsh
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/.rosinstall
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/etc/catkin/profile.d/05.catkin_make.bash
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/catkin_env_hook/05.catkin_make.bash
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/etc/catkin/profile.d/05.catkin_make_isolated.bash
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/catkin_env_hook/05.catkin_make_isolated.bash
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/pkgconfig/catkin.pc
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/catkinConfig.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/catkinConfig-version.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/package.xml
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/LICENSE
+-- Up-to-date: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/env-hooks
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/env-hooks/05.catkin_make_isolated.bash
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/env-hooks/05.catkin_make.bash
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/stamp.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/catkin_package_xml.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/custom_install.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/catkin_generate_environment.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/assert.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/empy.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/parse_package_xml.py
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/catkin_install_python.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/catkin_metapackage.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/em_expand.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/order_paths.py
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/tools
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/tools/rt.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/tools/threads.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/tools/bz2.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/tools/libraries.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/tools/doxygen.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/em
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/em/pkg.pc.em
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/em/order_packages.cmake.em
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/find_program_required.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/templates
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/templates/cfg-extras.context.py.in
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/templates/python_distutils_install.sh.in
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/templates/local_setup.bat.in
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/templates/env-hook.context.py.in
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/templates/setup.zsh.in
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/templates/local_setup.sh.in
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/templates/safe_execute_install.cmake.in
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/templates/script.sh.in
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/templates/rosinstall.in
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/templates/relay.py.in
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/templates/script.py.in
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/templates/pkgConfig-version.cmake.in
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/templates/script.in
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/templates/setup.bash.in
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/templates/pkg.context.pc.in
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/templates/env.bat.in
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/templates/script.bash.in
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/templates/local_setup.zsh.in
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/templates/_setup_util.py.in
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/templates/script.bat.in
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/templates/pkgConfig.cmake.in
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/templates/env.sh.in
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/templates/Doxyfile.in
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/templates/order_packages.context.py.in
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/templates/local_setup.bash.in
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/templates/python_win32_wrapper.cpp.in
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/templates/generate_cached_setup.py.in
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/templates/setup.bat.in
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/templates/python_distutils_install.bat.in
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/templates/__init__.py.in
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/templates/setup.sh.in
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/legacy.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/catkin_download.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/list_append_unique.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/interrogate_setup_dot_py.py
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/debug_message.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/string_starts_with.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/toplevel.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/catkin_symlink_install.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/catkin_python_setup.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/test
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/test/gtest.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/test/download_checkmd5.py
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/test/tests.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/test/nosetests.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/test/run_tests.py
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/test/remove_test_results.py
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/test/catkin_download_test_data.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/safe_execute_process.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/catkin_add_env_hooks.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/all.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/shell.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/list_append_deduplicate.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/catkin_libraries.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/atomic_configure_file.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/catkin_workspace.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/platform
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/platform/lsb.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/platform/ubuntu.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/platform/windows.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/list_insert_in_workspace_order.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/symlink_install
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/symlink_install/catkin_symlink_install.cmake.in
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/symlink_install/install.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/symlink_install/catkin_symlink_install_directory.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/symlink_install/catkin_symlink_install_files.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/symlink_install/catkin_symlink_install_append_install_code.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/symlink_install/catkin_symlink_install_targets.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/symlink_install/catkin_install_logic.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/symlink_install/catkin_symlink_install_programs.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/catkin_destinations.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/python.cmake
+-- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/catkin_package.cmake
++ cd /home/mars/MarquetteRMC2021/ros_catkin_ws/src/catkin
++ mkdir -p /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python3/dist-packages
++ /usr/bin/env PYTHONPATH=/home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python3/dist-packages:/home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/lib/python3/dist-packages:/opt/ros/melodic/lib/python2.7/dist-packages CATKIN_BINARY_DIR=/home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin /usr/bin/python3 /home/mars/MarquetteRMC2021/ros_catkin_ws/src/catkin/setup.py egg_info --egg-base /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin build --build-base /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin install --root=/ --install-layout=deb --prefix=/home/mars/MarquetteRMC2021/ros_catkin_ws/install --install-scripts=/home/mars/MarquetteRMC2021/ros_catkin_ws/install/bin
+running egg_info
+creating /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/catkin.egg-info
+writing /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/catkin.egg-info/PKG-INFO
+writing dependency_links to /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/catkin.egg-info/dependency_links.txt
+writing top-level names to /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/catkin.egg-info/top_level.txt
+writing manifest file '/home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/catkin.egg-info/SOURCES.txt'
+reading manifest file '/home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/catkin.egg-info/SOURCES.txt'
+writing manifest file '/home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/catkin.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/lib
+creating /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/lib/catkin
+copying python/catkin/__init__.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/lib/catkin
+copying python/catkin/tidy_xml.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/lib/catkin
+copying python/catkin/package_version.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/lib/catkin
+copying python/catkin/find_in_workspaces.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/lib/catkin
+copying python/catkin/cmake.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/lib/catkin
+copying python/catkin/workspace_vcs.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/lib/catkin
+copying python/catkin/terminal_color.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/lib/catkin
+copying python/catkin/test_results.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/lib/catkin
+copying python/catkin/builder.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/lib/catkin
+copying python/catkin/workspace.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/lib/catkin
+copying python/catkin/init_workspace.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/lib/catkin
+copying python/catkin/environment_cache.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/lib/catkin
+running build_scripts
+creating /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/scripts-3.6
+copying and adjusting bin/catkin_find -> /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/scripts-3.6
+copying and adjusting bin/catkin_init_workspace -> /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/scripts-3.6
+copying and adjusting bin/catkin_make -> /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/scripts-3.6
+copying and adjusting bin/catkin_make_isolated -> /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/scripts-3.6
+copying and adjusting bin/catkin_test_results -> /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/scripts-3.6
+copying and adjusting bin/catkin_topological_order -> /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/scripts-3.6
+changing mode of /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/scripts-3.6/catkin_find from 644 to 755
+changing mode of /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/scripts-3.6/catkin_init_workspace from 644 to 755
+changing mode of /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/scripts-3.6/catkin_make from 644 to 755
+changing mode of /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/scripts-3.6/catkin_make_isolated from 644 to 755
+changing mode of /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/scripts-3.6/catkin_test_results from 644 to 755
+changing mode of /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/scripts-3.6/catkin_topological_order from 644 to 755
+running install
+running install_lib
+creating /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python3/dist-packages/catkin
+copying /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/lib/catkin/__init__.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python3/dist-packages/catkin
+copying /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/lib/catkin/tidy_xml.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python3/dist-packages/catkin
+copying /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/lib/catkin/package_version.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python3/dist-packages/catkin
+copying /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/lib/catkin/find_in_workspaces.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python3/dist-packages/catkin
+copying /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/lib/catkin/cmake.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python3/dist-packages/catkin
+copying /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/lib/catkin/workspace_vcs.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python3/dist-packages/catkin
+copying /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/lib/catkin/terminal_color.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python3/dist-packages/catkin
+copying /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/lib/catkin/test_results.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python3/dist-packages/catkin
+copying /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/lib/catkin/builder.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python3/dist-packages/catkin
+copying /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/lib/catkin/workspace.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python3/dist-packages/catkin
+copying /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/lib/catkin/init_workspace.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python3/dist-packages/catkin
+copying /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/lib/catkin/environment_cache.py -> /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python3/dist-packages/catkin
+byte-compiling /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python3/dist-packages/catkin/__init__.py to __init__.cpython-36.pyc
+byte-compiling /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python3/dist-packages/catkin/tidy_xml.py to tidy_xml.cpython-36.pyc
+byte-compiling /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python3/dist-packages/catkin/package_version.py to package_version.cpython-36.pyc
+byte-compiling /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python3/dist-packages/catkin/find_in_workspaces.py to find_in_workspaces.cpython-36.pyc
+byte-compiling /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python3/dist-packages/catkin/cmake.py to cmake.cpython-36.pyc
+byte-compiling /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python3/dist-packages/catkin/workspace_vcs.py to workspace_vcs.cpython-36.pyc
+byte-compiling /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python3/dist-packages/catkin/terminal_color.py to terminal_color.cpython-36.pyc
+byte-compiling /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python3/dist-packages/catkin/test_results.py to test_results.cpython-36.pyc
+byte-compiling /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python3/dist-packages/catkin/builder.py to builder.cpython-36.pyc
+byte-compiling /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python3/dist-packages/catkin/workspace.py to workspace.cpython-36.pyc
+byte-compiling /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python3/dist-packages/catkin/init_workspace.py to init_workspace.cpython-36.pyc
+byte-compiling /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python3/dist-packages/catkin/environment_cache.py to environment_cache.cpython-36.pyc
+running install_egg_info
+Copying /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/catkin.egg-info to /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python3/dist-packages/catkin-0.7.29.egg-info
+Skipping SOURCES.txt
+running install_scripts
+creating /home/mars/MarquetteRMC2021/ros_catkin_ws/install/bin
+copying /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/scripts-3.6/catkin_test_results -> /home/mars/MarquetteRMC2021/ros_catkin_ws/install/bin
+copying /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/scripts-3.6/catkin_init_workspace -> /home/mars/MarquetteRMC2021/ros_catkin_ws/install/bin
+copying /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/scripts-3.6/catkin_make_isolated -> /home/mars/MarquetteRMC2021/ros_catkin_ws/install/bin
+copying /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/scripts-3.6/catkin_make -> /home/mars/MarquetteRMC2021/ros_catkin_ws/install/bin
+copying /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/scripts-3.6/catkin_topological_order -> /home/mars/MarquetteRMC2021/ros_catkin_ws/install/bin
+copying /home/mars/MarquetteRMC2021/ros_catkin_ws/build/catkin/scripts-3.6/catkin_find -> /home/mars/MarquetteRMC2021/ros_catkin_ws/install/bin
+changing mode of /home/mars/MarquetteRMC2021/ros_catkin_ws/install/bin/catkin_test_results to 755
+changing mode of /home/mars/MarquetteRMC2021/ros_catkin_ws/install/bin/catkin_init_workspace to 755
+changing mode of /home/mars/MarquetteRMC2021/ros_catkin_ws/install/bin/catkin_make_isolated to 755
+changing mode of /home/mars/MarquetteRMC2021/ros_catkin_ws/install/bin/catkin_make to 755
+changing mode of /home/mars/MarquetteRMC2021/ros_catkin_ws/install/bin/catkin_topological_order to 755
+changing mode of /home/mars/MarquetteRMC2021/ros_catkin_ws/install/bin/catkin_find to 755

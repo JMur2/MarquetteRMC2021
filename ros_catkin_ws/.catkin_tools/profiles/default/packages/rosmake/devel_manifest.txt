@@ -1,0 +1,8 @@
+ros/rosmake
+/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/rosmake/cmake.lock /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/./cmake.lock
+/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/rosmake/share/rosmake/cmake/rosmakeConfig.cmake /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/rosmake/cmake/rosmakeConfig.cmake
+/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/rosmake/share/rosmake/cmake/rosmakeConfig-version.cmake /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/rosmake/cmake/rosmakeConfig-version.cmake
+/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/rosmake/lib/pkgconfig/rosmake.pc /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/lib/pkgconfig/rosmake.pc
+/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/rosmake/lib/python2.7/dist-packages/rosmake/__init__.py /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/lib/python2.7/dist-packages/rosmake/__init__.py
+/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/rosmake/bin/cmake.lock /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/bin/cmake.lock
+/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/rosmake/bin/rosmake /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/bin/rosmake

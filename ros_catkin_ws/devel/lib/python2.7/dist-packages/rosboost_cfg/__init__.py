@@ -1,0 +1,1 @@
+/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/rosboost_cfg/lib/python2.7/dist-packages/rosboost_cfg/__init__.py

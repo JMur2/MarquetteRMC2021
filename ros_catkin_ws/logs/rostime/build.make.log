@@ -1,0 +1,6 @@
+[35m[1mScanning dependencies of target rostime[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/rostime.dir/src/duration.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/rostime.dir/src/rate.cpp.o[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/rostime.dir/src/time.cpp.o[0m
+[100%] [32m[1mLinking CXX shared library /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/rostime/lib/librostime.so[0m
+[100%] Built target rostime

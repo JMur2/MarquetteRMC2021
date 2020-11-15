@@ -1,0 +1,1 @@
+/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/catkin/lib/python3/dist-packages/catkin/__init__.py

@@ -1,0 +1,5 @@
+Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/rosboost_cfg/cmake/rosboost_cfgConfig.cmake
+Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/rosboost_cfg/cmake/rosboost_cfgConfig-version.cmake
+Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/lib/pkgconfig/rosboost_cfg.pc
+Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/lib/python2.7/dist-packages/rosboost_cfg/__init__.py
+Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/bin/rosboost-cfg

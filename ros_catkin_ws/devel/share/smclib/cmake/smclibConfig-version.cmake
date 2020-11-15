@@ -1,0 +1,1 @@
+/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/smclib/share/smclib/cmake/smclibConfig-version.cmake

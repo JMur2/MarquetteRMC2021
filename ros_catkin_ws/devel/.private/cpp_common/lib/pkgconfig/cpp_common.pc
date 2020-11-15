@@ -1,0 +1,8 @@
+prefix=/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/cpp_common
+
+Name: cpp_common
+Description: Description of cpp_common
+Version: 0.6.14
+Cflags: -I/home/mars/MarquetteRMC2021/ros_catkin_ws/src/roscpp_core/cpp_common/include -I/usr/include
+Libs: -L${prefix}/lib -lcpp_common /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
+Requires: 

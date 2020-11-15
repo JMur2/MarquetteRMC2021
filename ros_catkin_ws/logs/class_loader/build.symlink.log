@@ -1,0 +1,4 @@
+Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/class_loader/cmake/class_loaderConfig-version.cmake
+Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/class_loader/cmake/class_loaderConfig.cmake
+Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/lib/libclass_loader.so
+Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/lib/pkgconfig/class_loader.pc

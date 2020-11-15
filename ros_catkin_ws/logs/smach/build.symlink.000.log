@@ -1,0 +1,4 @@
+Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/smach/cmake/smachConfig-version.cmake
+Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/smach/cmake/smachConfig.cmake
+Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/lib/pkgconfig/smach.pc
+Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/lib/python2.7/dist-packages/smach/__init__.py

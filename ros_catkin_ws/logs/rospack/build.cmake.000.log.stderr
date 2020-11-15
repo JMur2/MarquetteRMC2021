@@ -1,0 +1,8 @@
+[33m[1mCMake Warning[0m at /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/catkin_package.cmake:166 (message):
+  catkin_package() DEPENDS on 'Boost' but neither 'Boost_INCLUDE_DIRS' nor
+  'Boost_LIBRARIES' is defined.
+[36mCall Stack (most recent call first):[0m
+  /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/catkin/cmake/catkin_package.cmake:102 (_catkin_package)
+  CMakeLists.txt:10 (catkin_package)
+
+

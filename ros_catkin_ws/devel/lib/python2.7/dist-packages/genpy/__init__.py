@@ -1,0 +1,1 @@
+/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/genpy/lib/python2.7/dist-packages/genpy/__init__.py

@@ -1,0 +1,13 @@
+/home/mars/MarquetteRMC2021/ros_catkin_ws/install/_setup_util.py
+/home/mars/MarquetteRMC2021/ros_catkin_ws/install/env.sh
+/home/mars/MarquetteRMC2021/ros_catkin_ws/install/setup.bash
+/home/mars/MarquetteRMC2021/ros_catkin_ws/install/local_setup.bash
+/home/mars/MarquetteRMC2021/ros_catkin_ws/install/setup.sh
+/home/mars/MarquetteRMC2021/ros_catkin_ws/install/local_setup.sh
+/home/mars/MarquetteRMC2021/ros_catkin_ws/install/setup.zsh
+/home/mars/MarquetteRMC2021/ros_catkin_ws/install/local_setup.zsh
+/home/mars/MarquetteRMC2021/ros_catkin_ws/install/.rosinstall
+/home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/pkgconfig/rosbag_migration_rule.pc
+/home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/rosbag_migration_rule/cmake/rosbag_migration_ruleConfig.cmake
+/home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/rosbag_migration_rule/cmake/rosbag_migration_ruleConfig-version.cmake
+/home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/rosbag_migration_rule/package.xml

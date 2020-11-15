@@ -1,0 +1,5 @@
+Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/roslint/cmake/roslintConfig.cmake
+Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/roslint/cmake/roslint-extras.cmake
+Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/roslint/cmake/roslintConfig-version.cmake
+Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/lib/pkgconfig/roslint.pc
+Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/lib/python2.7/dist-packages/roslint/__init__.py
