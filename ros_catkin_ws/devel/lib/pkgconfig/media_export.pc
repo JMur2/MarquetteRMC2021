@@ -1,1 +1,8 @@
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/media_export/lib/pkgconfig/media_export.pc
+prefix=/home/mars/MarquetteRMC2021/ros_catkin_ws/devel
+
+Name: media_export
+Description: Description of media_export
+Version: 0.3.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

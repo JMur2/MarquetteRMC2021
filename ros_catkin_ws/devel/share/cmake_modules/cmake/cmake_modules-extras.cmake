@@ -1,1 +1,2 @@
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/cmake_modules/share/cmake_modules/cmake/cmake_modules-extras.cmake
+# Append cmake modules from source directory to the cmake module path
+list(APPEND CMAKE_MODULE_PATH "/home/mars/MarquetteRMC2021/ros_catkin_ws/src/cmake_modules/cmake/Modules")

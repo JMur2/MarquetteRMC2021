@@ -1,6 +1,0 @@
-roscpp_core/cpp_common
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/cpp_common/cmake.lock /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/./cmake.lock
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/cpp_common/share/cpp_common/cmake/cpp_commonConfig.cmake /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/cpp_common/cmake/cpp_commonConfig.cmake
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/cpp_common/share/cpp_common/cmake/cpp_commonConfig-version.cmake /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/cpp_common/cmake/cpp_commonConfig-version.cmake
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/cpp_common/lib/libcpp_common.so /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/lib/libcpp_common.so
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/cpp_common/lib/pkgconfig/cpp_common.pc /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/lib/pkgconfig/cpp_common.pc

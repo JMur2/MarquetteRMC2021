@@ -68,7 +68,7 @@ set(class_loader_CONFIG_INCLUDED TRUE)
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
   set(class_loader_SOURCE_PREFIX /home/mars/MarquetteRMC2021/ros_catkin_ws/src/class_loader)
-  set(class_loader_DEVEL_PREFIX /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/class_loader)
+  set(class_loader_DEVEL_PREFIX /home/mars/MarquetteRMC2021/ros_catkin_ws/devel)
   set(class_loader_INSTALL_PREFIX "")
   set(class_loader_PREFIX ${class_loader_DEVEL_PREFIX})
 else()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib;/home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib;/opt/ros/melodic/lib)
+    foreach(path /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

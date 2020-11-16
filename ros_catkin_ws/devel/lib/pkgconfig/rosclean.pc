@@ -1,1 +1,8 @@
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/rosclean/lib/pkgconfig/rosclean.pc
+prefix=/home/mars/MarquetteRMC2021/ros_catkin_ws/devel
+
+Name: rosclean
+Description: Description of rosclean
+Version: 1.14.9
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,9 +1,0 @@
-Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/ros_environment/cmake/ros_environmentConfig-version.cmake
-Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/ros_environment/cmake/ros_environmentConfig.cmake
-Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/lib/pkgconfig/ros_environment.pc
-Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/etc/catkin/profile.d/1.ros_etc_dir.sh
-Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/etc/catkin/profile.d/1.ros_package_path.sh
-Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/etc/catkin/profile.d/cmake.lock
-Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/etc/catkin/profile.d/1.ros_python_version.sh
-Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/etc/catkin/profile.d/1.ros_distro.sh
-Symlinking /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/etc/catkin/profile.d/1.ros_version.sh

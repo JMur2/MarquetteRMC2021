@@ -1,8 +1,0 @@
-prefix=/home/mars/MarquetteRMC2021/ros_catkin_ws/install
-
-Name: webkit_dependency
-Description: Description of webkit_dependency
-Version: 1.1.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

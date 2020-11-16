@@ -1,4 +1,0 @@
-setup.py
-scripts/rosboost-cfg
-src/rosboost_cfg/__init__.py
-src/rosboost_cfg/rosboost_cfg.py

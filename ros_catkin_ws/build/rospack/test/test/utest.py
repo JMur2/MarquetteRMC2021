@@ -42,7 +42,7 @@ from subprocess import Popen, PIPE
 
 ROS_PACKAGE_PATH = 'ROS_PACKAGE_PATH'
 ROS_LANG_DISABLE = 'ROS_LANG_DISABLE'
-ROSPACK_PATH = "/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/rospack/bin/rospack"
+ROSPACK_PATH = "/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/bin/rospack"
 
 # Set the initial CWD, so that we can set it back later.
 # Go up one directory.  Have to do this because nosetests doesn't seem to

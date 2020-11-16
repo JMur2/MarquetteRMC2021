@@ -1,5 +1,0 @@
-ros/roslang
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/roslang/cmake.lock /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/./cmake.lock
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/roslang/share/roslang/cmake/roslangConfig-version.cmake /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/roslang/cmake/roslangConfig-version.cmake
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/roslang/share/roslang/cmake/roslangConfig.cmake /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/roslang/cmake/roslangConfig.cmake
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/roslang/lib/pkgconfig/roslang.pc /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/lib/pkgconfig/roslang.pc

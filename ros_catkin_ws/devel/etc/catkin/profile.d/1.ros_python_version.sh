@@ -1,1 +1,3 @@
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/ros_environment/etc/catkin/profile.d/1.ros_python_version.sh
+# generated from ros_environment/env-hooks/1.ros_python_version.sh.in
+
+export ROS_PYTHON_VERSION=2

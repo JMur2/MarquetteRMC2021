@@ -1,5 +1,0 @@
-[35m[1mScanning dependencies of target cpp_common[0m
-[ 33%] [32mBuilding CXX object CMakeFiles/cpp_common.dir/src/debug.cpp.o[0m
-[ 66%] [32mBuilding CXX object CMakeFiles/cpp_common.dir/src/header.cpp.o[0m
-[100%] [32m[1mLinking CXX shared library /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/cpp_common/lib/libcpp_common.so[0m
-[100%] Built target cpp_common

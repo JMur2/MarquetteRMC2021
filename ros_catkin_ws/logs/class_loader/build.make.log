@@ -1,7 +1,0 @@
-[35m[1mScanning dependencies of target class_loader[0m
-[ 20%] [32mBuilding CXX object CMakeFiles/class_loader.dir/src/class_loader.cpp.o[0m
-[ 40%] [32mBuilding CXX object CMakeFiles/class_loader.dir/src/class_loader_core.cpp.o[0m
-[ 60%] [32mBuilding CXX object CMakeFiles/class_loader.dir/src/meta_object.cpp.o[0m
-[ 80%] [32mBuilding CXX object CMakeFiles/class_loader.dir/src/multi_library_class_loader.cpp.o[0m
-[100%] [32m[1mLinking CXX shared library /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/class_loader/lib/libclass_loader.so[0m
-[100%] Built target class_loader

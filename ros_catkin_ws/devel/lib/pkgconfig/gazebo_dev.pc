@@ -1,1 +1,8 @@
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/gazebo_dev/lib/pkgconfig/gazebo_dev.pc
+prefix=/home/mars/MarquetteRMC2021/ros_catkin_ws/devel
+
+Name: gazebo_dev
+Description: Description of gazebo_dev
+Version: 2.8.7
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

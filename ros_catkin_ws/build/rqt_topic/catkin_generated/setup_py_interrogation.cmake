@@ -1,0 +1,7 @@
+set(rqt_topic_SETUP_PY_SETUP_MODULE "distutils.core")
+set(rqt_topic_SETUP_PY_VERSION "0.4.11")
+set(rqt_topic_SETUP_PY_SCRIPTS "")
+set(rqt_topic_SETUP_PY_PACKAGES "rqt_topic")
+set(rqt_topic_SETUP_PY_PACKAGE_DIRS "src/rqt_topic")
+set(rqt_topic_SETUP_PY_MODULES "")
+set(rqt_topic_SETUP_PY_MODULE_DIRS "")

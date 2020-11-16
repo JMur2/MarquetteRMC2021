@@ -1,7 +1,0 @@
-roslint
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/roslint/cmake.lock /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/./cmake.lock
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/roslint/share/roslint/cmake/roslintConfig.cmake /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/roslint/cmake/roslintConfig.cmake
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/roslint/share/roslint/cmake/roslint-extras.cmake /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/roslint/cmake/roslint-extras.cmake
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/roslint/share/roslint/cmake/roslintConfig-version.cmake /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/roslint/cmake/roslintConfig-version.cmake
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/roslint/lib/pkgconfig/roslint.pc /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/lib/pkgconfig/roslint.pc
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/roslint/lib/python2.7/dist-packages/roslint/__init__.py /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/lib/python2.7/dist-packages/roslint/__init__.py

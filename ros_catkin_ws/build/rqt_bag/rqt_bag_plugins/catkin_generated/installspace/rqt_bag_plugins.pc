@@ -1,0 +1,8 @@
+prefix=/home/mars/MarquetteRMC2021/ros_catkin_ws/install
+
+Name: rqt_bag_plugins
+Description: Description of rqt_bag_plugins
+Version: 0.4.14
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

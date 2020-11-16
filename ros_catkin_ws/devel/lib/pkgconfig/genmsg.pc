@@ -1,1 +1,8 @@
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/genmsg/lib/pkgconfig/genmsg.pc
+prefix=/home/mars/MarquetteRMC2021/ros_catkin_ws/devel
+
+Name: genmsg
+Description: Description of genmsg
+Version: 0.5.16
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

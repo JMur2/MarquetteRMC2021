@@ -1,1 +1,6 @@
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/ros_environment/etc/catkin/profile.d/1.ros_distro.sh
+# generated from ros_environment/env-hooks/1.ros_distro.sh.in
+
+if [ -n "$ROS_DISTRO" -a "$ROS_DISTRO" != "melodic" ]; then
+  echo "ROS_DISTRO was set to '$ROS_DISTRO' before. Please make sure that the environment does not mix paths from different distributions."
+fi
+export ROS_DISTRO=melodic

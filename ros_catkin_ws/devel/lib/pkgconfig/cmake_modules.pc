@@ -1,1 +1,8 @@
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/cmake_modules/lib/pkgconfig/cmake_modules.pc
+prefix=/home/mars/MarquetteRMC2021/ros_catkin_ws/devel
+
+Name: cmake_modules
+Description: Description of cmake_modules
+Version: 0.4.2
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

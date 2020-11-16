@@ -1,8 +1,0 @@
-gennodejs
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/gennodejs/cmake.lock /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/./cmake.lock
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/gennodejs/share/gennodejs/cmake/gennodejs-extras.cmake /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/gennodejs/cmake/gennodejs-extras.cmake
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/gennodejs/share/gennodejs/cmake/gennodejsConfig-version.cmake /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/gennodejs/cmake/gennodejsConfig-version.cmake
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/gennodejs/share/gennodejs/cmake/gennodejsConfig.cmake /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/gennodejs/cmake/gennodejsConfig.cmake
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/gennodejs/lib/pkgconfig/gennodejs.pc /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/lib/pkgconfig/gennodejs.pc
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/gennodejs/lib/python2.7/dist-packages/gennodejs/__init__.py /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/lib/python2.7/dist-packages/gennodejs/__init__.py
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/gennodejs/etc/ros/genmsg/gennodejs /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/etc/ros/genmsg/gennodejs

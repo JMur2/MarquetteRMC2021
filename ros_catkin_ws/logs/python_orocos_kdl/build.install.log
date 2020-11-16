@@ -1,6 +1,0 @@
-[100%] Built target python_module_PyKDL
-[36mInstall the project...[0m
--- Install configuration: "Release"
--- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages/PyKDL.so
--- Set runtime path of "/home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages/PyKDL.so" to ""
--- Installing: /home/mars/MarquetteRMC2021/ros_catkin_ws/install/share/python_orocos_kdl/package.xml

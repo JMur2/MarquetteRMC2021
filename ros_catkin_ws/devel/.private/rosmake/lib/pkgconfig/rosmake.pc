@@ -1,8 +1,0 @@
-prefix=/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/rosmake
-
-Name: rosmake
-Description: Description of rosmake
-Version: 1.14.9
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

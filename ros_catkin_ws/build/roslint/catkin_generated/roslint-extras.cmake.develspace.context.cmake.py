@@ -2,7 +2,7 @@
 DEVELSPACE = 'TRUE' == 'TRUE'
 INSTALLSPACE = 'FALSE' == 'TRUE'
 
-CATKIN_DEVEL_PREFIX = '/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/roslint'
+CATKIN_DEVEL_PREFIX = '/home/mars/MarquetteRMC2021/ros_catkin_ws/devel'
 
 CATKIN_GLOBAL_BIN_DESTINATION = 'bin'
 CATKIN_GLOBAL_ETC_DESTINATION = 'etc'
@@ -20,13 +20,13 @@ CATKIN_PACKAGE_LIBEXEC_DESTINATION = 'lib/roslint'
 CATKIN_PACKAGE_PYTHON_DESTINATION = 'lib/python2.7/dist-packages/roslint'
 CATKIN_PACKAGE_SHARE_DESTINATION = 'share/roslint'
 
-CMAKE_BINARY_DIR = '/home/mars/MarquetteRMC2021/ros_catkin_ws/build/roslint'
+CMAKE_BINARY_DIR = '/home/mars/MarquetteRMC2021/ros_catkin_ws/build'
 CMAKE_CURRENT_BINARY_DIR = '/home/mars/MarquetteRMC2021/ros_catkin_ws/build/roslint'
 CMAKE_CURRENT_SOURCE_DIR = '/home/mars/MarquetteRMC2021/ros_catkin_ws/src/roslint'
 CMAKE_INSTALL_PREFIX = '/home/mars/MarquetteRMC2021/ros_catkin_ws/install'
-CMAKE_SOURCE_DIR = '/home/mars/MarquetteRMC2021/ros_catkin_ws/src/roslint'
+CMAKE_SOURCE_DIR = '/home/mars/MarquetteRMC2021/ros_catkin_ws/src'
 
-PKG_CMAKE_DIR = '/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/roslint/share/roslint/cmake'
+PKG_CMAKE_DIR = '/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/roslint/cmake'
 
 PROJECT_NAME = 'roslint'
 PROJECT_BINARY_DIR = '/home/mars/MarquetteRMC2021/ros_catkin_ws/build/roslint'

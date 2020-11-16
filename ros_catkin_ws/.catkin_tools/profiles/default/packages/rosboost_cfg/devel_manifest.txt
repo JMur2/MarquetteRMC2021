@@ -1,8 +1,0 @@
-ros/rosboost_cfg
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/rosboost_cfg/cmake.lock /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/./cmake.lock
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/rosboost_cfg/share/rosboost_cfg/cmake/rosboost_cfgConfig.cmake /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/rosboost_cfg/cmake/rosboost_cfgConfig.cmake
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/rosboost_cfg/share/rosboost_cfg/cmake/rosboost_cfgConfig-version.cmake /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/rosboost_cfg/cmake/rosboost_cfgConfig-version.cmake
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/rosboost_cfg/lib/pkgconfig/rosboost_cfg.pc /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/lib/pkgconfig/rosboost_cfg.pc
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/rosboost_cfg/lib/python2.7/dist-packages/rosboost_cfg/__init__.py /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/lib/python2.7/dist-packages/rosboost_cfg/__init__.py
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/rosboost_cfg/bin/cmake.lock /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/bin/cmake.lock
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/rosboost_cfg/bin/rosboost-cfg /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/bin/rosboost-cfg

@@ -1,6 +1,0 @@
-devel_space: /home/mars/MarquetteRMC2021/ros_catkin_ws/devel
-install: true
-install_space: /home/mars/MarquetteRMC2021/ros_catkin_ws/install
-profile: default
-source_space: /home/mars/MarquetteRMC2021/ros_catkin_ws/src
-workspace: /home/mars/MarquetteRMC2021/ros_catkin_ws

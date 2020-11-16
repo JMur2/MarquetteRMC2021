@@ -22,8 +22,8 @@ echo_and_run mkdir -p "$DESTDIR/home/mars/MarquetteRMC2021/ros_catkin_ws/install
 # into one location when some dependencies were installed in another
 # location, #123.
 echo_and_run /usr/bin/env \
-    PYTHONPATH="/home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages:/home/mars/MarquetteRMC2021/ros_catkin_ws/build/genmsg/lib/python2.7/dist-packages:$PYTHONPATH" \
-    CATKIN_BINARY_DIR="/home/mars/MarquetteRMC2021/ros_catkin_ws/build/genmsg" \
+    PYTHONPATH="/home/mars/MarquetteRMC2021/ros_catkin_ws/install/lib/python2.7/dist-packages:/home/mars/MarquetteRMC2021/ros_catkin_ws/build/lib/python2.7/dist-packages:$PYTHONPATH" \
+    CATKIN_BINARY_DIR="/home/mars/MarquetteRMC2021/ros_catkin_ws/build" \
     "/usr/bin/python2" \
     "/home/mars/MarquetteRMC2021/ros_catkin_ws/src/genmsg/setup.py" \
     egg_info --egg-base /home/mars/MarquetteRMC2021/ros_catkin_ws/build/genmsg \

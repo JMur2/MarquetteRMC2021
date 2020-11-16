@@ -1,9 +1,0 @@
-geneus
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/geneus/cmake.lock /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/./cmake.lock
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/geneus/share/roseus/rospack_nosubdirs /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/roseus/rospack_nosubdirs
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/geneus/share/geneus/cmake/geneusConfig.cmake /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/geneus/cmake/geneusConfig.cmake
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/geneus/share/geneus/cmake/geneusConfig-version.cmake /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/geneus/cmake/geneusConfig-version.cmake
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/geneus/share/geneus/cmake/geneus-extras.cmake /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/geneus/cmake/geneus-extras.cmake
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/geneus/lib/pkgconfig/geneus.pc /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/lib/pkgconfig/geneus.pc
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/geneus/lib/python2.7/dist-packages/geneus/__init__.py /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/lib/python2.7/dist-packages/geneus/__init__.py
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/geneus/etc/ros/genmsg/geneus /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/etc/ros/genmsg/geneus

@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "genmsg".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "genlisp"
-PROJECT_SPACE_DIR = "/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/genlisp"
+PROJECT_SPACE_DIR = "/home/mars/MarquetteRMC2021/ros_catkin_ws/devel"
 PROJECT_VERSION = "0.4.16"

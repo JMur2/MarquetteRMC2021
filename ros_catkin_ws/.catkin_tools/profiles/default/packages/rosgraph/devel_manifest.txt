@@ -1,8 +1,0 @@
-ros_comm/rosgraph
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/rosgraph/cmake.lock /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/./cmake.lock
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/rosgraph/share/rosgraph/cmake/rosgraphConfig-version.cmake /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/rosgraph/cmake/rosgraphConfig-version.cmake
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/rosgraph/share/rosgraph/cmake/rosgraphConfig.cmake /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/rosgraph/cmake/rosgraphConfig.cmake
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/rosgraph/lib/pkgconfig/rosgraph.pc /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/lib/pkgconfig/rosgraph.pc
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/rosgraph/lib/python2.7/dist-packages/rosgraph/__init__.py /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/lib/python2.7/dist-packages/rosgraph/__init__.py
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/rosgraph/bin/rosgraph /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/bin/rosgraph
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/rosgraph/bin/cmake.lock /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/bin/cmake.lock

@@ -1,1 +1,8 @@
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/rosmaster/lib/pkgconfig/rosmaster.pc
+prefix=/home/mars/MarquetteRMC2021/ros_catkin_ws/devel
+
+Name: rosmaster
+Description: Description of rosmaster
+Version: 1.14.10
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

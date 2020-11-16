@@ -1,5 +1,0 @@
-media_export
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/media_export/cmake.lock /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/./cmake.lock
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/media_export/share/media_export/cmake/media_exportConfig-version.cmake /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/media_export/cmake/media_exportConfig-version.cmake
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/media_export/share/media_export/cmake/media_exportConfig.cmake /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/media_export/cmake/media_exportConfig.cmake
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/media_export/lib/pkgconfig/media_export.pc /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/lib/pkgconfig/media_export.pc

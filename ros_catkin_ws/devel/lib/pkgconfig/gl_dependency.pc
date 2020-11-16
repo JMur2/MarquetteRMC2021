@@ -1,1 +1,8 @@
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/gl_dependency/lib/pkgconfig/gl_dependency.pc
+prefix=/home/mars/MarquetteRMC2021/ros_catkin_ws/devel
+
+Name: gl_dependency
+Description: Description of gl_dependency
+Version: 1.1.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

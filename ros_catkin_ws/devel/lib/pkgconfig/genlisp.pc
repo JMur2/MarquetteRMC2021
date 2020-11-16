@@ -1,1 +1,8 @@
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/genlisp/lib/pkgconfig/genlisp.pc
+prefix=/home/mars/MarquetteRMC2021/ros_catkin_ws/devel
+
+Name: genlisp
+Description: Description of genlisp
+Version: 0.4.16
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: genmsg

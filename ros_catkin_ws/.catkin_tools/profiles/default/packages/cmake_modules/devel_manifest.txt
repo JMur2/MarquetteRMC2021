@@ -1,6 +1,0 @@
-cmake_modules
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/cmake_modules/cmake.lock /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/./cmake.lock
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/cmake_modules/share/cmake_modules/cmake/cmake_modulesConfig-version.cmake /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/cmake_modules/cmake/cmake_modulesConfig-version.cmake
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/cmake_modules/share/cmake_modules/cmake/cmake_modulesConfig.cmake /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/cmake_modules/cmake/cmake_modulesConfig.cmake
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/cmake_modules/share/cmake_modules/cmake/cmake_modules-extras.cmake /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/share/cmake_modules/cmake/cmake_modules-extras.cmake
-/home/mars/MarquetteRMC2021/ros_catkin_ws/devel/.private/cmake_modules/lib/pkgconfig/cmake_modules.pc /home/mars/MarquetteRMC2021/ros_catkin_ws/devel/lib/pkgconfig/cmake_modules.pc

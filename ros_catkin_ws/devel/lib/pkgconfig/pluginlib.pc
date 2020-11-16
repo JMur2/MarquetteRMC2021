@@ -1,0 +1,8 @@
+prefix=/home/mars/MarquetteRMC2021/ros_catkin_ws/devel
+
+Name: pluginlib
+Description: Description of pluginlib
+Version: 1.12.1
+Cflags: -I/home/mars/MarquetteRMC2021/ros_catkin_ws/src/pluginlib/include -I/usr/include
+Libs: -L${prefix}/lib /usr/lib/x86_64-linux-gnu/libtinyxml2.so
+Requires: class_loader rosconsole roslib

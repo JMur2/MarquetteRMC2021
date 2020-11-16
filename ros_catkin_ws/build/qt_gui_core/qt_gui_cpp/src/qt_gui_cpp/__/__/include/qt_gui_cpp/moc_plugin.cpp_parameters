@@ -1,0 +1,17 @@
+-I/home/mars/MarquetteRMC2021/ros_catkin_ws/src/qt_gui_core/qt_gui_cpp/include
+-I/home/mars/MarquetteRMC2021/ros_catkin_ws/src/pluginlib/include
+-I/home/mars/MarquetteRMC2021/ros_catkin_ws/src/class_loader/include
+-I/home/mars/MarquetteRMC2021/ros_catkin_ws/src/rosconsole/include
+-I/home/mars/MarquetteRMC2021/ros_catkin_ws/src/roscpp_core/cpp_common/include
+-I/home/mars/MarquetteRMC2021/ros_catkin_ws/src/roscpp_core/rostime/include
+-I/home/mars/MarquetteRMC2021/ros_catkin_ws/src/ros/roslib/include
+-I/home/mars/MarquetteRMC2021/ros_catkin_ws/src/rospack/include
+-I/usr/include
+-I/usr/include
+-DROS_BUILD_SHARED_LIBS=1
+-DROS_BUILD_SHARED_LIBS=1
+-DROS_PACKAGE_NAME="qt_gui_cpp"
+-DROSCONSOLE_BACKEND_LOG4CXX
+-o
+/home/mars/MarquetteRMC2021/ros_catkin_ws/build/qt_gui_core/qt_gui_cpp/src/qt_gui_cpp/__/__/include/qt_gui_cpp/moc_plugin.cpp
+/home/mars/MarquetteRMC2021/ros_catkin_ws/src/qt_gui_core/qt_gui_cpp/include/qt_gui_cpp/plugin.h
