@@ -5,17 +5,29 @@ This is the official main file
 """
 from human import HumanControl
 from states import State
+from locomotion import Locomotion
 
 class Robot:
 
     def __init__(self):
         self.control_state = State.set_control_state("startup")
         self.operation_state = State.set_operation_state("human")
+
         self.loco_speed = 50
+
+    def startup(self):
+        # initialize everything we need
+        Locomotion.initialize()
+
+        State.set_control_state("locomotion")
+
 
 if __name__ == "__main__":
     robot = Robot()
     control = HumanControl()
+
+    if State.get_control_state() == "startup":
+        robot.startup()
 
     while True:
         # control loop
@@ -31,6 +43,6 @@ if __name__ == "__main__":
         if robot.operation_state == "human":
             control.control_robot(robot.control_state, char)
         elif robot.operation_state == "lidar":
-            print("nothing") # lidar junk
+            print("nothing")
 
     print("Ending Program...")

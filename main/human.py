@@ -18,13 +18,14 @@ from locomotion import Locomotion
 
 class HumanControl:
 
-    loco = Locomotion(1) # need locomotion serial number
+    locomotion = Locomotion() # need locomotion serial number
     speed = 50
 
     def __init__(self):
         # initializations
-        self.control_state = State.get_control_state()
+        # self.control_state = State.get_control_state()
         # self.loco_speed = speed
+        print("init")
         
     def get_char(self):
         file_descriptor = sys.stdin.fileno()
@@ -48,7 +49,7 @@ class HumanControl:
             """
 
             if   input_val == 119 and curr_state == "locomotion": # w -- forward
-                HumanControl.loco.loco_forward(HumanControl.speed)
+                HumanControl.locomotion.loco_forward(HumanControl.speed)
             elif input_val == 97  and curr_state == "locomotion": # a -- left
                 print("left")
             elif input_val == 115 and curr_state == "locomotion": # s -- back
