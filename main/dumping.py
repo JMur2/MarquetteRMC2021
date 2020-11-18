@@ -40,5 +40,5 @@ class Dumping:
         roboclaw.ForwardM1(0x80, 127)
 
     @staticmethod
-    def actuator_extend():
+    def actuator_retract():
         roboclaw.BackwardM1(0x80, 127)
