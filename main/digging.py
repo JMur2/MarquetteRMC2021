@@ -12,7 +12,7 @@ import yaml
 class Digging:
 
     @staticmethod
-    def initialization():
+    def initialize():
         global odrv1
         odrv1 = odrive.find_any(serial_number=1)
     

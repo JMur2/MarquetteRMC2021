@@ -12,14 +12,13 @@ from dumping import Dumping
 class Robot:
 
     def __init__(self):
-        self.control_state = State.set_control_state("startup")
-        self.operation_state = State.set_operation_state("human")
-
         self.loco_speed = 50
 
     def startup(self):
-        # initialize everything we need
+        # initialize subassembly functionality
         Locomotion.initialize()
+        Digging.initialize()
+        Dumping.initialize()
 
         State.set_control_state("locomotion")
 
@@ -33,18 +32,15 @@ if __name__ == "__main__":
 
     while True:
         # control loop
-        robot.control_state = State.get_control_state()
-        robot.operation_state = State.get_operation_state()
-
         char = control.get_char()
         ascii_val = ord(char)
 
         if (ascii_val == 27): # esc -- stop whole program
             break
 
-        if robot.operation_state == "human":
-            control.control_robot(robot.control_state, char)
-        elif robot.operation_state == "lidar":
+        if State.get_operation_state == "human":
+            control.control_robot(State.get_control_state, char)
+        elif State.get_operation_state == "lidar":
             print("nothing")
 
     print("Ending Program...")
