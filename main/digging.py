@@ -22,7 +22,9 @@ class Digging:
         odrv1 = odrive.find_any(serial_number=1)
     
     #--------------------------------------------------------------------
-    #
+    # Move the zipper forward, digging the material below it
+    # 
+    # param: speed -- set the speed of belt movement (max at 67)
     #--------------------------------------------------------------------
     @staticmethod
     def zipper_forward(speed: int):
@@ -30,7 +32,10 @@ class Digging:
         # possible return
 
     #--------------------------------------------------------------------
-    #
+    # Move the zipper backward, to get it unstuck in the case of digging 
+    # incorrect material
+    # 
+    # param: speed -- set the speed of belt movement (max at 67)
     #--------------------------------------------------------------------
     @staticmethod
     def zipper_back(speed: int):
