@@ -19,7 +19,12 @@ class Digging:
     @staticmethod
     def initialize():
         global odrv1
-        odrv1 = odrive.find_any(serial_number=1)
+        try:
+            print("Searching for digging odrive, this may take a few seconds...")
+            odrv1 = odrive.find_any(serial_number=1)
+            print("Digging odrive connected successfuly")
+        except:
+            print("Unable to find digging odrive")
     
     #--------------------------------------------------------------------
     # Move the zipper forward, digging the material below it
@@ -43,7 +48,7 @@ class Digging:
         # possible return
 
     #--------------------------------------------------------------------
-    #
+    # Stop the zipper at its current location
     #--------------------------------------------------------------------
     @staticmethod
     def zipper_stop():
@@ -51,7 +56,9 @@ class Digging:
         # possible return
 
     #--------------------------------------------------------------------
+    # Extends the zipper drive deeper into the ground
     #
+    # param: speed -- set the speed of depth adjustment (max at 50)
     #--------------------------------------------------------------------
     @staticmethod
     def depth_extend(speed: int):
@@ -59,7 +66,9 @@ class Digging:
         # possible return
 
     #--------------------------------------------------------------------
-    #
+    # Retracts the zipper drive from the hole it has dug
+    # 
+    # param: speed -- set the speed of the depth adjustment (max at 50)
     #--------------------------------------------------------------------
     @staticmethod
     def depth_retract(speed: int):
@@ -67,21 +76,23 @@ class Digging:
         # possible return
 
     #--------------------------------------------------------------------
-    #
+    # Stops adjusting the depth of the zipper
     #--------------------------------------------------------------------
     @staticmethod
     def depth_stop():
         odrv1.axis0.controller.input_vel = 0
 
     #--------------------------------------------------------------------
-    #
+    # Helper function to operate the stepper motor
+    # 
+    # param: *args -- a variable set of arguments used to send commands
     #--------------------------------------------------------------------
     @staticmethod
     def ticcmd(*args):
         return subprocess.check_output(['ticcmd'] + list(args))
 
     #--------------------------------------------------------------------
-    #
+    # Rotate the zipper forward with the stepper motor
     #--------------------------------------------------------------------
     @staticmethod
     def stepper_forward():
@@ -92,7 +103,7 @@ class Digging:
         new_target = position + 20 # what the step size should be
 
     #--------------------------------------------------------------------
-    #
+    # Rotate the zipper backward with the stepper motor
     #--------------------------------------------------------------------
     @staticmethod
     def stepper_backward():

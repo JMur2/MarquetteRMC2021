@@ -12,12 +12,17 @@ class Locomotion:
     #--------------------------------------------------------------------
     # Locomotion intialiation function
     #
-    # Established the odrive connection for locomotion
+    # Establish the odrive connection for locomotion
     #--------------------------------------------------------------------
     @staticmethod
     def initialize():
         global odrv0 
-        odrv0 = odrive.find_any(serial_number=1)
+        try:
+            print("Searching locomotion odrive, this may take a few seconds...")
+            odrv0 = odrive.find_any(serial_number=1)
+            print("Locomotion odrive connected successfully")
+        except:
+            print("Unable to find locomotion odrive")            
 
     #--------------------------------------------------------------------
     # Drives robot forward
@@ -28,7 +33,6 @@ class Locomotion:
     def loco_forward(speed: int):
         odrv0.axis0.controller.input_vel = speed
         odrv0.axis1.controller.input_vel = (-1 * speed)
-        # possibly include return to know that we are in motion
 
     #--------------------------------------------------------------------
     # Zero point turn left
@@ -39,7 +43,6 @@ class Locomotion:
     def loco_left(speed: int):
         odrv0.axis0.controller.input_vel = (-1 * speed)
         odrv0.axis1.controller.input_vel = (-1 * speed)
-        # possible return
     
     #--------------------------------------------------------------------
     # Drives robot in reverse
@@ -50,7 +53,6 @@ class Locomotion:
     def loco_back(speed: int):
         odrv0.axis0.controller.input_vel = (-1 * speed)
         odrv0.axis1.controller.input_vel = speed
-        # possible return
 
     #--------------------------------------------------------------------
     # Zero point turn right 
@@ -61,7 +63,6 @@ class Locomotion:
     def loco_right(speed: int):
         odrv0.axis0.controller.input_vel = speed
         odrv0.axis1.controller.input_vel = speed
-        # possible return
     
     #--------------------------------------------------------------------
     # Stops all movement
@@ -70,7 +71,6 @@ class Locomotion:
     def loco_stop():
         odrv0.axis0.controller.input_vel = 0
         odrv0.axis1.controller.input_vel = 0
-        # possible return
 
     #--------------------------------------------------------------------
     # Perform error checking on locomotion system

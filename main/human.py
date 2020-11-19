@@ -18,13 +18,8 @@ from locomotion import Locomotion
 
 class HumanControl:
 
-    locomotion = Locomotion() # need locomotion serial number
-    speed = 50
-
     def __init__(self):
         # initializations
-        # self.control_state = State.get_control_state()
-        # self.loco_speed = speed
         print("init")
         
     def get_char(self):
@@ -39,22 +34,14 @@ class HumanControl:
 
         return character
 
-    def control_robot(self, curr_state: str, char: str):
-        try:
-            input_char = char.lower()
-            input_val = ord(input_char)
-            """
-            ord() takes a character and returns its ASCII value, 
-            allowing us to have more specific control with more keys.
-            """
-
-            if   input_val == 119 and curr_state == "locomotion": # w -- forward
-                HumanControl.locomotion.loco_forward(HumanControl.speed)
-            elif input_val == 97  and curr_state == "locomotion": # a -- left
-                print("left")
-            elif input_val == 115 and curr_state == "locomotion": # s -- back
-                print("back")
-            elif input_val == 100 and curr_state == "locomotion": # d -- right
-                print("right")
-        finally:
-            print("----------------------------")
+    def control_robot(self, curr_state: str, char_val: int):
+        if   char_val == 119 and curr_state == "locomotion": # w -- forward
+            Locomotion.loco_forward(50)
+        elif char_val == 97  and curr_state == "locomotion": # a -- left
+            Locomotion.loco_left(50)
+        elif char_val == 115 and curr_state == "locomotion": # s -- back
+            Locomotion.loco_back(50)
+        elif char_val == 100 and curr_state == "locomotion": # d -- right
+            Locomotion.loco_back(50)
+        elif char_val == 120 and curr_state == "locomotion": # x -- stop
+            Locomotion.loco_stop()
