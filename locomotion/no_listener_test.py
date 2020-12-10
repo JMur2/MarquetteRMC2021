@@ -48,8 +48,8 @@ if __name__ == '__main__':
                 odrv0.axis0.controller.input_vel = -50
                 odrv0.axis1.controller.input_vel = -50
             elif char.lower() == "x":
-                odrv0.axis0.controller.input_vel = 0
-                odrv0.axis1.controller.input_vel = 0
+                odrv0.axis0.controller.input_vel = 1
+                odrv0.axis1.controller.input_vel = 1
     finally:
         odrv0.axis0.controller.input_vel = 0
         odrv0.axis1.controller.input_vel = 0
