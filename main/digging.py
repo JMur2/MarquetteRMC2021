@@ -16,9 +16,8 @@ class Digging:
     # 
     # Establish the odrive connection for digging 
     #--------------------------------------------------------------------
-    @staticmethod
-    def initialize():
-        global odrv1
+    def __init__(self):
+        self.odrv1
         try:
             print("Searching for digging odrive, this may take a few seconds...")
             odrv1 = odrive.find_any(serial_number=1)
@@ -31,9 +30,8 @@ class Digging:
     # 
     # param: speed -- set the speed of belt movement (max at 67)
     #--------------------------------------------------------------------
-    @staticmethod
-    def zipper_forward(speed: int):
-        odrv1.axis1.controller.input_vel = speed
+    def zipper_forward(self, speed: int):
+        self.odrv1.axis1.controller.input_vel = speed
         # possible return
 
     #--------------------------------------------------------------------
@@ -42,17 +40,15 @@ class Digging:
     # 
     # param: speed -- set the speed of belt movement (max at 67)
     #--------------------------------------------------------------------
-    @staticmethod
-    def zipper_back(speed: int):
-        odrv1.axis1.controller.inpur_vel = (-1 * speed)
+    def zipper_back(self, speed: int):
+        self.odrv1.axis1.controller.inpur_vel = (-1 * speed)
         # possible return
 
     #--------------------------------------------------------------------
     # Stop the zipper at its current location
     #--------------------------------------------------------------------
-    @staticmethod
-    def zipper_stop():
-        odrv1.axis1.controller.input_vel = 0
+    def zipper_stop(self):
+        self.odrv1.axis1.controller.input_vel = 0
         # possible return
 
     #--------------------------------------------------------------------
@@ -60,9 +56,8 @@ class Digging:
     #
     # param: speed -- set the speed of depth adjustment (max at 50)
     #--------------------------------------------------------------------
-    @staticmethod
-    def depth_extend(speed: int):
-        odrv1.axis0.controller.input_vel = speed
+    def depth_extend(self, speed: int):
+        self.odrv1.axis0.controller.input_vel = speed
         # possible return
 
     #--------------------------------------------------------------------
@@ -70,32 +65,28 @@ class Digging:
     # 
     # param: speed -- set the speed of the depth adjustment (max at 50)
     #--------------------------------------------------------------------
-    @staticmethod
-    def depth_retract(speed: int):
-        odrv1.axis0.controller.input_vel = (-1 * speed)
+    def depth_retract(self, speed: int):
+        self.odrv1.axis0.controller.input_vel = (-1 * speed)
         # possible return
 
     #--------------------------------------------------------------------
     # Stops adjusting the depth of the zipper
     #--------------------------------------------------------------------
-    @staticmethod
-    def depth_stop():
-        odrv1.axis0.controller.input_vel = 0
+    def depth_stop(self):
+        self.odrv1.axis0.controller.input_vel = 0
 
     #--------------------------------------------------------------------
     # Helper function to operate the stepper motor
     # 
     # param: *args -- a variable set of arguments used to send commands
     #--------------------------------------------------------------------
-    @staticmethod
-    def ticcmd(*args):
+    def ticcmd(self, *args):
         return subprocess.check_output(['ticcmd'] + list(args))
 
     #--------------------------------------------------------------------
     # Rotate the zipper forward with the stepper motor
     #--------------------------------------------------------------------
-    @staticmethod
-    def stepper_forward():
+    def stepper_forward(self):
         status = yaml.load(Digging.ticcmd('-s', '--full'))
         position = status['Current position']
 
@@ -105,8 +96,7 @@ class Digging:
     #--------------------------------------------------------------------
     # Rotate the zipper backward with the stepper motor
     #--------------------------------------------------------------------
-    @staticmethod
-    def stepper_backward():
+    def stepper_backward(self):
         status = yaml.load(Digging.ticcmd('-s', '--full'))
         position = status['Current position']
 

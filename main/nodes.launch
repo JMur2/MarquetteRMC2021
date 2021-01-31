@@ -1,0 +1,13 @@
+<launch>
+    <node name="main_node" pkg="nasa_rmc" type="main_wrapper.py" output="screen">
+    </node>
+
+    <node name="locomotion_node" pkg="nasa_rmc" type="locomotion_wrapper.py" output="screen">
+    </node>
+
+    <node name="digging_node" pkg="nasa_rmc" type="digging_wrapper.py" output="screen">
+    </node>
+
+    <node name="dumping_node" pkg="nasa_rmc" type="dumping_wrapper.py" output="screen">
+    </node>
+</launch>

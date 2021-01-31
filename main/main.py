@@ -15,7 +15,11 @@ class Robot:
         # because robot is still going to be instanced, we want to establish the startup
         # state as soon as the instance is created in main
         State.set_control_state("startup")
-
+        self.dummy_array_M = [1, 2, 3]
+        self.dummy_array_A = [1, 2, 3]
+        self.state_operation = "manual"
+        self.state_control = "locomotion"
+        
     def startup(self):
         # initialize the operation state
         State.set_operation_state("human")
@@ -32,7 +36,7 @@ class Robot:
 
 if __name__ == "__main__":
     robot = Robot()
-    control = HumanControl()
+    #control = HumanControl()
 
     # run robot startup after instance creation
     if State.get_control_state() == "startup":
