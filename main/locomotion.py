@@ -15,7 +15,7 @@ class Locomotion:
     # Establish the odrive connection for locomotion
     #--------------------------------------------------------------------
     def __init__(self):
-        self.odrv0 
+        #self.odrv0 
         try:
             print("Searching locomotion odrive, this may take a few seconds...")
             self.odrv0 = odrive.find_any(serial_number=1)

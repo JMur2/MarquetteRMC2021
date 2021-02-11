@@ -17,10 +17,10 @@ class Digging:
     # Establish the odrive connection for digging 
     #--------------------------------------------------------------------
     def __init__(self):
-        self.odrv1
+        #self.odrv1
         try:
             print("Searching for digging odrive, this may take a few seconds...")
-            odrv1 = odrive.find_any(serial_number=1)
+            self.odrv1 = odrive.find_any(serial_number=1)
             print("Digging odrive connected successfuly")
         except:
             print("Unable to find digging odrive")
