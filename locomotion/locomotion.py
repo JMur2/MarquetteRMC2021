@@ -13,22 +13,23 @@ import time
 import math
 import py_compile
 
- print("Finding an ODrive...\n")
- drive = odrive.find_any()
+print("Finding an ODrive...\n")
+drive = odrive.find_any()
 
- # establishing variables for use.
- axis0 = drive.axis0
- axis1 = drive.axis1
- motor = axis0.motor
- encoder = axis.endcoder
+# establishing variables for use.
+axis0 = drive.axis0
+axis1 = drive.axis1
+motor = axis0.motor
+encoder = axis.endcoder
 
- print("Calibration...\n")
- axis0.requested_state = AXIS_STATE_FULL_CALIBRATION_SEQUENCE
+print("Calibration...\n")
+axis0.requested_state = AXIS_STATE_FULL_CALIBRATION_SEQUENCE
 
- while axis0.current_state != AXIS_STATE_IDLE:
-     time.sleep(0.1)
+while axis0.current_state != AXIS_STATE_IDLE:
+	time.sleep(0.1)
 
- axis0.requested_state = AXIS_STATE_CLOSED_LOOP_CONTROL    
+axis0.requested_state = AXIS_STATE_CLOSED_LOOP_CONTROL
+
 def drive():
 	print("Setting velocity to 20\n")
 	odrv0 = odrive.find_any()
