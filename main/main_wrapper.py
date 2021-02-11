@@ -1,5 +1,11 @@
 #!/usr/bin/env python
 
+import time
+import math
+import sys
+import tty
+import termios
+
 import rospy
 from std_msgs.msg import Int32
 
@@ -29,12 +35,22 @@ class mainWrapperROS:
         pass
         # this is where the emergency stop code will go
 
+    def get_char(self):
+        file_descriptor = sys.stdin.fileno()
+        old_settings = termios.tcgetattr(file_descriptor)
+
+        try:
+            tty.setraw(file_descriptor)
+            character = sys.stdin.read(1)
+        finally:
+            termios.tcsetattr(file_descriptor, termios.TCSADRAIN, old_settings)
+
+        return character
+
 
 if __name__ == "__main__":
     rospy.init_node("main_node")
         
-    # if statements for publishing data
-
     main_wrapper = mainWrapperROS()
 
     rospy.on_shutdown() # stop everything, close UI
@@ -43,3 +59,13 @@ if __name__ == "__main__":
 
     # rospy.spin()
     while True:
+        # control loop
+        char = mainWrapperROS.get_char() # get the character from the keyboard
+        char_val = ord(char) # convert the character read in to its ASCII value
+
+        if (char_val == 27): # esc -- end whole program
+            break
+
+        if (char_val):
+
+    print("Ending Program...")

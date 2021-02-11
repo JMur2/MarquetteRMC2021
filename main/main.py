@@ -31,28 +31,28 @@ class Robot:
     #     State.set_control_state("locomotion")
 
 
-if __name__ == "__main__":
-    robot = Robot()
-    #control = HumanControl()
+# if __name__ == "__main__":
+#     robot = Robot()
+#     #control = HumanControl()
 
-    # run robot startup after instance creation
-    if State.get_control_state() == "startup":
-        robot.startup()
+#     # run robot startup after instance creation
+#     if State.get_control_state() == "startup":
+#         robot.startup()
 
-    while True:
-        # control loop
-        char = control.get_char() # get the character from the keyboard
-        char_val = ord(char) # convert the character read in to its ASCII value
+#     while True:
+#         # control loop
+#         char = control.get_char() # get the character from the keyboard
+#         char_val = ord(char) # convert the character read in to its ASCII value
 
-        if (char_val == 27): # esc -- end whole program
-            break
+#         if (char_val == 27): # esc -- end whole program
+#             break
 
-        # TODO: establish button for changing operation state to/from human and lidar here
+#         # TODO: establish button for changing operation state to/from human and lidar here
 
-        if State.get_operation_state == "human":
-            control.control_robot(State.get_control_state, char)
-        elif State.get_operation_state == "lidar":
-            # TODO: Lidar file!
-            print("nothing")
+#         if State.get_operation_state == "human":
+#             control.control_robot(State.get_control_state, char)
+#         elif State.get_operation_state == "lidar":
+#             # TODO: Lidar file!
+#             print("nothing")
 
-    print("Ending Program...")
+#     print("Ending Program...")
