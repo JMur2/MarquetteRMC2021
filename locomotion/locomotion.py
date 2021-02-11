@@ -20,7 +20,7 @@ drive = odrive.find_any()
 axis0 = drive.axis0
 axis1 = drive.axis1
 motor = axis0.motor
-encoder = axis.endcoder
+encoder = axis1.endcoder
 
 print("Calibration...\n")
 axis0.requested_state = AXIS_STATE_FULL_CALIBRATION_SEQUENCE

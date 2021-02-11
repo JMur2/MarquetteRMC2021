@@ -41,5 +41,5 @@ if __name__ == "__main__":
 
     rospy.loginfo("Main node initialized successfully")
 
-    rospy.spin()
-    #while True:
+    # rospy.spin()
+    while True:
