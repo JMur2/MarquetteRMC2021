@@ -15,21 +15,17 @@ class mainWrapperROS:
 
     def __init__(self):
         self.main = Robot()
-
-        self.data_to_send = 0
         
         self.publisher_manual = rospy.Publisher("main_manual", Int32, queue_size=10)
         self.publisher_automated = rospy.Publisher("main_automated", Int32, queue_size=10)
 
-        #ROS Service might be useful here
-
     def publish_data_manual(self, event=None, data=None):
-        self.data_to_send_M = Int32(data=data)
-        self.publisher_manual.publish(self.data_to_send_M)
+        data = Int32(data=data)
+        self.publisher_manual.publish(data)
 
-    def publish_data_automated(self, event=None):
-        self.data_to_send_A = Int32(data=self.main.dummy_opcode)
-        self.publisher_automated.publish(self.data_to_send_A)
+    def publish_data_automated(self, event=None, data=None):
+        data = Int32(data=data)
+        self.publisher_automated.publish(data)
 
     def big_red_button(self):
         pass
