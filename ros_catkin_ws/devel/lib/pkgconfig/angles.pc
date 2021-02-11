@@ -1,8 +1,0 @@
-prefix=/home/mars/MarquetteRMC2021/ros_catkin_ws/devel
-
-Name: angles
-Description: Description of angles
-Version: 1.9.12
-Cflags: -I/home/mars/MarquetteRMC2021/ros_catkin_ws/src/angles/include
-Libs: -L${prefix}/lib 
-Requires: 

@@ -1,8 +1,0 @@
-prefix=/home/mars/MarquetteRMC2021/ros_catkin_ws/devel
-
-Name: qt_gui
-Description: Description of qt_gui
-Version: 0.4.2
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

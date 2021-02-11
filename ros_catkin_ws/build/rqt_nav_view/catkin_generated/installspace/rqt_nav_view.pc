@@ -1,8 +1,0 @@
-prefix=/home/mars/MarquetteRMC2021/ros_catkin_ws/install
-
-Name: rqt_nav_view
-Description: Description of rqt_nav_view
-Version: 0.5.7
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

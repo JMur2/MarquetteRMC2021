@@ -1,8 +1,0 @@
-prefix=/home/mars/MarquetteRMC2021/ros_catkin_ws/devel
-
-Name: rqt_robot_monitor
-Description: Description of rqt_robot_monitor
-Version: 0.5.13
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

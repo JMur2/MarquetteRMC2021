@@ -1,8 +1,0 @@
-prefix=/home/mars/MarquetteRMC2021/ros_catkin_ws/devel
-
-Name: rqt_robot_steering
-Description: Description of rqt_robot_steering
-Version: 0.5.10
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

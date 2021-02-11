@@ -1,8 +1,0 @@
-prefix=/home/mars/MarquetteRMC2021/ros_catkin_ws/devel
-
-Name: rqt_console
-Description: Description of rqt_console
-Version: 0.4.9
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

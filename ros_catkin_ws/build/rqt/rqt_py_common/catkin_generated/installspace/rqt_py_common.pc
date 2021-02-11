@@ -1,8 +1,0 @@
-prefix=/home/mars/MarquetteRMC2021/ros_catkin_ws/install
-
-Name: rqt_py_common
-Description: Description of rqt_py_common
-Version: 0.5.2
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib 
-Requires: 

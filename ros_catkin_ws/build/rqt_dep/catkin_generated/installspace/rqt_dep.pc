@@ -1,8 +1,0 @@
-prefix=/home/mars/MarquetteRMC2021/ros_catkin_ws/install
-
-Name: rqt_dep
-Description: Description of rqt_dep
-Version: 0.4.9
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

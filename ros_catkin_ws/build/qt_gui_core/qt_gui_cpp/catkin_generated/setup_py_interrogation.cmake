@@ -1,7 +1,0 @@
-set(qt_gui_cpp_SETUP_PY_SETUP_MODULE "setuptools")
-set(qt_gui_cpp_SETUP_PY_VERSION "0.4.2")
-set(qt_gui_cpp_SETUP_PY_SCRIPTS "")
-set(qt_gui_cpp_SETUP_PY_PACKAGES "qt_gui_cpp")
-set(qt_gui_cpp_SETUP_PY_PACKAGE_DIRS "src/qt_gui_cpp")
-set(qt_gui_cpp_SETUP_PY_MODULES "")
-set(qt_gui_cpp_SETUP_PY_MODULE_DIRS "")

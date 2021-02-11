@@ -1,8 +1,0 @@
-prefix=/home/mars/MarquetteRMC2021/ros_catkin_ws/install
-
-Name: rosconsole
-Description: Description of rosconsole
-Version: 1.13.18
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib -lrosconsole -lrosconsole_log4cxx -lrosconsole_backend_interface /usr/lib/x86_64-linux-gnu/liblog4cxx.so
-Requires: cpp_common rostime

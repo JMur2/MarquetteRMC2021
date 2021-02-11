@@ -1,8 +1,0 @@
-prefix=/home/mars/MarquetteRMC2021/ros_catkin_ws/install
-
-Name: rostest
-Description: Description of rostest
-Version: 1.14.10
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib 
-Requires: 

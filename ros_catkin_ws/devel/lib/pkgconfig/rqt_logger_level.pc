@@ -1,8 +1,0 @@
-prefix=/home/mars/MarquetteRMC2021/ros_catkin_ws/devel
-
-Name: rqt_logger_level
-Description: Description of rqt_logger_level
-Version: 0.4.8
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

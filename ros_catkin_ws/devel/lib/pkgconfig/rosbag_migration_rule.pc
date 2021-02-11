@@ -1,8 +1,0 @@
-prefix=/home/mars/MarquetteRMC2021/ros_catkin_ws/devel
-
-Name: rosbag_migration_rule
-Description: Description of rosbag_migration_rule
-Version: 1.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
