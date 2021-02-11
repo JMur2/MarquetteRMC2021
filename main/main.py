@@ -21,18 +21,18 @@ class Robot:
         self.state_operation = "manual"
         self.state_control = "locomotion"
         
-    def startup(self):
-        # initialize the operation state
-        State.set_operation_state("human")
+    # def startup(self):
+    #     # initialize the operation state
+    #     State.set_operation_state("human")
 
-        # initialize subassembly functionality
-        Locomotion.initialize()
-        Digging.initialize()
-        Dumping.initialize()
+    #     # initialize subassembly functionality
+    #     Locomotion.initialize()
+    #     Digging.initialize()
+    #     Dumping.initialize()
 
-        # once the initializations are finished, set the state to what is assumed to
-        # be the first operation
-        State.set_control_state("locomotion")
+    #     # once the initializations are finished, set the state to what is assumed to
+    #     # be the first operation
+    #     State.set_control_state("locomotion")
 
 
 if __name__ == "__main__":
