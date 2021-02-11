@@ -18,6 +18,7 @@ class mainWrapperROS:
         
         self.publisher_manual = rospy.Publisher("main_manual", Int32, queue_size=10)
         self.publisher_automated = rospy.Publisher("main_automated", Int32, queue_size=10)
+        self.big_red_button = rospy.Publihser("emergency_stop", Int32, queue_size=10)
 
     def publish_data_manual(self, event=None, data=None):
         data = Int32(data=data)
@@ -51,7 +52,7 @@ if __name__ == "__main__":
 
     #rospy.on_shutdown() # stop everything, close UI
 
-    rospy.loginfo("Main node initialized successfully")
+    rospy.loginfo("\n***Main node initialized successfully***\n")
 
     # rospy.spin()
     while True:

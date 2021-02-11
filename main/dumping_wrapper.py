@@ -35,6 +35,6 @@ if __name__ == "__main__":
 
     #rospy.on_shutdown()
 
-    rospy.loginfo("Dumping node initialized successfully")
+    rospy.loginfo("\n***Dumping node initialized successfully***\n")
 
     rospy.spin()

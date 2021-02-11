@@ -38,6 +38,6 @@ if __name__ == "__main__":
 
     rospy.on_shutdown(locomotion_wrapper.locomotion.loco_stop) # tells the node what action to take on shutdown
 
-    rospy.loginfo("Locomotion node initialized successfully") 
+    rospy.loginfo("\n***Locomotion node initialized successfully***\n") 
 
     rospy.spin() # essentially an infinite loop that keeps the node active
