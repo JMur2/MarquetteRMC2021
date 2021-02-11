@@ -17,7 +17,7 @@ class dumpingWrapperROS:
     def callback_main(self, msg):
         self.opcode = msg.data
 
-        if self.opcode >= 14 and self.opcode >= 17:
+        if self.opcode >= 14 and self.opcode <= 17:
             if self.opcode == 14:
                 self.dumping.stepper_forward()
             if self.opcode == 15:

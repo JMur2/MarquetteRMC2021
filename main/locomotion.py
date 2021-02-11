@@ -29,7 +29,7 @@ class Locomotion:
     #
     # param: speed -- set the speed of movement (max at 50)
     #--------------------------------------------------------------------
-    def loco_forward(self, speed: int):
+    def loco_forward(self, speed):
         self.odrv0.axis0.controller.input_vel = speed
         odrv0.axis1.controller.input_vel = (-1 * speed)
 
@@ -38,7 +38,7 @@ class Locomotion:
     #
     # param: speed -- set the speed of movement (max at 50)
     #--------------------------------------------------------------------
-    def loco_left(self, speed: int):
+    def loco_left(self, speed):
         self.odrv0.axis0.controller.input_vel = (-1 * speed)
         self.odrv0.axis1.controller.input_vel = (-1 * speed)
     
@@ -47,7 +47,7 @@ class Locomotion:
     #
     # param: speed -- sets the speed of movement (max at 50)
     #--------------------------------------------------------------------
-    def loco_back(self, speed: int):
+    def loco_back(self, speed):
         self.odrv0.axis0.controller.input_vel = (-1 * speed)
         self.odrv0.axis1.controller.input_vel = speed
 
@@ -56,7 +56,7 @@ class Locomotion:
     #
     # param: speed -- sets the speed of movement (max at 50)
     #--------------------------------------------------------------------
-    def loco_right(self, speed: int):
+    def loco_right(self, speed):
         self.odrv0.axis0.controller.input_vel = speed
         self.odrv0.axis1.controller.input_vel = speed
     

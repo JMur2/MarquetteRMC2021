@@ -16,7 +16,7 @@ class Dumping:
     # Establish the roboclaw connection for the linear actuator
     #--------------------------------------------------------------------
     def __init__(self):
-        self.roboclaw
+        #self.roboclaw
         try:
             print("Searching for dumping roboclaw, this may take a few seconds...")
             self.roboclaw = Roboclaw("/dev/ttyACM0", 38400)
