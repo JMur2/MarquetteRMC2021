@@ -53,7 +53,7 @@ if __name__ == "__main__":
         
     main_wrapper = mainWrapperROS()
 
-    rospy.on_shutdown() # stop everything, close UI
+    #rospy.on_shutdown() # stop everything, close UI
 
     rospy.loginfo("Main node initialized successfully")
 
