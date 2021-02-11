@@ -3,8 +3,6 @@ This is the official main file
 
 @created: 10-25-2020
 """
-from human import HumanControl
-from states import State
 from locomotion import Locomotion
 from digging import Digging
 from dumping import Dumping

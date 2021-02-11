@@ -14,7 +14,6 @@ class Locomotion:
     #
     # Establish the odrive connection for locomotion
     #--------------------------------------------------------------------
-    @staticmethod
     def __init__(self):
         self.odrv0 
         try:
