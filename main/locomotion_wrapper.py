@@ -10,16 +10,14 @@ class locomotionWrapperROS:
     def __init__(self):
         self.locomotion = Locomotion()
 
-        self.state = -1
         self.opcode = -1
 
         rospy.Subscriber("main_manual", Int32MultiArray, self.callback_main)
 
     def callback_main(self, msg): 
-        self.state = msg.data[0]
-        self.opcode = msg.data[1]
+        self.opcode = msg.data
 
-        if self.state == 0 and self.opcode >= 0 and self.opcode <= 5:
+        if self.opcode >= 0 and self.opcode <= 5:
             if self.opcode == 0:
                 self.locomotion.loco_forward(50)
             if self.opcode == 1:

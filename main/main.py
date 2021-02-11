@@ -15,8 +15,9 @@ class Robot:
         # because robot is still going to be instanced, we want to establish the startup
         # state as soon as the instance is created in main
         State.set_control_state("startup")
-        self.dummy_array_M = [1, 2, 3]
-        self.dummy_array_A = [1, 2, 3]
+
+        self.dummy_opcode = 1
+
         self.state_operation = "manual"
         self.state_control = "locomotion"
         
