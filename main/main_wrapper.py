@@ -26,7 +26,9 @@ class mainWrapperROS:
         self.publisher_automated.publish(self.data_to_send_A)
 
     def big_red_button(self):
+        pass
         # this is where the emergency stop code will go
+
 
 if __name__ == "__main__":
     rospy.init_node("main_node")

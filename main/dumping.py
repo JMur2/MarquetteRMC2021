@@ -15,12 +15,11 @@ class Dumping:
     #
     # Establish the roboclaw connection for the linear actuator
     #--------------------------------------------------------------------
-    @staticmethod
-    def initialize():
-        global roboclaw
+    def __init__(self):
+        self.roboclaw
         try:
             print("Searching for dumping roboclaw, this may take a few seconds...")
-            roboclaw = Roboclaw("/dev/ttyACM0", 38400)
+            self.roboclaw = Roboclaw("/dev/ttyACM0", 38400)
             print("Dumping roboclaw connected successfully")
         except:
             print("Unable to find digging roboclaw")
@@ -30,16 +29,14 @@ class Dumping:
     # 
     # param: *args -- a variable set of arguments used to send commands
     #--------------------------------------------------------------------
-    @staticmethod
-    def ticcmd(*args):
+    def ticcmd(self, *args):
         return subprocess.check_output(['ticcmd'] + list(args))
 
     #--------------------------------------------------------------------
     # Rotate the zipper forward with the stepper motor
     #--------------------------------------------------------------------
-    @staticmethod
-    def stepper_forward():
-        status = yaml.load(Dumping.ticcmd('-s', '--full'))
+    def stepper_forward(self):
+        status = yaml.load(self.ticcmd('-s', '--full'))
         position = status['Current position']
 
         # test for boundaries
@@ -48,9 +45,8 @@ class Dumping:
     #--------------------------------------------------------------------
     # Rotate the zipper backward with the stepper motor
     #--------------------------------------------------------------------
-    @staticmethod
-    def stepper_backward():
-        status = yaml.load(Dumping.ticcmd('-s', '--full'))
+    def stepper_backward(self):
+        status = yaml.load(self.ticcmd('-s', '--full'))
         position = status['Current position']
 
         # test for boundaries
@@ -59,13 +55,11 @@ class Dumping:
     #--------------------------------------------------------------------
     # Extend the linear actuator forward for its full length
     #--------------------------------------------------------------------
-    @staticmethod
-    def actuator_extend():
-        roboclaw.ForwardM1(0x80, 127)
+    def actuator_extend(self):
+        self.roboclaw.ForwardM1(0x80, 127)
 
     #--------------------------------------------------------------------
     # Fully retract the linear actuator
     #--------------------------------------------------------------------
-    @staticmethod
-    def actuator_retract():
-        roboclaw.BackwardM1(0x80, 127)
+    def actuator_retract(self):
+        self.roboclaw.BackwardM1(0x80, 127)

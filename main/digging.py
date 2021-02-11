@@ -87,7 +87,7 @@ class Digging:
     # Rotate the zipper forward with the stepper motor
     #--------------------------------------------------------------------
     def stepper_forward(self):
-        status = yaml.load(Digging.ticcmd('-s', '--full'))
+        status = yaml.load(self.ticcmd('-s', '--full'))
         position = status['Current position']
 
         # test for boundaries
@@ -97,7 +97,7 @@ class Digging:
     # Rotate the zipper backward with the stepper motor
     #--------------------------------------------------------------------
     def stepper_backward(self):
-        status = yaml.load(Digging.ticcmd('-s', '--full'))
+        status = yaml.load(self.ticcmd('-s', '--full'))
         position = status['Current position']
 
         # test for boundaries
