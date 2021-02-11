@@ -23,8 +23,8 @@ class mainWrapperROS:
 
         #ROS Service might be useful here
 
-    def publish_data_manual(self, event=None):
-        self.data_to_send_M = Int32(data=self.main.dummy_opcode)
+    def publish_data_manual(self, event=None, data=None):
+        self.data_to_send_M = Int32(data=data)
         self.publisher_manual.publish(self.data_to_send_M)
 
     def publish_data_automated(self, event=None):
@@ -66,6 +66,13 @@ if __name__ == "__main__":
         if (char_val == 27): # esc -- end whole program
             break
 
-        if (char_val):
+        if (char_val == 119 or char_val == 87):
+            # W -- go forward
+            opcode = 0
+            main_wrapper.publish_data_manual(opcode)
+        if (char_val == 120 or char_val == 88):
+            # X -- STOP
+            opcode = 4
+            main_wrapper.publish_data_manual(opcode)
 
     print("Ending Program...")
