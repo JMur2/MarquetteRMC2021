@@ -18,7 +18,7 @@ class Locomotion:
         #self.odrv0 
         try:
             print("Searching locomotion odrive, this may take a few seconds...")
-            self.odrv0 = odrive.find_any(serial_number=1)
+            self.odrv0 = odrive.find_any()
             print("Locomotion odrive connected successfully")
         except:
             print("Unable to find locomotion odrive")            
