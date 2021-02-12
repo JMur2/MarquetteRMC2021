@@ -54,7 +54,6 @@ if __name__ == "__main__":
 
     rospy.loginfo("\n***Main node initialized successfully***\n")
 
-    # rospy.spin()
     while True:
         # control loop
         char = mainWrapperROS.get_char() # get the character from the keyboard
@@ -71,5 +70,5 @@ if __name__ == "__main__":
             # X -- STOP
             opcode = 4
             main_wrapper.publish_data_manual(opcode)
-
-    print("Ending Program...")
+    
+    rospy.spin()
