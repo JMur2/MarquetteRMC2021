@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import rospy
-from std_msgs.msg import Int32MultiArray
+from std_msgs.msg import Int32
 
 from locomotion import Locomotion
 
@@ -12,7 +12,7 @@ class locomotionWrapperROS:
 
         self.opcode = -1
 
-        rospy.Subscriber("main_manual", Int32MultiArray, self.callback_main)
+        rospy.Subscriber("main_manual", Int32, self.callback_main)
 
     def callback_main(self, msg): 
         self.opcode = msg.data
