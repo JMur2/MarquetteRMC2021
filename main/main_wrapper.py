@@ -10,8 +10,8 @@ class mainWrapperROS:
     def __init__(self):
         self.main = Robot()
         
-        self.publisher_manual = rospy.Publisher("main_manual", Int32, queue_size=10)
-        self.publisher_automated = rospy.Publisher("main_automated", Int32, queue_size=10)
+        self.publisher_manual = rospy.Publisher("main_manual", Int32, queue_size=1)
+        self.publisher_automated = rospy.Publisher("main_automated", Int32, queue_size=1)
         #self.big_red_button = rospy.Publisher("emergency_stop", Int32, queue_size=10)
 
     def publish_data_manual(self, event=None):

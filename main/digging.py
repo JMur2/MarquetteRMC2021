@@ -31,7 +31,8 @@ class Digging:
     # param: speed -- set the speed of belt movement (max at 67)
     #--------------------------------------------------------------------
     def zipper_forward(self, speed):
-        self.odrv1.axis1.controller.input_vel = speed
+        print("zipper_forward")
+        #self.odrv1.axis1.controller.input_vel = speed
         # possible return
 
     #--------------------------------------------------------------------
@@ -41,14 +42,16 @@ class Digging:
     # param: speed -- set the speed of belt movement (max at 67)
     #--------------------------------------------------------------------
     def zipper_back(self, speed):
-        self.odrv1.axis1.controller.inpur_vel = (-1 * speed)
+        print("zipper_backward")
+        #self.odrv1.axis1.controller.inpur_vel = (-1 * speed)
         # possible return
 
     #--------------------------------------------------------------------
     # Stop the zipper at its current location
     #--------------------------------------------------------------------
     def zipper_stop(self):
-        self.odrv1.axis1.controller.input_vel = 0
+        print("zipper_stop")
+        #self.odrv1.axis1.controller.input_vel = 0
         # possible return
 
     #--------------------------------------------------------------------
@@ -57,7 +60,8 @@ class Digging:
     # param: speed -- set the speed of depth adjustment (max at 50)
     #--------------------------------------------------------------------
     def depth_extend(self, speed):
-        self.odrv1.axis0.controller.input_vel = speed
+        print("depth_extend")
+        #self.odrv1.axis0.controller.input_vel = speed
         # possible return
 
     #--------------------------------------------------------------------
@@ -66,14 +70,16 @@ class Digging:
     # param: speed -- set the speed of the depth adjustment (max at 50)
     #--------------------------------------------------------------------
     def depth_retract(self, speed):
-        self.odrv1.axis0.controller.input_vel = (-1 * speed)
+        print("deph_retract")
+        #self.odrv1.axis0.controller.input_vel = (-1 * speed)
         # possible return
 
     #--------------------------------------------------------------------
     # Stops adjusting the depth of the zipper
     #--------------------------------------------------------------------
     def depth_stop(self):
-        self.odrv1.axis0.controller.input_vel = 0
+        print("depth_stop")
+        #self.odrv1.axis0.controller.input_vel = 0
 
     #--------------------------------------------------------------------
     # Helper function to operate the stepper motor
