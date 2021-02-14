@@ -33,24 +33,34 @@ class Dumping:
         return subprocess.check_output(['ticcmd'] + list(args))
 
     #--------------------------------------------------------------------
-    # Rotate the zipper forward with the stepper motor
+    # Rotate the bucket forward with the stepper motor
     #--------------------------------------------------------------------
     def stepper_forward(self):
         status = yaml.load(self.ticcmd('-s', '--full'))
-        position = status['Current position']
+        position = status['Current speed']
 
-        # test for boundaries
-        new_target = position + 20 # what the step size should be
+        new_target = 200
+        ticcmd('--exit-safe-start', '--velocity', str(new_target))
 
     #--------------------------------------------------------------------
-    # Rotate the zipper backward with the stepper motor
+    # Rotate the bucket backward with the stepper motor
     #--------------------------------------------------------------------
     def stepper_backward(self):
         status = yaml.load(self.ticcmd('-s', '--full'))
-        position = status['Current position']
+        position = status['Current speed']
 
-        # test for boundaries
-        new_target = position - 20 # what the step size should be
+        new_target = -200
+        ticcmd('--exit-safe-start', '--velocity', str(new_target))
+
+    #--------------------------------------------------------------------
+    # Stop the nucket from rotating
+    #--------------------------------------------------------------------
+    def stepper_stop(self):
+        status = yaml.load(self.ticcmd('-s', '--full'))
+        position = status['Current speed']
+
+        new_target = 0
+        ticcmd('--exit-safe-start', '--velocity', str(new_target))
 
     #--------------------------------------------------------------------
     # Extend the linear actuator forward for its full length

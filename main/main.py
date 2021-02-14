@@ -65,3 +65,18 @@ class Robot:
             # X -- STOP
             opcode = 4
             return opcode
+
+        if (char_val == 116 or char_val == 84):
+            # T -- BUCKET FORWARD
+            opcode = 14
+            return opcode
+
+        if (char_val == 103 or char_val == 71):
+            # G -- BUCKET STOP
+            opcode = 16
+            return opcode
+
+        if (char_val == 98 or char_val == 66):
+            # B -- BUCKET BACKWARD
+            opcode = 15
+            return opcode
