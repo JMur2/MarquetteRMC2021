@@ -36,6 +36,7 @@ if __name__ == "__main__":
 
     rospy.loginfo("\n***Main node initialized successfully***\n")
 
-    main_wrapper.publish_data_manual()
+    while True:
+        main_wrapper.publish_data_manual()
 
     rospy.spin()
