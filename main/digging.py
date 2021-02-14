@@ -4,8 +4,8 @@ This file houses all of the digging functionality
 @created: 11-1-2020
 """
 
-import odrive
-from odrive.enums import *
+#import odrive
+#from odrive.enums import *
 import subprocess
 import yaml
 
