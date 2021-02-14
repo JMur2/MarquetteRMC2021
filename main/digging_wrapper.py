@@ -46,6 +46,6 @@ if __name__ == "__main__":
 
     rospy.on_shutdown(digging_wrapper.stop)
 
-    rospy.loginfo("\n***Digging node initialized successfully***\n")
+    rospy.loginfo("***Digging node initialized successfully***")
 
     rospy.spin()

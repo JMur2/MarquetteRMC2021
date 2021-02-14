@@ -35,7 +35,7 @@ if __name__ == "__main__":
 
     #rospy.on_shutdown() # stop everything, close UI
 
-    rospy.loginfo("\n***Main node initialized successfully***\n")
+    rospy.loginfo("***Main node initialized successfully***")
 
     while True:
         main_wrapper.publish_data_manual() 
