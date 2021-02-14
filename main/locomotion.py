@@ -78,3 +78,4 @@ class Locomotion:
     #--------------------------------------------------------------------
     def loco_config_check(self):
         #print(self.odrv0.axis0.encoder.mode)
+        print("loco_config")
