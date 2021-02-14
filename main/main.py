@@ -17,8 +17,13 @@ from dumping import Dumping
 class Robot:
 
     def __init__(self):
+        self.state = "manual"
 
-        self.state_operation = "manual"
+    def get_state(self):
+        return state
+
+    def set_state(self, state):
+        self.state = state
 
     def get_char(self):
         file_descriptor = sys.stdin.fileno()
@@ -37,8 +42,23 @@ class Robot:
         char_val = ord(char) # convert the character read in to its ASCII value
 
         if (char_val == 119 or char_val == 87):
-            # W -- go forward
+            # W -- FORWARD
             opcode = 0
+            return opcode
+
+        if (char_val == 97 or char_val == 65):
+            # A -- LEFT
+            opcode = 1
+            return opcode
+
+        if (char_val == 115 or char_val == 83):
+            # S -- BACK
+            opcode = 2
+            return opcode
+
+        if (char_val == 100 or char_val == 68):
+            # D -- RIGHT
+            opcode = 3
             return opcode
 
         if (char_val == 120 or char_val == 88):

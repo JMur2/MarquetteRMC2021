@@ -19,8 +19,9 @@ class mainWrapperROS:
         data = Int32(data=opcode)
         self.publisher_manual.publish(data)
 
-    def publish_data_automated(self, event=None, data=None):
-        data = Int32(data=data)
+    def publish_data_automated(self, event=None):
+        d = self.main.get_data()
+        data = Int32(data=d)
         self.publisher_automated.publish(data)
 
     def big_red_button(self):
@@ -37,6 +38,11 @@ if __name__ == "__main__":
     rospy.loginfo("\n***Main node initialized successfully***\n")
 
     while True:
-        main_wrapper.publish_data_manual()
+        main_wrapper.publish_data_manual() 
+        # if main_wrapper.main.get_state == "manual":
+        #     main_wrapper.publish_data_manual()
+
+        # if main_wrapper.main.get_state == "automation":
+        #     main_wrapper.publish_data_automated()
 
     rospy.spin()
