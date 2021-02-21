@@ -17,6 +17,7 @@ class mainWrapperROS:
         #self.big_red_button = rospy.Publisher("emergency_stop", Int32, queue_size=10)
 
     def publish_data_manual(self, event=None):
+        print("test")
         opcode = self.main.get_opcode()
         print("OPCODE returned: ", opcode)
         data = Int32(data=opcode)
