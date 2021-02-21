@@ -12,12 +12,13 @@ class mainWrapperROS:
         self.main = Robot()
         #self.main = Ui_Dialog()
         
+        self.opcode = -1
+
         self.publisher_manual = rospy.Publisher("main_manual", Int32, queue_size=1)
         self.publisher_automated = rospy.Publisher("main_automated", Int32, queue_size=1)
         #self.big_red_button = rospy.Publisher("emergency_stop", Int32, queue_size=10)
 
     def publish_data_manual(self, event=None):
-        print("test")
         opcode = self.main.get_opcode()
         print("OPCODE returned: ", opcode)
         data = Int32(data=opcode)
@@ -41,8 +42,9 @@ if __name__ == "__main__":
 
     rospy.loginfo("***Main node initialized successfully***")
 
+    main_wrapper.main.init_gui()
+
     while True:
-        print("loop!")
         main_wrapper.publish_data_manual() 
         # if main_wrapper.main.get_state == "manual":
         #     main_wrapper.publish_data_manual()

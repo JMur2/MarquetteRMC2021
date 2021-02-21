@@ -17,17 +17,18 @@ class Robot:
     def __init__(self):
         self.state = "manual"
 
-        # self.app = QtWidgets.QApplication(sys.argv)
-        # self.Dialog = QtWidgets.QDialog()
-        # self.setupUi(self.Dialog)
-        # self.Dialog.show()
-        # sys.exit(self.app.exec_())
-
     def get_state(self):
         return state
 
     def set_state(self, state):
         self.state = state
+
+    def init_gui(self):
+        self.app = QtWidgets.QApplication(sys.argv)
+        self.Dialog = QtWidgets.QDialog()
+        self.setupUi(self.Dialog)
+        self.Dialog.show()
+        sys.exit(self.app.exec_())
 
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
