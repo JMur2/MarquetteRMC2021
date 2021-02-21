@@ -18,6 +18,7 @@ class mainWrapperROS:
 
     def publish_data_manual(self, event=None):
         opcode = self.main.get_opcode()
+        print("OPCODE returned: ", opcode)
         data = Int32(data=opcode)
         self.publisher_manual.publish(data)
 
