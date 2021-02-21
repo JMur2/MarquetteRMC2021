@@ -17,7 +17,7 @@ class Locomotion:
     def __init__(self):
         try:
             print("Searching locomotion odrive, this may take a few seconds...")
-            self.odrv0 = odrive.find_any()
+            #self.odrv0 = odrive.find_any()
             print("Locomotion odrive connected successfully")
         except:
             print("Unable to find locomotion odrive")            
