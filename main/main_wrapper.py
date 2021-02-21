@@ -41,7 +41,7 @@ if __name__ == "__main__":
 
     rospy.loginfo("***Main node initialized successfully***")
 
-    main_wrapper.main.rungui()
+    #main_wrapper.main.rungui()
 
     # while True:
     #     main_wrapper.publish_data_manual() 
