@@ -35,13 +35,13 @@ class mainWrapperROS:
 if __name__ == "__main__":
     rospy.init_node("main_node")
         
+    print("before")
     main_wrapper = mainWrapperROS()
+    print("after")
 
     #rospy.on_shutdown() # stop everything, close UI
 
     rospy.loginfo("***Main node initialized successfully***")
-
-    print("I am alive!")
 
     while True:
         print("loop!")
