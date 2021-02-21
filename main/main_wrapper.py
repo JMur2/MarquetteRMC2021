@@ -3,7 +3,10 @@
 import rospy
 from std_msgs.msg import Int32
 
-from main import Robot
+import sys
+
+#from main import Robot
+from main import setupUI
 
 class mainWrapperROS:
 
@@ -38,8 +41,10 @@ if __name__ == "__main__":
 
     rospy.loginfo("***Main node initialized successfully***")
 
-    while True:
-        main_wrapper.publish_data_manual() 
+    main_wrapper.main.rungui()
+
+    # while True:
+    #     main_wrapper.publish_data_manual() 
         # if main_wrapper.main.get_state == "manual":
         #     main_wrapper.publish_data_manual()
 
