@@ -9,9 +9,7 @@ from main import Robot
 class mainWrapperROS:
 
     def __init__(self):
-        print("before")
         self.main = Robot()
-        print("after")
         #self.main = Ui_Dialog()
         
         self.publisher_manual = rospy.Publisher("main_manual", Int32, queue_size=1)
