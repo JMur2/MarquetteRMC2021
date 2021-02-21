@@ -41,7 +41,7 @@ if __name__ == "__main__":
 
     rospy.loginfo("***Main node initialized successfully***")
 
-    #main_wrapper.main.rungui()
+    print("I am alive!")
 
     while True:
         print("loop!")
