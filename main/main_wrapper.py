@@ -9,7 +9,9 @@ from main import Robot
 class mainWrapperROS:
 
     def __init__(self):
+        print("before")
         self.main = Robot()
+        print("after")
         #self.main = Ui_Dialog()
         
         self.publisher_manual = rospy.Publisher("main_manual", Int32, queue_size=1)
@@ -35,9 +37,7 @@ class mainWrapperROS:
 if __name__ == "__main__":
     rospy.init_node("main_node")
         
-    print("before")
     main_wrapper = mainWrapperROS()
-    print("after")
 
     #rospy.on_shutdown() # stop everything, close UI
 
