@@ -44,6 +44,7 @@ if __name__ == "__main__":
     #main_wrapper.main.rungui()
 
     while True:
+        print("loop!")
         main_wrapper.publish_data_manual() 
         # if main_wrapper.main.get_state == "manual":
         #     main_wrapper.publish_data_manual()

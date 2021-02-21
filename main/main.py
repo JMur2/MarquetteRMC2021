@@ -326,8 +326,8 @@ class Robot:
 # Communicate Opcode 
 #-----------------------------------------------------------
     def set_opcode(self, op):
-        print("Setting opcode to ", op)
         self.opcode = op
+        print("Setting opcode to ", self.opcode)
     
     def get_opcode(self):
         print("Returning opcode ", self.opcode)
