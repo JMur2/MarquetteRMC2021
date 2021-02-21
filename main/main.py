@@ -16,7 +16,6 @@ class Robot:
 
     def __init__(self):
         self.state = "manual"
-        self.opcode = -1
 
         self.app = QtWidgets.QApplication(sys.argv)
         self.Dialog = QtWidgets.QDialog()
@@ -327,9 +326,11 @@ class Robot:
 # Communicate Opcode 
 #-----------------------------------------------------------
     def set_opcode(self, op):
+        print("Setting opcode to ", op)
         self.opcode = op
     
     def get_opcode(self):
+        print("Returning opcode ", self.opcode)
         return self.opcode
 
     def retranslateUi(self, Dialog):
