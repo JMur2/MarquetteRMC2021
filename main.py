@@ -377,7 +377,7 @@ class Ui_Dialog(object):
         #self.ui = Ui_Dialog()
         self.setupUi(self.Dialog)
         self.Dialog.show()
-        sys.exit(app.exec_())
+        sys.exit(self.app.exec_())
 
 
 # if __name__ == "__main__":
