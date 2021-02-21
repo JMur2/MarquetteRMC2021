@@ -16,6 +16,7 @@ class Robot:
 
     def __init__(self):
         self.state = "manual"
+        self.opcode = -1
 
         self.app = QtWidgets.QApplication(sys.argv)
         self.Dialog = QtWidgets.QDialog()
