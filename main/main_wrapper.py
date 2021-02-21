@@ -383,12 +383,4 @@ if __name__ == "__main__":
 
     rospy.loginfo("***Main node initialized successfully***")
 
-    # while True:
-    #     main_wrapper.publish_data_manual() 
-    #     if main_wrapper.main.get_state == "manual":
-    #         main_wrapper.publish_data_manual()
-
-    #     if main_wrapper.main.get_state == "automation":
-    #         main_wrapper.publish_data_automated()
-
     rospy.spin()
