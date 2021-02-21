@@ -38,7 +38,7 @@ const int calVal_eepromAdress = 0;
 unsigned long t = 0;
 
 void setup() {
-  //Serial.begin(57600); delay(10);
+  Serial.begin(57600); delay(10);
   //Serial.println();
   //Serial.println("Starting...");
 
