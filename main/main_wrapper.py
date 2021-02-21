@@ -6,7 +6,7 @@ from std_msgs.msg import Int32
 import sys
 
 #from main import Robot
-from main import setupUI
+from main import setupUi
 
 class mainWrapperROS:
 
