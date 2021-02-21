@@ -375,7 +375,7 @@ class Ui_Dialog(object):
         self.app = QtWidgets.QApplication(sys.argv)
         self.Dialog = QtWidgets.QDialog()
         #self.ui = Ui_Dialog()
-        self.setupUi(Dialog)
+        self.setupUi(self.Dialog)
         self.Dialog.show()
         sys.exit(app.exec_())
 
