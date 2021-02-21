@@ -8,7 +8,8 @@ from main import Robot
 class mainWrapperROS:
 
     def __init__(self):
-        self.main = Robot()
+        #self.main = Robot()
+        self.main = setupUi()
         
         self.publisher_manual = rospy.Publisher("main_manual", Int32, queue_size=1)
         self.publisher_automated = rospy.Publisher("main_automated", Int32, queue_size=1)
