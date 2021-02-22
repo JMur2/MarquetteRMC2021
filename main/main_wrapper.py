@@ -257,7 +257,7 @@ class mainWrapperROS:
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
 #-----------------------------------------------------------
-# Handlers for locomotion buttons
+# Locomotion Button Handlers
 #-----------------------------------------------------------
     def foward_loco(self):
         self.publish_data_manual(None, 0)
@@ -280,24 +280,37 @@ class mainWrapperROS:
         #print("This is for stop Locomotion")
         
 #-----------------------------------------------------------
-# Handlers for digging
+# Digging Button Handlers
 #-----------------------------------------------------------
     def dig_handler(self):
-        print("This is for digging")
-        #Digit: 6
+        self.publish_data_manual(None, 6)
+        #print("This is for digging")
         
     def undig_handler(self):
-        print("This is for undig")
-        #Digit: 7
+        self.publish_data_manual(None, 7)
+        #print("This is for undig")
         
     def stop_dig(self):
-        print("This is for stop digging")
-        #Digit: 8
+        self.publish_data_manual(None, 8)
+        #print("This is for stop digging")
+
+    def depth_increase(self):
+        self.publish_data_manual(None, 9)
+        #print("This is for depth increase")
         
+    def depth_decrease(self):
+        self.publish_data_manual(None, 10)
+        #print("This is for depth decrease")
+    
+    def depth_stop(self):
+        self.publish_data_manual(None, 11)
+        #print("This is for depth stop")
+
+    # HANDLE AFTER STEPPER TESTING WITH NEW SCRIPT
     def pitch_ccw(self):
         print("This is for pitch CCW")
         #Digit: 9
-        
+
     def pitch_cw(self):
         print("This is for pitch cw")
         #Digit: 10
@@ -306,20 +319,8 @@ class mainWrapperROS:
         print("This is for stop pitch")
         #Digit: 11
         
-    def depth_increase(self):
-        print("This is for depth increase")
-        #Digit: 12
-        
-    def depth_decrease(self):
-        print("This is for depth decrease")
-        #Digit: 13
-    
-    def depth_stop(self):
-        print("This is for depth stop")
-        #Digit: 14
-        
 #-----------------------------------------------------------
-# Handlers for digging
+# Dumping Button Handlers
 #-----------------------------------------------------------
     def Dump_handler(self):
         print("This is for sump")
