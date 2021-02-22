@@ -29,13 +29,15 @@ class dumpingWrapperROS:
             if self.opcode == 18:
                 self.dumping.actuator_retract()
 
+    def stop(self):
+        self.dumping.stepper_stop()
 
 if __name__ == "__main__":
     rospy.init_node("dumping_node")
 
     dumping_wrapper = dumpingWrapperROS()
 
-    #rospy.on_shutdown()
+    rospy.on_shutdown(dumping_wrapper.stop)
 
     rospy.loginfo("***Dumping node initialized successfully***")
 

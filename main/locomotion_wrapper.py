@@ -31,12 +31,15 @@ class locomotionWrapperROS:
             if self.opcode == 5:
                 self.locomotion.loco_config_check()
 
+    def stop(self):
+        self.locomotion.loco_stop()
+
 if __name__ == "__main__":
     rospy.init_node("locomotion_node")
 
     locomotion_wrapper = locomotionWrapperROS()
 
-    rospy.on_shutdown(locomotion_wrapper.locomotion.loco_stop) # tells the node what action to take on shutdown
+    rospy.on_shutdown(locomotion_wrapper.stop) # tells the node what action to take on shutdown
 
     rospy.loginfo("***Locomotion node initialized successfully***") 
 
