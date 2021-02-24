@@ -1,22 +1,24 @@
 #!/usr/bin/env python
 
 import rospy
-from std_msgs.msg import Int32
+from std_msgs.msg import Int32, UInt16
 
 import sys
 
-#from main import Robot
-from main import Ui_Dialog
+from main import Robot
+#from main import Ui_Dialog
 
 class mainWrapperROS:
 
     def __init__(self):
-        #self.main = Robot()
-        self.main = Ui_Dialog()
+        self.main = Robot()
+        #self.main = Ui_Dialog()
         
         self.publisher_manual = rospy.Publisher("main_manual", Int32, queue_size=1)
         self.publisher_automated = rospy.Publisher("main_automated", Int32, queue_size=1)
         #self.big_red_button = rospy.Publisher("emergency_stop", Int32, queue_size=10)
+
+        rospy.Subscriber("scale_publisher", UInt16, self.test_callback)
 
     def publish_data_manual(self, event=None):
         opcode = self.main.get_opcode()
@@ -32,6 +34,10 @@ class mainWrapperROS:
         pass
         # this is where the emergency stop code will go
 
+    def test_callback(self, msg):
+        value = msg.data
+        print(value)
+
 if __name__ == "__main__":
     rospy.init_node("main_node")
         
@@ -41,10 +47,10 @@ if __name__ == "__main__":
 
     rospy.loginfo("***Main node initialized successfully***")
 
-    main_wrapper.main.rungui()
+    #main_wrapper.main.rungui()
 
-    # while True:
-    #     main_wrapper.publish_data_manual() 
+    while True:
+        main_wrapper.publish_data_manual() 
         # if main_wrapper.main.get_state == "manual":
         #     main_wrapper.publish_data_manual()
 
