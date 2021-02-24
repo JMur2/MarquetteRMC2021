@@ -75,7 +75,7 @@ void loop() {
     gryo_msg.data = "Down"
   }
   
-  button_publisher.publish( &button_msg );
+  button_publisher.publish( &gryo_msg );
   node_handle.spinOnce();
   
   delay(100);
