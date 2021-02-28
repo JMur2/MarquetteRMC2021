@@ -13,6 +13,7 @@ class dumpingWrapperROS:
         self.opcode = -1
 
         rospy.Subscriber("main_manual", Int32, self.callback_main)
+        rospy.Subscriber("emergency_stop", Int32, self.callback_stop)
     
     def callback_main(self, msg):
         self.opcode = msg.data
@@ -28,6 +29,9 @@ class dumpingWrapperROS:
                 self.dumping.actuator_extend()
             if self.opcode == 18:
                 self.dumping.actuator_retract()
+
+    def callback_stop(self):
+        self.stop()
 
     def stop(self):
         self.dumping.stepper_stop()

@@ -13,6 +13,7 @@ class locomotionWrapperROS:
         self.opcode = -1
 
         rospy.Subscriber("main_manual", Int32, self.callback_main)
+        rospy.Subscriber("emergency_stop", Int32, self.callback_stop)
 
     def callback_main(self, msg): 
         self.opcode = msg.data
@@ -30,6 +31,9 @@ class locomotionWrapperROS:
                 self.locomotion.loco_stop()
             if self.opcode == 5:
                 self.locomotion.loco_config_check()
+
+    def callback_stop(self):
+        self.stop()
 
     def stop(self):
         self.locomotion.loco_stop()

@@ -13,6 +13,7 @@ class diggingWrapperROS:
         self.opcode = -1
 
         rospy.Subscriber("main_manual", Int32, self.callback_main)
+        rospy.Subscriber("emergency_stop", Int32, self.callback_stop)
 
     def callback_main(self, msg):
         self.opcode = msg.data
@@ -35,6 +36,9 @@ class diggingWrapperROS:
             if self.opcode == 13:
                 self.digging.stepper_backward()
     
+    def callback_stop(self):
+        self.stop()
+
     def stop(self):
         self.digging.depth_stop()
         self.digging.zipper_stop()

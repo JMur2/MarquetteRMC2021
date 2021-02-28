@@ -18,7 +18,7 @@ class mainWrapperROS:
 
         self.publisher_manual = rospy.Publisher("main_manual", Int32, queue_size=1)
         self.publisher_automated = rospy.Publisher("main_automated", Int32, queue_size=1)
-        #self.big_red_button = rospy.Publisher("emergency_stop", Int32, queue_size=10)
+        self.emergency_stop = rospy.Publisher("emergency_stop", Int32, queue_size=10)
 
         self.app = QtWidgets.QApplication(sys.argv)
         self.Dialog = QtWidgets.QDialog()
@@ -36,8 +36,8 @@ class mainWrapperROS:
         self.publisher_automated.publish(data)
 
     def big_red_button(self):
-        pass
-        # this is where the emergency stop code will go
+        data = Int32(data=1)
+        self.emergency_stop.publish(data)
     
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
@@ -451,7 +451,7 @@ if __name__ == "__main__":
         
     main_wrapper = mainWrapperROS()
 
-    #rospy.on_shutdown() # stop everything, close UI
+    rospy.on_shutdown(main_wrapper.big_red_button) # stop everything, close UI
 
     rospy.loginfo("***Main node initialized successfully***")
 
