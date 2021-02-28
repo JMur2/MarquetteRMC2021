@@ -82,7 +82,7 @@ void loop() {
       scale_msg.data = i;
       scale_publisher.publish( &scale_msg );
       node_handle.spinOnce();
-      delay(100);
+      //delay(100);
   
       newDataReady = 0;
       t = millis();
