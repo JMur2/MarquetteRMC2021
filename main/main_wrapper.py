@@ -40,30 +40,29 @@ class mainWrapperROS:
         data = Int32(data=1)
         self.emergency_stop.publish(data)
     
-    def keyPressEvent(self, event):
-        
-        if event.key() == Qt.Key_W:
-            print("w") # forward
-        elif event.key() == Qt.Key_A:
-            print("a") # left
-        elif event.key() == Qt.Key_S:
-            print("s") # back
-        elif event.key() == Qt.Key_D:
-            print("d") # right
-        elif event.key() == Qt.Key_X:
-            print("x") # stop
-        elif event.key() == Qt.Key_T:
-            print("t") # dig forward
-        elif event.key() == Qt.Key_G:
-            print("g") # dig stop
-        elif event.key() == Qt.Key_B:
-            print("b") # dig backward
-        elif event.key() == Qt.Key_Y:
-            print("y") # angle forward cw
-        elif event.key() == Qt.Key_H:
-            print("h") # angle stop
-        elif event.key() == Qt.Key_N:
-            print("n") # angle backward ccw
+    # def keyPressEvent(self, event):
+    #     if event.key() == Qt.Key_W:
+    #         print("w") # forward
+    #     elif event.key() == Qt.Key_A:
+    #         print("a") # left
+    #     elif event.key() == Qt.Key_S:
+    #         print("s") # back
+    #     elif event.key() == Qt.Key_D:
+    #         print("d") # right
+    #     elif event.key() == Qt.Key_X:
+    #         print("x") # stop
+    #     elif event.key() == Qt.Key_T:
+    #         print("t") # dig forward
+    #     elif event.key() == Qt.Key_G:
+    #         print("g") # dig stop
+    #     elif event.key() == Qt.Key_B:
+    #         print("b") # dig backward
+    #     elif event.key() == Qt.Key_Y:
+    #         print("y") # angle forward cw
+    #     elif event.key() == Qt.Key_H:
+    #         print("h") # angle stop
+    #     elif event.key() == Qt.Key_N:
+    #         print("n") # angle backward ccw
 
 
     def setupUi(self, Dialog):
