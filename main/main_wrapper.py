@@ -347,42 +347,41 @@ class mainWrapperROS:
     # HANDLE AFTER STEPPER TESTING WITH NEW SCRIPT
     def pitch_ccw(self):
         print("This is for pitch CCW")
-        #Digit: 9
+        #Digit: 12
 
     def pitch_cw(self):
         print("This is for pitch cw")
-        #Digit: 10
+        #Digit: 13
         
     def pitch_stop(self):
         print("This is for stop pitch")
-        #Digit: 11
+        #Digit: 14
         
 #-----------------------------------------------------------
 # Dumping Button Handlers
 #-----------------------------------------------------------
     def Dump_handler(self):
-        print("This is for sump")
-        #Digit: 15
+        self.publish_data_manual(None, 14)
+        #print("This is for dump")
         
     def Dump_Retract(self):
-        print("This is for store")
-        #Digit: 16
+        self.publish_data_manual(None, 15)
+        #print("This is for store")
         
     def store_stop(self):
-        print("This is for dump stop")
-        #Digit: 17
+        self.publish_data_manual(None, 16)
+        #print("This is for dump stop")
         
     def Actuator_Extend(self):
+        self.publish_data_manual(None, 17)
         print("This is for sump")
-        #Digit: 15
         
     def Actuator_Retract(self):
-        print("This is for store")
-        #Digit: 16
+        self.publish_data_manual(None, 18)
+        #print("This is for store")
         
     def Stop_Actuator(self):
         print("This is for dump stop")
-        #Digit: 17
 
 #-----------------------------------------------------------
 # Handlers for Autonomy 
@@ -398,7 +397,7 @@ class mainWrapperROS:
     def setControl(self):
         radio = self.sender()
         #print(radio.text())
-        
+
     def set_opcode(self, opcode):
         self.holder = self.opcode
 
