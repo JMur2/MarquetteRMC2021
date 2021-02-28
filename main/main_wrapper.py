@@ -218,12 +218,12 @@ class mainWrapperROS:
         self.Dump = QtWidgets.QPushButton(Dialog)
         self.Dump.setGeometry(QtCore.QRect(780, 180, 81, 28))
         self.Dump.setObjectName("Dump")
-        self.Dump.clicked.connect(self.Dump_handler)
+        self.Dump.clicked.connect(self.dump_handler)
         
         self.Retract_Dump = QtWidgets.QPushButton(Dialog)
         self.Retract_Dump.setGeometry(QtCore.QRect(880, 180, 81, 28))
         self.Retract_Dump.setObjectName("Retract_Dump")
-        self.Retract_Dump.clicked.connect(self.Dump_Retract)
+        self.Retract_Dump.clicked.connect(self.dump_retract)
 
         self.Dump_Stop = QtWidgets.QPushButton(Dialog)
         self.Dump_Stop.setGeometry(QtCore.QRect(980, 180, 81, 28))
@@ -233,17 +233,17 @@ class mainWrapperROS:
         self.Retract_Actuator = QtWidgets.QPushButton(Dialog)
         self.Retract_Actuator.setGeometry(QtCore.QRect(880, 140, 81, 28))
         self.Retract_Actuator.setObjectName("Retract_Actuator")
-        self.Retract_Actuator.clicked.connect(self.Actuator_Retract)
+        self.Retract_Actuator.clicked.connect(self.actuator_retract)
         
         self.Extend_Actuator = QtWidgets.QPushButton(Dialog)
         self.Extend_Actuator.setGeometry(QtCore.QRect(780, 140, 81, 28))
         self.Extend_Actuator.setObjectName("Extend_Actuator")
-        self.Extend_Actuator.clicked.connect(self.Actuator_Extend)
+        self.Extend_Actuator.clicked.connect(self.actuator_extend)
         
         self.Actuator_Stop = QtWidgets.QPushButton(Dialog)
         self.Actuator_Stop.setGeometry(QtCore.QRect(980, 140, 81, 28))
         self.Actuator_Stop.setObjectName("Actuator_Stop")
-        self.Actuator_Stop.clicked.connect(self.Stop_Actuator)
+        self.Actuator_Stop.clicked.connect(self.stop_actuator)
 
         #digging button declaration 
         self.Dig = QtWidgets.QPushButton(Dialog)
@@ -360,11 +360,11 @@ class mainWrapperROS:
 #-----------------------------------------------------------
 # Dumping Button Handlers
 #-----------------------------------------------------------
-    def Dump_handler(self):
+    def dump_handler(self):
         self.publish_data_manual(None, 14)
         #print("This is for dump")
         
-    def Dump_Retract(self):
+    def dump_retract(self):
         self.publish_data_manual(None, 15)
         #print("This is for store")
         
@@ -372,21 +372,20 @@ class mainWrapperROS:
         self.publish_data_manual(None, 16)
         #print("This is for dump stop")
         
-    def Actuator_Extend(self):
+    def actuator_extend(self):
         self.publish_data_manual(None, 17)
         print("This is for sump")
         
-    def Actuator_Retract(self):
+    def actuator_retract(self):
         self.publish_data_manual(None, 18)
         #print("This is for store")
         
-    def Stop_Actuator(self):
+    def stop_actuator(self):
         print("This is for dump stop")
 
 #-----------------------------------------------------------
 # Handlers for Autonomy 
 #-----------------------------------------------------------       
-        
     def autonomy_S(self):
         radio = self.sender()   #we can get the text and use it to check which radio 
                                 #button is clicked (radio.text())
