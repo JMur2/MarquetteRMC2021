@@ -162,10 +162,10 @@ class mainWrapperROS:
         self.unfold.setObjectName("unfold")
         self.Fold = QtWidgets.QPushButton(Dialog)
         self.Fold.setGeometry(QtCore.QRect(640, 40, 111, 28))
-        self.Fold.setObjectName("pushButton_3")
+        self.Fold.setObjectName("Fold")
         self.E_stop = QtWidgets.QPushButton(Dialog)
         self.E_stop.setGeometry(QtCore.QRect(500, 40, 111, 28))
-        self.E_stop.setObjectName("pushButton_4")
+        self.E_stop.setObjectName("E_stop")
 
         #Autonomy for the different subsystems 
         self.A_Dumping = QtWidgets.QRadioButton(Dialog)
@@ -438,8 +438,8 @@ class mainWrapperROS:
         self.Loco_stop.setText(_translate("Dialog", "Stop"))
         self.Initiate_A.setText(_translate("Dialog", "Initiate"))
         self.unfold.setText(_translate("Dialog", "Unfold"))
-        self.pushButton_3.setText(_translate("Dialog", "Fold"))
-        self.pushButton_4.setText(_translate("Dialog", "Emergency Stop"))
+        self.Fold.setText(_translate("Dialog", "Fold"))
+        self.E_stop.setText(_translate("Dialog", "Emergency Stop"))
         self.Extend_Actuator.setText(_translate("Dialog", "Extend"))
         self.Dump.setText(_translate("Dialog", "Dump"))
         self.Actuator_Stop.setText(_translate("Dialog", "Stop"))
