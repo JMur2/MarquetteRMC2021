@@ -159,7 +159,7 @@ class mainWrapperROS:
         #General manual controls 
         self.unfold = QtWidgets.QPushButton(Dialog)
         self.unfold.setGeometry(QtCore.QRect(360, 40, 111, 28))
-        self.unfold.setObjectName("pushButton_2")
+        self.unfold.setObjectName("unfold")
         self.Fold = QtWidgets.QPushButton(Dialog)
         self.Fold.setGeometry(QtCore.QRect(640, 40, 111, 28))
         self.Fold.setObjectName("pushButton_3")
@@ -437,7 +437,7 @@ class mainWrapperROS:
         self.Depth_Stop.setText(_translate("Dialog", "Stop"))
         self.Loco_stop.setText(_translate("Dialog", "Stop"))
         self.Initiate_A.setText(_translate("Dialog", "Initiate"))
-        self.pushButton_2.setText(_translate("Dialog", "Unfold"))
+        self.unfold.setText(_translate("Dialog", "Unfold"))
         self.pushButton_3.setText(_translate("Dialog", "Fold"))
         self.pushButton_4.setText(_translate("Dialog", "Emergency Stop"))
         self.Extend_Actuator.setText(_translate("Dialog", "Extend"))
