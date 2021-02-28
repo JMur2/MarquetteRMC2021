@@ -166,6 +166,7 @@ class mainWrapperROS:
         self.E_stop = QtWidgets.QPushButton(Dialog)
         self.E_stop.setGeometry(QtCore.QRect(500, 40, 111, 28))
         self.E_stop.setObjectName("E_stop")
+        self.E_stop.clicked.connect(self.emergency_stop_handler)
 
         #Autonomy for the different subsystems 
         self.A_Dumping = QtWidgets.QRadioButton(Dialog)
@@ -400,6 +401,15 @@ class mainWrapperROS:
     def set_opcode(self, opcode):
         self.holder = self.opcode
 
+#--
+#
+#--
+    def emergency_stop_handler(self):
+        self.big_red_button()
+
+#--
+#
+#--
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
