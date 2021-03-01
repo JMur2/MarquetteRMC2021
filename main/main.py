@@ -66,6 +66,10 @@ class Robot:
             opcode = 4
             return opcode
 
+        #----
+        # DUMPING COMMANDS
+        #----
+
         if (char_val == 116 or char_val == 84):
             # T -- BUCKET FORWARD
             opcode = 14
@@ -79,4 +83,14 @@ class Robot:
         if (char_val == 98 or char_val == 66):
             # B -- BUCKET BACKWARD
             opcode = 15
+            return opcode
+
+        if (char_val == 121 or char_val == 89):
+            # Y -- Extend Actuatior
+            opcode = 17
+            return opcode
+
+        if (char_val == 78 or char_val == 110):
+            # N -- Retract Actuator
+            opcode = 18
             return opcode
