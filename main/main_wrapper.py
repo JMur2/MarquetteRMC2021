@@ -1,5 +1,10 @@
 #!/usr/bin/env python
 
+"""
+This file is the ROS wrapper for main.py
+It handles the GUI, and operates as a hub for sending out information to the subassembly files through Publishers
+"""
+
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.Qt import Qt
 
@@ -9,33 +14,54 @@ import rospy
 from std_msgs.msg import Int32
 
 from main import Robot
-#from main import Ui_Dialog
 
 class mainWrapperROS:
 
+    #-------------------------------------------------------------------------------------------
+    # Main Wrapper Initialization
+    #
+    # This initializes an object from main.py, the publishers used throughout this wrapper,
+    # and handles running the GUI once all other operations complete
+    #-------------------------------------------------------------------------------------------
     def __init__(self):
         self.main = Robot()
-        #self.main = Ui_Dialog()
 
+        # establish the main set of publishers
         self.publisher_manual = rospy.Publisher("main_manual", Int32, queue_size=1)
         self.publisher_automated = rospy.Publisher("main_automated", Int32, queue_size=1)
         self.emergency_stop = rospy.Publisher("emergency_stop", Int32, queue_size=10)
 
+        # startup the GUI
         self.app = QtWidgets.QApplication(sys.argv)
         self.Dialog = QtWidgets.QDialog()
         self.setupUi(self.Dialog)
         self.Dialog.show()
         sys.exit(self.app.exec_())
 
+    #-------------------------------------------------------------------------------------------
+    # Publish manual control data
+    #
+    # Uses the manual publisher to send commands from the GUI to the subassembly
+    #-------------------------------------------------------------------------------------------
     def publish_data_manual(self, event=None, op=None):
         data = Int32(data=op)
         self.publisher_manual.publish(data)
 
+    #-------------------------------------------------------------------------------------------
+    # Publish automated control data
+    #
+    # Automation controls are published with this publisher
+    #-------------------------------------------------------------------------------------------
     def publish_data_automated(self, event=None):
         d = self.main.get_data()
         data = Int32(data=d)
         self.publisher_automated.publish(data)
 
+    #-------------------------------------------------------------------------------------------
+    # Publish an emergency stop
+    #
+    # In the event of an emergency, publish a stop command to all operations
+    #-------------------------------------------------------------------------------------------
     def big_red_button(self):
         data = Int32(data=1)
         self.emergency_stop.publish(data)
@@ -63,7 +89,6 @@ class mainWrapperROS:
             print("h") # angle stop
         elif event.key() == Qt.Key_N:
             print("n") # angle backward ccw
-
 
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
