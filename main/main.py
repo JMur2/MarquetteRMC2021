@@ -41,6 +41,10 @@ class Robot:
         char = self.get_char() # get the character from the keyboard
         char_val = ord(char) # convert the character read in to its ASCII value
 
+        #----------------------------------------------------------------
+        # LOCOMOTION COMMANDS
+        #----------------------------------------------------------------
+
         if (char_val == 119 or char_val == 87):
             # W -- FORWARD
             opcode = 0
@@ -66,9 +70,9 @@ class Robot:
             opcode = 4
             return opcode
 
-        #----
+        #----------------------------------------------------------------
         # DUMPING COMMANDS
-        #----
+        #----------------------------------------------------------------
 
         if (char_val == 116 or char_val == 84):
             # T -- BUCKET FORWARD
