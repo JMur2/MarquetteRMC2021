@@ -20,13 +20,13 @@ class locomotionWrapperROS:
 
         if self.opcode >= 0 and self.opcode <= 5:
             if self.opcode == 0:
-                self.locomotion.loco_forward(50)
+                self.locomotion.loco_forward(67)
             if self.opcode == 1:
-                self.locomotion.loco_left(50)
+                self.locomotion.loco_left(67)
             if self.opcode == 2:
-                self.locomotion.loco_back(50)
+                self.locomotion.loco_back(67)
             if self.opcode == 3:
-                self.locomotion.loco_right(50)
+                self.locomotion.loco_right(67)
             if self.opcode == 4:
                 self.locomotion.loco_stop()
             if self.opcode == 5:
