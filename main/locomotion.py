@@ -4,8 +4,8 @@ This file houses all of the locomotion functionality.
 @created: 11-1-2020
 """
 
-# import odrive
-# from odrive.enums import *
+import odrive
+from odrive.enums import *
 
 class Locomotion:
     
@@ -17,7 +17,7 @@ class Locomotion:
     def __init__(self):
         try:
             print("Searching locomotion odrive, this may take a few seconds...")
-            #self.odrv0 = odrive.find_any()
+            self.odrv0 = odrive.find_any(serial_number=206430804648)
             print("Locomotion odrive connected successfully")
         except:
             print("Unable to find locomotion odrive")            
@@ -71,4 +71,4 @@ class Locomotion:
     # Still a work in progress
     #--------------------------------------------------------------------
     def loco_config_check(self):
-        print(self.odrv0.axis0.encoder.mode)
+        pass
