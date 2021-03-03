@@ -399,11 +399,10 @@ class mainWrapperROS:
 
     # HANDLE AFTER STEPPER TESTING WITH NEW SCRIPT
     def pitch_ccw(self):
-        print("This is for pitch CCW")
-        #Digit: 12
+        self.publish_data_manual(None, 12)
 
     def pitch_cw(self):
-        print("This is for pitch cw")
+        self.publish_data_manual(None, 13)
         #Digit: 13
         
     def pitch_stop(self):
