@@ -26,11 +26,11 @@ class diggingWrapperROS:
             if self.opcode == 8:
                 self.digging.zipper_stop()
             if self.opcode == 9:
-                self.digging.depth_extend(50)
+                self.digging.depth_extend(10)
             if self.opcode == 10:
-                self.digging.depth_retract(50)
+                self.digging.depth_retract(10)
             if self.opcode == 11:
-                self.digging.depth_stop(50)
+                self.digging.depth_stop()
             if self.opcode == 12:
                 self.digging.stepper_forward()
             if self.opcode == 13:
