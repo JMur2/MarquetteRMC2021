@@ -20,7 +20,7 @@ class Digging:
         #self.odrv1
         try:
             print("Searching for digging odrive, this may take a few seconds...")
-            #self.odrv1 = odrive.find_any(serial_number=1)
+            #self.odrv1 = odrive.find_any(serial_number="207939834D4D")
             print("Digging odrive connected successfuly")
         except:
             print("Unable to find digging odrive")
