@@ -6,7 +6,7 @@ This file houses all of the dumping functionality
 
 import subprocess
 import yaml
-from roboclaw_3 import Roboclaw
+from roboclaw import Roboclaw
 
 class Dumping:
 
