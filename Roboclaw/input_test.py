@@ -2,7 +2,7 @@
 
 @created: 10-11-2020
 """
-from roboclaw_3 import Roboclaw
+from roboclaw import Roboclaw
 import time
 import math
 import sys
@@ -23,7 +23,7 @@ def get_char():
 
 if __name__ == '__main__':
     print("Searching for roboclaw, this may take a few seconds...\n")
-    roboclaw = Roboclaw("/dev/ttyS0", 38400)
+    roboclaw = Roboclaw("/dev/ttyACM0", 38400)
     roboclaw.Open()
     print("Robot is ready to control, use WASD to control direction and Q to quit")
 
