@@ -429,6 +429,7 @@ class mainWrapperROS:
         #print("This is for sump")
         
     def actuator_retract(self):
+        print("main retract")
         self.publish_data_manual(None, 18)
         #print("This is for store")
         
