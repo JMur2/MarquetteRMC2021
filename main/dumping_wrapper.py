@@ -28,8 +28,9 @@ class dumpingWrapperROS:
             if self.opcode == 17:
                 self.dumping.actuator_extend()
             if self.opcode == 18:
-                print("wrapper retract")
                 self.dumping.actuator_retract()
+            if self.opcode == 19:
+                self.dumping.actuator_stop()
 
     def callback_stop(self):
         self.stop()

@@ -67,12 +67,16 @@ class Dumping:
     # Extend the linear actuator forward for its full length
     #--------------------------------------------------------------------
     def actuator_extend(self):
-        print("extend actuator")
         self.roboclaw.BackwardM1(128, 127)
 
     #--------------------------------------------------------------------
     # Fully retract the linear actuator
     #--------------------------------------------------------------------
     def actuator_retract(self):
-        print("retract actuator")
         self.roboclaw.ForwardM1(128, 127)
+
+    #--------------------------------------------------------------------
+    # Stop the linear actuator
+    #--------------------------------------------------------------------
+    def actuator_stop(self):
+        self.roboclaw.ForwardM1(128, 0)

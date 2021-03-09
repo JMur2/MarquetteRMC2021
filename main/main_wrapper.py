@@ -429,12 +429,11 @@ class mainWrapperROS:
         #print("This is for sump")
         
     def actuator_retract(self):
-        print("main retract")
         self.publish_data_manual(None, 18)
         #print("This is for store")
         
     def stop_actuator(self):
-        print("This is for dump stop")
+        self.publish_data_manual(None, 19)
 
 #-----------------------------------------------------------
 # Handlers for Autonomy 
