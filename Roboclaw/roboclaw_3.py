@@ -181,7 +181,8 @@ class Roboclaw:
 	def _writebyte(self,val):
 		self.crc_update(val&0xFF)
 #		self._port.write(chr(val&0xFF))
-		self._port.write(val.to_bytes(1, 'big'))
+		#self._port.write(val.to_bytes(1, 'big'))
+		self._port.write(struct.pack('>I', val))
 
 	def _writesbyte(self,val):
 		self._writebyte(val)
