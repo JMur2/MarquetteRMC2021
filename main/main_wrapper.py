@@ -426,7 +426,7 @@ class mainWrapperROS:
         
     def actuator_extend(self):
         self.publish_data_manual(None, 17)
-        print("This is for sump")
+        #print("This is for sump")
         
     def actuator_retract(self):
         self.publish_data_manual(None, 18)
