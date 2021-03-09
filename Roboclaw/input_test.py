@@ -35,10 +35,10 @@ if __name__ == '__main__':
             if char.lower() == "q":
                 break
             elif char.lower() == "w":
-                roboclaw.ForwardM2(0x80, 127)
+                roboclaw.ForwardM2(128, 127)
                 #roboclaw.ForwardM2(0x80, 127)
             elif char.lower() == "s":
-                roboclaw.BackwardM2(0x80, 127)
+                roboclaw.BackwardM2(128, 127)
                 #roboclaw.BackwardM2(0x80, 127)
 #            elif char.lower() == "x":
 #                roboclaw.ForwardM1(0x80, 0)
