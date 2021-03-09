@@ -126,10 +126,12 @@ class Roboclaw:
 		self.crc_clear()
 		self.crc_update(address)
 #		self._port.write(chr(address))
-		self._port.write(address.to_bytes(1, 'big'))
+		#self._port.write(address.to_bytes(1, 'big'))
+		self._port.write(struct.pack('>I', address))
 		self.crc_update(command)
 #		self._port.write(chr(command))
-		self._port.write(command.to_bytes(1, 'big'))
+		#self._port.write(command.to_bytes(1, 'big'))
+		self._port.write(struct.pack('>I', command))
 		return
 
 	def _readchecksumword(self):
@@ -1079,4 +1081,3 @@ class Roboclaw:
 		except:
 			return 0
 		return 1
-
