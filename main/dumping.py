@@ -19,7 +19,7 @@ class Dumping:
         #self.roboclaw
         try:
             print("Searching for dumping roboclaw, this may take a few seconds...")
-            self.roboclaw = Roboclaw("/dev/ttyACM0", 38400)
+            self.roboclaw = Roboclaw("/dev/ttyACM1", 38400)
             self.roboclaw.Open()
             print("Dumping roboclaw connected successfully")
         except:
@@ -67,10 +67,10 @@ class Dumping:
     # Extend the linear actuator forward for its full length
     #--------------------------------------------------------------------
     def actuator_extend(self):
-        self.roboclaw.ForwardM1(0x80, 127)
+        self.roboclaw.BackwardM1(128, 127)
 
     #--------------------------------------------------------------------
     # Fully retract the linear actuator
     #--------------------------------------------------------------------
     def actuator_retract(self):
-        self.roboclaw.BackwardM1(0x80, 127)
+        self.roboclaw.ForwardM1(128, 127)
