@@ -20,6 +20,7 @@ class Dumping:
         try:
             print("Searching for dumping roboclaw, this may take a few seconds...")
             self.roboclaw = Roboclaw("/dev/ttyACM0", 38400)
+            self.roboclaw.Open()
             print("Dumping roboclaw connected successfully")
         except:
             print("Unable to find digging roboclaw")
