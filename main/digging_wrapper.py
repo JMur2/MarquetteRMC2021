@@ -18,7 +18,7 @@ class diggingWrapperROS:
     def callback_main(self, msg):
         self.opcode = msg.data
 
-        if self.opcode >= 6 and self.opcode <= 13:
+        if self.opcode >= 6 and self.opcode <= 14:
             if self.opcode == 6:
                 self.digging.zipper_forward(67)
             if self.opcode == 7:
@@ -32,9 +32,11 @@ class diggingWrapperROS:
             if self.opcode == 11:
                 self.digging.depth_stop()
             if self.opcode == 12:
-                self.digging.stepper_forward()
+                self.digging.stepper_forward(10)
             if self.opcode == 13:
-                self.digging.stepper_backward()
+                self.digging.stepper_backward(10)
+            if self.opcode == 14:
+                self.digging.stepper_stop()
     
     def callback_stop(self):
         self.stop()

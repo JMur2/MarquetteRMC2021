@@ -16,7 +16,7 @@ class Dumping:
     # Establish the roboclaw connection for the linear actuator
     #--------------------------------------------------------------------
     def __init__(self):
-        #self.roboclaw
+        self.serial_num = '00320100'
         try:
             print("Searching for dumping roboclaw, this may take a few seconds...")
             self.roboclaw = Roboclaw("/dev/ttyACM0", 38400)
@@ -37,31 +37,22 @@ class Dumping:
     # Rotate the bucket forward with the stepper motor
     #--------------------------------------------------------------------
     def stepper_forward(self):
-        status = yaml.load(self.ticcmd('-s', '--full'))
-        position = status['Current speed']
-
-        new_target = 200
-        ticcmd('--exit-safe-start', '--velocity', str(new_target))
+        new_target = 10
+        ticcmd('--exit-safe-start', '-d', self.serial_num, '--velocity', str(new_target))
 
     #--------------------------------------------------------------------
     # Rotate the bucket backward with the stepper motor
     #--------------------------------------------------------------------
     def stepper_backward(self):
-        status = yaml.load(self.ticcmd('-s', '--full'))
-        position = status['Current speed']
-
-        new_target = -200
-        ticcmd('--exit-safe-start', '--velocity', str(new_target))
+        new_target = -10
+        ticcmd('--exit-safe-start', '-d', self.serial_num, '--velocity', str(new_target))
 
     #--------------------------------------------------------------------
     # Stop the nucket from rotating
     #--------------------------------------------------------------------
     def stepper_stop(self):
-        status = yaml.load(self.ticcmd('-s', '--full'))
-        position = status['Current speed']
-
         new_target = 0
-        ticcmd('--exit-safe-start', '--velocity', str(new_target))
+        ticcmd('--exit-safe-start', '-d', self.serial_num, '--velocity', str(new_target))
 
     #--------------------------------------------------------------------
     # Extend the linear actuator forward for its full length

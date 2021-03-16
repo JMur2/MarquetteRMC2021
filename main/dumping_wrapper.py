@@ -18,18 +18,18 @@ class dumpingWrapperROS:
     def callback_main(self, msg):
         self.opcode = msg.data
 
-        if self.opcode >= 14 and self.opcode <= 19:
-            if self.opcode == 14:
-                self.dumping.stepper_forward()
+        if self.opcode >= 15 and self.opcode <= 20:
             if self.opcode == 15:
-                self.dumping.stepper_backward()
+                self.dumping.stepper_forward()
             if self.opcode == 16:
-                self.dumping.stepper_stop()
+                self.dumping.stepper_backward()
             if self.opcode == 17:
-                self.dumping.actuator_extend()
+                self.dumping.stepper_stop()
             if self.opcode == 18:
-                self.dumping.actuator_retract()
+                self.dumping.actuator_extend()
             if self.opcode == 19:
+                self.dumping.actuator_retract()
+            if self.opcode == 20:
                 self.dumping.actuator_stop()
 
     def callback_stop(self):

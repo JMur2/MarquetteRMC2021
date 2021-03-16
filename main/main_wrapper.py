@@ -397,43 +397,45 @@ class mainWrapperROS:
         self.publish_data_manual(None, 11)
         #print("This is for depth stop")
 
-    # HANDLE AFTER STEPPER TESTING WITH NEW SCRIPT
     def pitch_ccw(self):
         self.publish_data_manual(None, 12)
+        #print("This is for stepper forward")
 
     def pitch_cw(self):
         self.publish_data_manual(None, 13)
-        #Digit: 13
+        #print("This is for stepper backward")
         
     def pitch_stop(self):
-        print("This is for stop pitch")
-        #Digit: 14
+        self.publish_data_manual(None, 14)
+        #print("This is for stop pitch")
+        
         
 #-----------------------------------------------------------
 # Dumping Button Handlers
 #-----------------------------------------------------------
     def dump_handler(self):
-        self.publish_data_manual(None, 14)
-        #print("This is for dump")
+        self.publish_data_manual(None, 15)
+        #print("This is for stepper forward")
         
     def dump_retract(self):
-        self.publish_data_manual(None, 15)
-        #print("This is for store")
+        self.publish_data_manual(None, 16)
+        #print("This is for stepper backward")
         
     def store_stop(self):
-        self.publish_data_manual(None, 16)
+        self.publish_data_manual(None, 17)
         #print("This is for dump stop")
         
     def actuator_extend(self):
-        self.publish_data_manual(None, 17)
-        #print("This is for sump")
+        self.publish_data_manual(None, 18)
+        #print("This is for actuator extend")
         
     def actuator_retract(self):
-        self.publish_data_manual(None, 18)
-        #print("This is for store")
+        self.publish_data_manual(None, 19)
+        #print("This is for actuator retract")
         
     def stop_actuator(self):
-        self.publish_data_manual(None, 19)
+        self.publish_data_manual(None, 20)
+        #print("This is for actuator stop")
 
 #-----------------------------------------------------------
 # Handlers for Autonomy 

@@ -16,11 +16,10 @@ class Digging:
     # Establish the odrive connection for digging 
     #--------------------------------------------------------------------
     def __init__(self):
+        self.serial_num = "00320097"
         try:
             print("Searching for digging odrive, this may take a few seconds...")
             self.odrv1 = odrive.find_any(serial_number="207939834D4D")
-            print("Digging odrive connected successfuly")
-            print("207939834D4D")
         except:
             print("Unable to find digging odrive")
     
@@ -80,19 +79,20 @@ class Digging:
     #--------------------------------------------------------------------
     # Rotate the zipper forward with the stepper motor
     #--------------------------------------------------------------------
-    def stepper_forward(self):
-        status = yaml.load(self.ticcmd('-s', '--full'))
-        position = status['Current position']
-
-        # test for boundaries
-        new_target = position + 20 # what the step size should be
+    def stepper_forward(self, speed):
+        new_target = speed
+        ticcmd('--exit-safe-start', '-d', self.serial_num, '--velocity', str(new_target))
 
     #--------------------------------------------------------------------
     # Rotate the zipper backward with the stepper motor
     #--------------------------------------------------------------------
-    def stepper_backward(self):
-        status = yaml.load(self.ticcmd('-s', '--full'))
-        position = status['Current position']
+    def stepper_backward(self, speed):
+        new_target = (-1 * speed) 
+        ticcmd('--exit-safe-start', '-d', self.serial_num, '--velocity', str(new_target))
 
-        # test for boundaries
-        new_target = position - 20 # what the step size should be
+    #--------------------------------------------------------------------
+    # Rotate the zipper backward with the stepper motor
+    #--------------------------------------------------------------------
+    def stepper_stop(self):
+        new_target = 0
+        ticcmd('--exit-safe-start', '-d', self.serial_num, '--velocity', str(new_target))
