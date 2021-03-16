@@ -36,15 +36,15 @@ class Dumping:
     #--------------------------------------------------------------------
     # Rotate the bucket forward with the stepper motor
     #--------------------------------------------------------------------
-    def stepper_forward(self):
-        new_target = 10
+    def stepper_forward(self, speed):
+        new_target = speed
         ticcmd('--exit-safe-start', '-d', self.serial_num, '--velocity', str(new_target))
 
     #--------------------------------------------------------------------
     # Rotate the bucket backward with the stepper motor
     #--------------------------------------------------------------------
-    def stepper_backward(self):
-        new_target = -10
+    def stepper_backward(self, speed):
+        new_target = (-1 * speed)
         ticcmd('--exit-safe-start', '-d', self.serial_num, '--velocity', str(new_target))
 
     #--------------------------------------------------------------------

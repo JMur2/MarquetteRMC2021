@@ -20,9 +20,9 @@ class dumpingWrapperROS:
 
         if self.opcode >= 15 and self.opcode <= 20:
             if self.opcode == 15:
-                self.dumping.stepper_forward()
+                self.dumping.stepper_forward(10)
             if self.opcode == 16:
-                self.dumping.stepper_backward()
+                self.dumping.stepper_backward(10)
             if self.opcode == 17:
                 self.dumping.stepper_stop()
             if self.opcode == 18:
