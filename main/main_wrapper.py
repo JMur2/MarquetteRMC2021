@@ -344,6 +344,12 @@ class mainWrapperROS:
         self.Depth_Stop.setObjectName("Depth_Stop")
         self.Depth_Stop.clicked.connect(self.depth_stop)
 
+        self.Loco_Right.keyPressEvent = self.keyPressEvent
+        self.Loco_FW.keyPressEvent = self.keyPressEvent
+        self.Loco_Back.keyPressEvent = self.keyPressEvent
+        self.Loco_Left.keyPressEvent = self.keyPressEvent
+        self.Loco_stop.keyPressEvent = self.keyPressEvent
+
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
