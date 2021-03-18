@@ -9,9 +9,9 @@ def dump_algorithm():
     dumping.actuator_extend()
     time.sleep(12)
     dumping.stepper_forward()
-    time.sleep(2)
+    time.sleep(4)
     dumping.stepper_backward()
-    time.sleep(2)
+    time.sleep(4)
     dumping.actuator_retract()
 
 
