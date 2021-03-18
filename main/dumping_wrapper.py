@@ -43,7 +43,7 @@ if __name__ == "__main__":
 
     dumping_wrapper = dumpingWrapperROS()
 
-    rospy.on_shutdown(dumping_wrapper.stop)
+    rospy.on_shutdown()
 
     rospy.loginfo("***Dumping node initialized successfully***")
 

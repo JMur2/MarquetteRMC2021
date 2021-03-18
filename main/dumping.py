@@ -51,7 +51,7 @@ class Dumping:
     # Stop the nucket from rotating
     #--------------------------------------------------------------------
     def stepper_stop(self):
-        new_target = 0
+        new_target = -10
         self.ticcmd('--exit-safe-start', '-d', self.serial_num, '--position', str(new_target))
 
     #--------------------------------------------------------------------
