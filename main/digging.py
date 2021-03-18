@@ -81,18 +81,18 @@ class Digging:
     #--------------------------------------------------------------------
     def stepper_forward(self, speed):
         new_target = speed
-        ticcmd('--exit-safe-start', '-d', self.serial_num, '--velocity', str(new_target))
+        self.ticcmd('--exit-safe-start', '-d', self.serial_num, '--velocity', str(new_target))
 
     #--------------------------------------------------------------------
     # Rotate the zipper backward with the stepper motor
     #--------------------------------------------------------------------
     def stepper_backward(self, speed):
         new_target = (-1 * speed) 
-        ticcmd('--exit-safe-start', '-d', self.serial_num, '--velocity', str(new_target))
+        self.ticcmd('--exit-safe-start', '-d', self.serial_num, '--velocity', str(new_target))
 
     #--------------------------------------------------------------------
     # Rotate the zipper backward with the stepper motor
     #--------------------------------------------------------------------
     def stepper_stop(self):
         new_target = 0
-        ticcmd('--exit-safe-start', '-d', self.serial_num, '--velocity', str(new_target))
+        self.ticcmd('--exit-safe-start', '-d', self.serial_num, '--velocity', str(new_target))
