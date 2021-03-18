@@ -38,21 +38,21 @@ class Dumping:
     #--------------------------------------------------------------------
     def stepper_forward(self, speed):
         new_target = speed
-        ticcmd('--exit-safe-start', '-d', self.serial_num, '--velocity', str(new_target))
+        self.ticcmd('--exit-safe-start', '-d', self.serial_num, '--velocity', str(new_target))
 
     #--------------------------------------------------------------------
     # Rotate the bucket backward with the stepper motor
     #--------------------------------------------------------------------
     def stepper_backward(self, speed):
         new_target = (-1 * speed)
-        ticcmd('--exit-safe-start', '-d', self.serial_num, '--velocity', str(new_target))
+        self.ticcmd('--exit-safe-start', '-d', self.serial_num, '--velocity', str(new_target))
 
     #--------------------------------------------------------------------
     # Stop the nucket from rotating
     #--------------------------------------------------------------------
     def stepper_stop(self):
         new_target = 0
-        ticcmd('--exit-safe-start', '-d', self.serial_num, '--velocity', str(new_target))
+        self.ticcmd('--exit-safe-start', '-d', self.serial_num, '--velocity', str(new_target))
 
     #--------------------------------------------------------------------
     # Extend the linear actuator forward for its full length
