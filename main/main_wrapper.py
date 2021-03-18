@@ -415,7 +415,6 @@ class mainWrapperROS:
         self.publish_data_manual(None, 14)
         #print("This is for stop pitch")
         
-        
 #-----------------------------------------------------------
 # Dumping Button Handlers
 #-----------------------------------------------------------
