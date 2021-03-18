@@ -6,6 +6,7 @@ This file houses all of the dumping functionality
 
 import subprocess
 import yaml
+import time
 from roboclaw import Roboclaw
 
 class Dumping:
@@ -71,3 +72,16 @@ class Dumping:
     #--------------------------------------------------------------------
     def actuator_stop(self):
         self.roboclaw.ForwardM1(128, 0)
+
+    #--------------------------------------------------------------------
+    # A full dump algorithm
+    #--------------------------------------------------------------------
+    def full_dump(self):
+        self.actuator_extend()
+        time.sleep(12)
+        self.stepper_forward()
+        time.sleep(4)
+        self.stepper_backward()
+        time.sleep(4)
+        self.actuator_retract()
+        time.sleep(12)
