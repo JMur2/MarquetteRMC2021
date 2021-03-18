@@ -34,13 +34,13 @@ if __name__ == '__main__':
 			if char.lower() == 'q':
 				break
 			elif char.lower() == 'w':
-				ticcmd('--exit-safe-start', '-d', serial_num, '--velocity', str(10))
+				ticcmd('--exit-safe-start', '-d', serial_num, '--position', str(10))
 			elif char.lower() == 's':
-				ticcmd('--exit-safe-start', '-d', serial_num, '--velocity', str(-10))
+				ticcmd('--exit-safe-start', '-d', serial_num, '--position', str(-10))
 			elif char.lower() == 'x':
-				ticcmd('--exit-safe-start', '-d', serial_num, '--velocity', str(0))
+				ticcmd('--exit-safe-start', '-d', serial_num, '--position', str(0))
 	finally:
-		ticcmd('--exit-safe-start', '-d', serial_num, '--velocity', str(0))
+		#ticcmd('--exit-safe-start', '-d', serial_num, '--velocity', str(0))
 		print("-------")
 
 print("Ending program")
