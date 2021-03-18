@@ -11,10 +11,8 @@ if __name__ == "__main__":
 
     Dumping.actuator_extend()
     time.sleep()
-    Dumping.stepper_forward(10)
+    Dumping.stepper_forward(-200)
     time.sleep()
-    Dumping.stepper_stop()
-    time.sleep()
-    Dumping.stepper_backward(10)
+    Dumping.stepper_backward(-10)
     time.sleep()
     Dumping.actuator_retract()
