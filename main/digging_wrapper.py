@@ -42,7 +42,7 @@ class diggingWrapperROS:
         self.stop()
 
     def stop(self):
-        self.digging.depth_stop()
+        self.digging.dig_disengage_depth()
         self.digging.zipper_stop()
 
 if __name__ == "__main__":

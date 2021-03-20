@@ -36,15 +36,15 @@ class locomotionWrapperROS:
         self.stop()
 
     def stop(self):
-        self.locomotion.loco_stop()
+        self.locomotion.loco_disengage_motor()
 
 if __name__ == "__main__":
     rospy.init_node("locomotion_node")
 
     locomotion_wrapper = locomotionWrapperROS()
 
-    rospy.on_shutdown(locomotion_wrapper.stop) # tells the node what action to take on shutdown
+    rospy.on_shutdown(locomotion_wrapper.stop) 
 
     rospy.loginfo("***Locomotion node initialized successfully***") 
 
-    rospy.spin() # essentially an infinite loop that keeps the node active
+    rospy.spin() 

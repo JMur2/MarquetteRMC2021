@@ -1069,4 +1069,10 @@ class Roboclaw:
 		except:
 			return 0
 		return 1
-
+	
+	def Close(self):
+		try:
+			self._port = None
+		except:
+			return 0
+		return 1

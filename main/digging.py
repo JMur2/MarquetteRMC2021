@@ -101,14 +101,14 @@ class Digging:
     #--------------------------------------------------------------------
     # Engages the locomotion motors by setting their state
     #--------------------------------------------------------------------
-    def dig_engage_motor(self):
-        odrv1.axis0.requested_state = AXIS_STATE_CLOSED_LOOP_CONTROL
+    def dig_engage_depth(self):
+        self.odrv1.axis0.requested_state = AXIS_STATE_CLOSED_LOOP_CONTROL
 
     #--------------------------------------------------------------------
     # Disengages the locomotion motors by setting their state
     #--------------------------------------------------------------------
-    def dig_disengage_motor(self):
-        odrv1.axis0.requested_state = AXIS_STATE_IDLE
+    def dig_disengage_depth(self):
+        self.odrv1.axis0.requested_state = AXIS_STATE_IDLE
 
     #--------------------------------------------------------------------
     # Dumps all errors from the locomotion odrive
