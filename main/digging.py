@@ -5,6 +5,7 @@ This file houses all of the digging functionality
 """
 
 import odrive
+from odrive.utils import dump_errors
 from odrive.enums import *
 import subprocess
 import yaml
@@ -96,3 +97,21 @@ class Digging:
     def stepper_stop(self):
         new_target = 0
         self.ticcmd('--exit-safe-start', '-d', self.serial_num, '--velocity', str(new_target))
+
+    #--------------------------------------------------------------------
+    # Engages the locomotion motors by setting their state
+    #--------------------------------------------------------------------
+    def dig_engage_motor(self):
+        odrv1.axis0.requested_state = AXIS_STATE_CLOSED_LOOP_CONTROL
+
+    #--------------------------------------------------------------------
+    # Disengages the locomotion motors by setting their state
+    #--------------------------------------------------------------------
+    def dig_disengage_motor(self):
+        odrv1.axis0.requested_state = AXIS_STATE_IDLE
+
+    #--------------------------------------------------------------------
+    # Dumps all errors from the locomotion odrive
+    #--------------------------------------------------------------------
+    def dig_dump_errors(self):
+        dump_errors(odrv1, True)

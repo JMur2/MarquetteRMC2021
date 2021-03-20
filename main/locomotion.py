@@ -5,6 +5,7 @@ This file houses all of the locomotion functionality.
 """
 
 import odrive
+from odrive.utils import dump_errors
 from odrive.enums import *
 
 class Locomotion:
@@ -74,3 +75,23 @@ class Locomotion:
     #--------------------------------------------------------------------
     def loco_config_check(self):
         pass
+
+    #--------------------------------------------------------------------
+    # Engages the locomotion motors by setting their state
+    #--------------------------------------------------------------------
+    def loco_engage_motor(self):
+        odrv0.axis0.requested_state = AXIS_STATE_CLOSED_LOOP_CONTROL
+        odrv0.axis1.requested_state = AXIS_STATE_CLOSED_LOOP_CONTROL
+
+    #--------------------------------------------------------------------
+    # Disengages the locomotion motors by setting their state
+    #--------------------------------------------------------------------
+    def loco_disengage_motor(self):
+        odrv0.axis0.requested_state = AXIS_STATE_IDLE
+        odrv0.axis1.requested_state = AXIS_STATE_IDLE
+
+    #--------------------------------------------------------------------
+    # Dumps all errors from the locomotion odrive
+    #--------------------------------------------------------------------
+    def loco_dump_errors(self):
+        dump_errors(odrv0, True)
