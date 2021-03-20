@@ -7,6 +7,7 @@ This file houses all of the dumping functionality
 import subprocess
 import yaml
 import time
+
 from roboclaw import Roboclaw
 
 class Dumping:
@@ -20,12 +21,12 @@ class Dumping:
         self.serial_num = '00320100'
         try:
             print("Searching for dumping roboclaw, this may take a few seconds...")
+            #self.enable_roboclaw()
             self.roboclaw = Roboclaw("/dev/ttyACM1", 38400)
             self.roboclaw.Open()
-            self.roboclaw.Stop()
             print("Dumping roboclaw connected successfully")
         except:
-            print("Unable to find digging roboclaw")
+            print("Unable to find dumping roboclaw")
 
     #--------------------------------------------------------------------
     # Helper function to operate the stepper motor
@@ -60,19 +61,22 @@ class Dumping:
     # Extend the linear actuator forward for its full length
     #--------------------------------------------------------------------
     def actuator_extend(self):
-        self.roboclaw.BackwardM1(128, 127)
+        if self.roboclaw != None:
+            self.roboclaw.BackwardM1(128, 127)
 
     #--------------------------------------------------------------------
     # Fully retract the linear actuator
     #--------------------------------------------------------------------
     def actuator_retract(self):
-        self.roboclaw.ForwardM1(128, 127)
+        if self.roboclaw != None:
+            self.roboclaw.ForwardM1(128, 127)
 
     #--------------------------------------------------------------------
     # Stop the linear actuator
     #--------------------------------------------------------------------
     def actuator_stop(self):
-        self.roboclaw.ForwardM1(128, 0)
+        if self.roboclaw != None:
+            self.roboclaw.ForwardM1(128, 0)
 
     #--------------------------------------------------------------------
     # A full dump algorithm
@@ -86,3 +90,16 @@ class Dumping:
         time.sleep(4)
         self.actuator_retract()
         time.sleep(12)
+
+    #--------------------------------------------------------------------
+    # Enables the roboclaw to communicate on the ACM1 port
+    #--------------------------------------------------------------------
+    def enable_roboclaw(self):
+        self.roboclaw = Roboclaw("/dev/ttyACM1", 38400)
+        self.roboclaw.Open()
+
+    #--------------------------------------------------------------------
+    # Disables the roboclaw to communicate on the ACM1 port
+    #--------------------------------------------------------------------
+    def disable_roboclaw(self):
+        self.roboclaw.Close()
