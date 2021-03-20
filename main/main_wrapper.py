@@ -57,14 +57,6 @@ class mainWrapperROS:
         data = Int32(data=d)
         self.publisher_automated.publish(data)
 
-    #-------------------------------------------------------------------------------------------
-    # Publish an emergency stop
-    #
-    # In the event of an emergency, publish a stop command to all operations
-    #-------------------------------------------------------------------------------------------
-    def big_red_button(self):
-        data = Int32(data=1)
-        self.emergency_stop.publish(data)
     
     def keyPressEvent(self, event):
         if event.key() == Qt.Key_W:
@@ -475,11 +467,14 @@ class mainWrapperROS:
     def set_opcode(self, opcode):
         self.holder = self.opcode
 
-#--
-#
-#--
+    #-------------------------------------------------------------------------------------------
+    # Publish an emergency stop
+    #
+    # In the event of an emergency, publish a stop command to all operations
+    #-------------------------------------------------------------------------------------------
     def emergency_stop_handler(self):
-        self.big_red_button()
+        data = Int32(data=1)
+        self.emergency_stop.publish(data)
 
 #--
 #

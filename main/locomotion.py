@@ -61,8 +61,17 @@ class Locomotion:
     
     #--------------------------------------------------------------------
     # Stops all movement
+    # 
+    # Stopping right to 0 causes ringing in the motor, so stopping is set
+    # to the following: (speed) -> 0 -> 5 -> 0
     #--------------------------------------------------------------------
     def loco_stop(self):
+        self.odrv0.axis0.controller.input_vel = 0
+        self.odrv0.axis1.controller.input_vel = 0
+
+        self.odrv0.axis0.controller.input_vel = 5
+        self.odrv0.axis1.controller.input_vel = 5
+
         self.odrv0.axis0.controller.input_vel = 0
         self.odrv0.axis1.controller.input_vel = 0
 

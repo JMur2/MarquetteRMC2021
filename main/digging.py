@@ -68,6 +68,8 @@ class Digging:
     #--------------------------------------------------------------------
     def depth_stop(self):
         self.odrv1.axis0.controller.input_vel = 0
+        self.odrv1.axis0.controller.input_vel = 5
+        self.odrv1.axis0.controller.input_vel = 0
 
     #--------------------------------------------------------------------
     # Helper function to operate the stepper motor
