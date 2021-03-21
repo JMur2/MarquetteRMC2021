@@ -237,7 +237,6 @@ class mainWrapperROS:
         self.Loco_Right.setGeometry(QtCore.QRect(160, 180, 51, 28))
         self.Loco_Right.setObjectName("Loco_Right")
         self.Loco_Right.clicked.connect(self.right_loco)
-        #self.Loco_Right.keyPressEvent = self.keyPressEvent
 
         self.Loco_FW = QtWidgets.QPushButton(Dialog)
         self.Loco_FW.setGeometry(QtCore.QRect(90, 140, 51, 28))

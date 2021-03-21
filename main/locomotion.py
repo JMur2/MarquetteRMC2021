@@ -32,7 +32,7 @@ class Locomotion:
     #--------------------------------------------------------------------
     def loco_forward(self):
         self.odrv1.axis0.controller.input_vel = -67
-        self.odrv1.axis1.controller.input_vel = 67
+        self.odrv1.axis1.controller.input_vel = -67
 
     #--------------------------------------------------------------------
     # Zero point turn left
