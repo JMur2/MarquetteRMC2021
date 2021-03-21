@@ -36,7 +36,7 @@ class locomotionWrapperROS:
         self.stop()
 
     def stop(self):
-        self.locomotion.loco_disengage_motor()
+        self.locomotion.loco_disengage_motors()
 
 if __name__ == "__main__":
     rospy.init_node("locomotion_node")
