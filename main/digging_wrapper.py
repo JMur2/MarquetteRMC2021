@@ -20,9 +20,9 @@ class diggingWrapperROS:
 
         if self.opcode >= 6 and self.opcode <= 14:
             if self.opcode == 6:
-                self.digging.zipper_forward(67)
+                self.digging.zipper_forward(8)
             if self.opcode == 7:
-                self.digging.zipper_back(67)
+                self.digging.zipper_back(8)
             if self.opcode == 8:
                 self.digging.zipper_stop()
             if self.opcode == 9:
