@@ -50,7 +50,7 @@ def ticcmd(*args):
  
 if __name__ == "__main__":
 
-    status = yaml.load(ticcmd('-s', '--full'))
+    status = yaml.load(ticcmd('-d', '00320097', '-s', '--full'))
     
     while(True):
         position = status['Current position']
