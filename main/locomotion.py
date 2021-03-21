@@ -31,7 +31,7 @@ class Locomotion:
     # param: speed -- set the speed of movement (max at 67)
     #--------------------------------------------------------------------
     def loco_forward(self):
-        self.odrv1.axis0.controller.input_vel = -67
+        self.odrv1.axis0.controller.input_vel = 67
         self.odrv1.axis1.controller.input_vel = -67
 
     #--------------------------------------------------------------------
