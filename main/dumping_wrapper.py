@@ -37,9 +37,8 @@ class dumpingWrapperROS:
         self.stop()
 
     def stop(self):
-        # self.dumping.stepper_stop()
-        # self.dumping.actuator_stop()
-        pass
+        self.dumping.disable_stepper()
+        self.dumping.disable_roboclaw()
 
 if __name__ == "__main__":
     rospy.init_node("dumping_node")

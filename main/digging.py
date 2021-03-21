@@ -131,3 +131,6 @@ class Digging:
     #--------------------------------------------------------------------
     def dig_dump_errors(self):
         dump_errors(odrv0, True)
+
+    def dig_disengage_pitch(self):
+        self.ticcmd('-d', self.serial_num, '--reset')

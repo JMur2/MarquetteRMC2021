@@ -44,6 +44,7 @@ class diggingWrapperROS:
     def stop(self):
         self.digging.dig_disengage_depth()
         self.digging.dig_disengage_zipper()
+        self.digging.dig_disengage_pitch()
 
 if __name__ == "__main__":
     rospy.init_node("digging_node")
