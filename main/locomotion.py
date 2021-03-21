@@ -5,6 +5,7 @@ This file houses all of the locomotion functionality.
 """
 
 import odrive
+import time
 from odrive.utils import dump_errors
 from odrive.enums import *
 
@@ -31,6 +32,11 @@ class Locomotion:
     # param: speed -- set the speed of movement (max at 67)
     #--------------------------------------------------------------------
     def loco_forward(self):
+        self.odrv1.axis0.controller.input_vel = 0
+        self.odrv1.axis1.controller.input_vel = 0
+
+        time.sleep(0.1)
+
         self.odrv1.axis0.controller.input_vel = -67
         self.odrv1.axis1.controller.input_vel = 67
 
@@ -40,6 +46,11 @@ class Locomotion:
     # param: speed -- set the speed of movement (max at 50)
     #--------------------------------------------------------------------
     def loco_left(self):
+        self.odrv1.axis0.controller.input_vel = 0
+        self.odrv1.axis1.controller.input_vel = 0
+
+        time.sleep(0.1)
+
         self.odrv1.axis0.controller.input_vel = 67
         self.odrv1.axis1.controller.input_vel = 67
     
@@ -49,6 +60,11 @@ class Locomotion:
     # param: speed -- sets the speed of movement (max at 50)
     #--------------------------------------------------------------------
     def loco_back(self):
+        self.odrv1.axis0.controller.input_vel = 0
+        self.odrv1.axis1.controller.input_vel = 0
+
+        time.sleep(0.1)
+
         self.odrv1.axis0.controller.input_vel = 67
         self.odrv1.axis1.controller.input_vel = -67
 
@@ -58,6 +74,11 @@ class Locomotion:
     # param: speed -- sets the speed of movement (max at 50)
     #--------------------------------------------------------------------
     def loco_right(self):
+        self.odrv1.axis0.controller.input_vel = 0
+        self.odrv1.axis1.controller.input_vel = 0
+
+        time.sleep(0.1)
+
         self.odrv1.axis0.controller.input_vel = -67
         self.odrv1.axis1.controller.input_vel = -67
     
@@ -71,8 +92,12 @@ class Locomotion:
         self.odrv1.axis0.controller.input_vel = 0
         self.odrv1.axis1.controller.input_vel = 0
 
+        time.sleep(0.1)
+
         self.odrv1.axis0.controller.input_vel = 5
         self.odrv1.axis1.controller.input_vel = 5
+
+        time.sleep(0.1)
 
         self.odrv1.axis0.controller.input_vel = 0
         self.odrv1.axis1.controller.input_vel = 0
