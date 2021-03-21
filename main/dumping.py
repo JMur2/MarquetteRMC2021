@@ -54,8 +54,7 @@ class Dumping:
     # Stop the nucket from rotating
     #--------------------------------------------------------------------
     def stepper_stop(self):
-        new_target = -10
-        self.ticcmd('--exit-safe-start', '-d', self.serial_num, '--position', str(new_target))
+        self.ticcmd('-d', self.serial_num, '--reset')
 
     #--------------------------------------------------------------------
     # Extend the linear actuator forward for its full length

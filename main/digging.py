@@ -100,8 +100,7 @@ class Digging:
     # Rotate the zipper backward with the stepper motor
     #--------------------------------------------------------------------
     def stepper_stop(self):
-        new_target = 0
-        self.ticcmd('--exit-safe-start', '-d', self.serial_num, '--position', str(new_target))
+        self.ticcmd('-d', self.serial_num, '--reset')
 
     #--------------------------------------------------------------------
     # Engages the depth motor by setting their state
