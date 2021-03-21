@@ -39,7 +39,7 @@ class Digging:
     # param: speed -- set the speed of belt movement (max at 67)
     #--------------------------------------------------------------------
     def zipper_back(self, speed):
-        self.odrv1.axis1.controller.inpur_vel = speed
+        self.odrv1.axis1.controller.input_vel = speed
 
     #--------------------------------------------------------------------
     # Stop the zipper at its current location

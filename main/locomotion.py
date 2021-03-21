@@ -21,7 +21,9 @@ class Locomotion:
             self.odrv0 = odrive.find_any(serial_number="20863880304E")
             print("Locomotion odrive connected successfully")
         except:
-            print("Unable to find locomotion odrive")            
+            print("Unable to find locomotion odrive")
+
+        self.loco_engage_motor()     
 
     #--------------------------------------------------------------------
     # Drives robot forward
