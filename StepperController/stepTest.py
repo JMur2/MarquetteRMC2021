@@ -6,20 +6,20 @@ import sys
 import tty
 import termios
 
-# def get_char():
-#     file_descriptor = sys.stdin.fileno()
-#     old_settings = termios.tcgetattr(file_descriptor)
+def get_char():
+    file_descriptor = sys.stdin.fileno()
+    old_settings = termios.tcgetattr(file_descriptor)
     
-#     try:
-#         tty.setraw(file_descriptor)
-#         character = sys.stdin.read(1)
-#     finally:
-#         termios.tcsetattr(file_descriptor, termios.TCSADRAIN, old_settings)
+    try:
+        tty.setraw(file_descriptor)
+        character = sys.stdin.read(1)
+    finally:
+        termios.tcsetattr(file_descriptor, termios.TCSADRAIN, old_settings)
         
-#     return character
+    return character
 
-# def ticcmd(self, *args):
-# 	return subprocess.check_output(['ticcmd'] + list(args))
+def ticcmd(self, *args):
+	return subprocess.check_output(['ticcmd'] + list(args))
 
 
 # if __name__ == '__main__':
@@ -52,10 +52,22 @@ if __name__ == "__main__":
 
     status = yaml.load(ticcmd('-d', '00320097', '-s', '--full'))
     
-    while(True):
-        position = status['Current position']
-        print("Current position is {}.".format(position))
-        time.sleep(1)
+    # while(True):
+    #     position = status['Current position']
+    #     print("Current position is {}.".format(position))
+    #     time.sleep(1)
+
+    try:
+        while True:
+            char = get_char()
+
+            if char.lower() == 'q':
+                ticcmd('-d', '00320097', '--reset')
+                break
+            elif char.lower == 'w':
+                ticcmd('--exit-safe-start', '-d', '00320097', '--position-relative', str(-150))
+            elif char.lower == 'w':
+                ticcmd('--exit-safe-start', '-d', '00320097', '--position-relative', str(150))
 
 # #new_target = -200 if position > 0 else 200
 # new_target = -100
