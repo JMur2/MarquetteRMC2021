@@ -50,8 +50,10 @@ import termios
  
 # status = yaml.load(ticcmd('-s', '--full'))
  
-position = status['Current position']
-print("Current position is {}.".format(position))
+while(True):
+    position = status['Current position']
+    print("Current position is {}.".format(position))
+    time.sleep(1)
 
 # #new_target = -200 if position > 0 else 200
 # new_target = -100
