@@ -30,36 +30,36 @@ class Locomotion:
     #
     # param: speed -- set the speed of movement (max at 67)
     #--------------------------------------------------------------------
-    def loco_forward(self, speed):
-        self.odrv1.axis0.controller.input_vel = -speed
-        self.odrv1.axis1.controller.input_vel = speed
+    def loco_forward(self):
+        self.odrv1.axis0.controller.input_vel = -67
+        self.odrv1.axis1.controller.input_vel = 67
 
     #--------------------------------------------------------------------
     # Zero point turn left
     #
     # param: speed -- set the speed of movement (max at 50)
     #--------------------------------------------------------------------
-    def loco_left(self, speed):
-        self.odrv1.axis0.controller.input_vel = speed
-        self.odrv1.axis1.controller.input_vel = speed
+    def loco_left(self):
+        self.odrv1.axis0.controller.input_vel = 67
+        self.odrv1.axis1.controller.input_vel = 67
     
     #--------------------------------------------------------------------
     # Drives robot in reverse
     #
     # param: speed -- sets the speed of movement (max at 50)
     #--------------------------------------------------------------------
-    def loco_back(self, speed):
-        self.odrv1.axis0.controller.input_vel = speed
-        self.odrv1.axis1.controller.input_vel = -speed
+    def loco_back(self):
+        self.odrv1.axis0.controller.input_vel = 67
+        self.odrv1.axis1.controller.input_vel = -67
 
     #--------------------------------------------------------------------
     # Zero point turn right 
     #
     # param: speed -- sets the speed of movement (max at 50)
     #--------------------------------------------------------------------
-    def loco_right(self, speed):
-        self.odrv1.axis0.controller.input_vel = -speed
-        self.odrv1.axis1.controller.input_vel = -speed
+    def loco_right(self):
+        self.odrv1.axis0.controller.input_vel = -67
+        self.odrv1.axis1.controller.input_vel = -67
     
     #--------------------------------------------------------------------
     # Stops all movement
