@@ -32,9 +32,9 @@ class diggingWrapperROS:
             if self.opcode == 11:
                 self.digging.depth_stop()
             if self.opcode == 12:
-                self.digging.stepper_forward(150)
+                self.digging.stepper_forward(300)
             if self.opcode == 13:
-                self.digging.stepper_backward(150)
+                self.digging.stepper_backward(300)
             if self.opcode == 14:
                 self.digging.stepper_stop()
     
