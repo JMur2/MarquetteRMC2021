@@ -46,7 +46,7 @@ import termios
 # print("Ending program")
         
 def ticcmd(*args):
-  return subprocess.check_output(['ticcmd'] + list(args))
+    return subprocess.check_output(['ticcmd'] + list(args))
  
 status = yaml.load(ticcmd('-s', '--full'))
  
