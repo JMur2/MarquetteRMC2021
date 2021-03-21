@@ -68,3 +68,5 @@ if __name__ == "__main__":
                 ticcmd('--exit-safe-start', '-d', '00320097', '--position-relative', str(-150))
             elif char.lower == 'w':
                 ticcmd('--exit-safe-start', '-d', '00320097', '--position-relative', str(150))
+    
+    print("done")
