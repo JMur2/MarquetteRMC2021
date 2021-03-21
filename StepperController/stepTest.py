@@ -45,17 +45,17 @@ def ticcmd(self, *args):
 
 # print("Ending program")
         
+# #new_target = -200 if position > 0 else 200
+# new_target = -100
+# print("Setting target position to {}.".format(new_target))
+# ticcmd('--exit-safe-start', '-d', '00320097', '--position', str(new_target))
+
 def ticcmd(*args):
     return subprocess.check_output(['ticcmd'] + list(args))
  
 if __name__ == "__main__":
 
     status = yaml.load(ticcmd('-d', '00320097', '-s', '--full'))
-    
-    # while(True):
-    #     position = status['Current position']
-    #     print("Current position is {}.".format(position))
-    #     time.sleep(1)
 
     try:
         while True:
@@ -68,8 +68,3 @@ if __name__ == "__main__":
                 ticcmd('--exit-safe-start', '-d', '00320097', '--position-relative', str(-150))
             elif char.lower == 'w':
                 ticcmd('--exit-safe-start', '-d', '00320097', '--position-relative', str(150))
-
-# #new_target = -200 if position > 0 else 200
-# new_target = -100
-# print("Setting target position to {}.".format(new_target))
-# ticcmd('--exit-safe-start', '-d', '00320097', '--position', str(new_target))
