@@ -28,10 +28,10 @@ class Locomotion:
     #--------------------------------------------------------------------
     # Drives robot forward
     #
-    # param: speed -- set the speed of movement (max at 50)
+    # param: speed -- set the speed of movement (max at 67)
     #--------------------------------------------------------------------
     def loco_forward(self, speed):
-        self.odrv1.axis0.controller.input_vel = (-1 * speed)
+        self.odrv1.axis0.controller.input_vel = -speed
         self.odrv1.axis1.controller.input_vel = speed
 
     #--------------------------------------------------------------------
@@ -50,7 +50,7 @@ class Locomotion:
     #--------------------------------------------------------------------
     def loco_back(self, speed):
         self.odrv1.axis0.controller.input_vel = speed
-        self.odrv1.axis1.controller.input_vel = (-1 * speed)
+        self.odrv1.axis1.controller.input_vel = -speed
 
     #--------------------------------------------------------------------
     # Zero point turn right 
@@ -58,8 +58,8 @@ class Locomotion:
     # param: speed -- sets the speed of movement (max at 50)
     #--------------------------------------------------------------------
     def loco_right(self, speed):
-        self.odrv1.axis0.controller.input_vel = (-1 * speed)
-        self.odrv1.axis1.controller.input_vel = (-1 * speed)
+        self.odrv1.axis0.controller.input_vel = -speed
+        self.odrv1.axis1.controller.input_vel = -speed
     
     #--------------------------------------------------------------------
     # Stops all movement
