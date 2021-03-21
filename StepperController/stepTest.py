@@ -45,15 +45,15 @@ import termios
 
 # print("Ending program")
         
-def ticcmd(*args):
-    return subprocess.check_output(['ticcmd'] + list(args))
+# def ticcmd(*args):
+#     return subprocess.check_output(['ticcmd'] + list(args))
  
-status = yaml.load(ticcmd('-s', '--full'))
+# status = yaml.load(ticcmd('-s', '--full'))
  
 position = status['Current position']
 print("Current position is {}.".format(position))
 
-#new_target = -200 if position > 0 else 200
-new_target = -100
-print("Setting target position to {}.".format(new_target))
-ticcmd('--exit-safe-start', '-d', '00320097', '--position', str(new_target))
+# #new_target = -200 if position > 0 else 200
+# new_target = -100
+# print("Setting target position to {}.".format(new_target))
+# ticcmd('--exit-safe-start', '-d', '00320097', '--position', str(new_target))
