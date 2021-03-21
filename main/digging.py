@@ -24,8 +24,8 @@ class Digging:
         except:
             print("Unable to find digging odrive")
 
-        self.dig_disengage_depth()
-        self.dig_disengage_zipper()
+        self.dig_engage_depth()
+        self.dig_engage_zipper()
     
     #--------------------------------------------------------------------
     # Move the zipper forward, digging the material below it
