@@ -18,7 +18,7 @@ class Dumping:
     # Establish the roboclaw connection for the linear actuator
     #--------------------------------------------------------------------
     def __init__(self):
-        self.serial_num = '00320100'
+        self.serial_num = "00320100"
         try:
             print("Searching for dumping roboclaw, this may take a few seconds...")
             #self.enable_roboclaw()
