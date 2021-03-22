@@ -217,17 +217,17 @@ class mainWrapperROS:
         self.A_Dumping = QtWidgets.QRadioButton(Dialog)
         self.A_Dumping.setGeometry(QtCore.QRect(1100, 120, 95, 20))
         self.A_Dumping.setObjectName("A_Dumping")
-        self.A_Dumping.toggled.connect(self.autonomy_S)
+        self.A_Dumping.toggled.connect(lambda:self.autonomy_S(self.A_Dumping))
         
         self.A_Locomotion = QtWidgets.QRadioButton(Dialog)
         self.A_Locomotion.setGeometry(QtCore.QRect(1100, 150, 95, 20))
         self.A_Locomotion.setObjectName("A_Locomotion")
-        self.A_Locomotion.toggled.connect(self.autonomy_S)
+        self.A_Locomotion.toggled.connect(lambda:self.autonomy_S(self.A_Dumping))
         
         self.A_Digging = QtWidgets.QRadioButton(Dialog)
         self.A_Digging.setGeometry(QtCore.QRect(1100, 180, 95, 20))
         self.A_Digging.setObjectName("A_Digging")
-        self.A_Digging.toggled.connect(self.autonomy_S)
+        self.A_Digging.toggled.connect(lambda:self.autonomy_S(self.A_Dumping))
         
         self.Initiate_A = QtWidgets.QPushButton(Dialog)
         self.Initiate_A.setGeometry(QtCore.QRect(1130, 220, 93, 28))
