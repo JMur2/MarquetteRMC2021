@@ -210,6 +210,8 @@ class mainWrapperROS:
         self.E_stop.setGeometry(QtCore.QRect(500, 40, 111, 28))
         self.E_stop.setObjectName("E_stop")
         self.E_stop.clicked.connect(self.emergency_stop_handler)
+        self.E_stop.setAutoFillBackground(True)
+        self.E_stop.setStyleSheet("background-color: red;")
 
         #Autonomy for the different subsystems 
         self.A_Dumping = QtWidgets.QRadioButton(Dialog)
