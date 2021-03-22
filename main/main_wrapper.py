@@ -31,6 +31,8 @@ class mainWrapperROS:
         self.publisher_automated = rospy.Publisher("main_automated", Int32, queue_size=1)
         self.emergency_stop = rospy.Publisher("emergency_stop", Int32, queue_size=10)
 
+        self.active_autonomy = ""
+
         # startup the GUI
         self.app = QtWidgets.QApplication(sys.argv)
         self.Dialog = QtWidgets.QDialog()
@@ -454,12 +456,19 @@ class mainWrapperROS:
 #-----------------------------------------------------------
 # Handlers for Autonomy 
 #-----------------------------------------------------------       
-    def autonomy_S(self):
-        radio = self.sender()   #we can get the text and use it to check which radio 
-                                #button is clicked (radio.text())
-                                #print(radio.text())
+    def autonomy_S(self, b):
+        if b.text() == "Dumping":
+            self.active_autonomy = "Dumping"
+            print(b.text())
+        elif b.text() == "Locomotion":
+            self.active_autonomy = "Locomotion"
+            print(b.text())
+        elif b.text() == "Digging":
+            self.active_autonomy = "Digging"
+            print(b.text())
+
     def Begin_Autonomy(self):
-        x=1                     #communicate the autonomy call
+        
         
     def setControl(self):
         radio = self.sender()
