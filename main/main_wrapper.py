@@ -54,9 +54,10 @@ class mainWrapperROS:
     #
     # Automation controls are published with this publisher
     #-------------------------------------------------------------------------------------------
-    def publish_data_automated(self, event=None):
-        d = self.main.get_data()
-        data = Int32(data=d)
+    def publish_data_automated(self, event=None, op=none):
+       #d = self.main.get_data()
+        #data = Int32(data=d)
+        data = Int32(data=op)
         self.publisher_automated.publish(data)
 
     
@@ -468,7 +469,15 @@ class mainWrapperROS:
             print(b.text())
 
     def Begin_Autonomy(self):
-        
+        if self.active_autonomy == "Dumping":
+            self.publish_data_automated(none, 1)
+            
+        elif self.active_autonomy == "Locomotion":
+            self.publish_data_automated(none, 2)
+            
+        elif self.active_autonomy == "Digging":
+            self.publish_data_automated(none, 3)
+            
         
     def setControl(self):
         radio = self.sender()
