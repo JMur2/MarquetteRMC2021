@@ -7,7 +7,7 @@ class autoDumpingWrapperROS:
 
     def __init__(self):
         #content object
-
+ 
         self.auto_dump_publisher = rospy.Publisher("auto_dig", Int32, queue_size=1)
 
         #subscribers to sensor data and Main
