@@ -519,7 +519,7 @@ class mainWrapperROS:
         self.Dump_Stop.setText(_translate("Dialog", "Stop"))
         self.Dig.setText(_translate("Dialog", "Dig"))
         self.Dig_CCW.setText(_translate("Dialog", "Backward"))
-        self.Dig_CW.setText(_translate("Dialog", "Foward"))
+        self.Dig_CW.setText(_translate("Dialog", "Forward"))
         self.Dig_DeH.setText(_translate("Dialog", "Decrease "))
         self.Dig_InH.setText(_translate("Dialog", "Increase"))
         self.Loco_FW.setText(_translate("Dialog", "Foward"))
