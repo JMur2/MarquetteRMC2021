@@ -196,11 +196,11 @@ class mainWrapperROS:
         self.MC_On = QtWidgets.QRadioButton(Dialog)
         self.MC_On.setGeometry(QtCore.QRect(10, 50, 171, 20))
         self.MC_On.setObjectName("MC_On")
-        self.MC_On.toggled.connect(self.setControl)
+        self.MC_On.toggled.connect(lambda:self.setControl(self.MC_On))
         self.AC_On = QtWidgets.QRadioButton(Dialog)
         self.AC_On.setGeometry(QtCore.QRect(1100, 60, 141, 20))
         self.AC_On.setObjectName("AC_On")
-        self.AC_On.toggled.connect(self.setControl)
+        self.AC_On.toggled.connect(lambda:self.setControl(self.AC_On))
         
         #General manual controls 
         self.unfold = QtWidgets.QPushButton(Dialog)
@@ -479,9 +479,14 @@ class mainWrapperROS:
             self.publish_data_automated(none, 3)
             
         
-    def setControl(self):
-        radio = self.sender()
-        #print(radio.text())
+    def setControl(self, b):
+        
+        if b.text() == "Activate Manual Controls":
+            
+            pass
+        elif b.text() == "Activate Autonomy ":
+            pass
+        
 
     def set_opcode(self, opcode):
         self.holder = self.opcode
