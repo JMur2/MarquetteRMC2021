@@ -2,7 +2,7 @@ import rospy
 import time 
 from std_msgs.msg import Int32
 
-from digging_indicator import indicators 
+from digging_indicator import DiggingIndicators 
 #TO-DO
 #---------------------------------------
 #1. Sensors
@@ -13,7 +13,7 @@ from digging_indicator import indicators
 class Digging_Automation_Wrapper:
 
     def __init__(self):
-        
+        self.indicators = DiggingIndicators
         self.opcode = -1
         
         self.publisher_Automation_Digging = rospy.Publisher("automation_publisher", Int32, queue_size=1)
@@ -28,6 +28,7 @@ class Digging_Automation_Wrapper:
         self.opcode = msg.data
         
         if self.opcode == 2:
+            pass
         #run automation
     
     def callback_gyroscope(self, msg):
@@ -38,6 +39,9 @@ class Digging_Automation_Wrapper:
     
     def callback_loadcell(self, msg):
         self.load = msg.data
+        self.indicators.getload(self.load)
+        
+
 
         
         

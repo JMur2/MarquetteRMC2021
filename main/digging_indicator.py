@@ -2,7 +2,7 @@
 # This file will allow us to check for all of the sensor data in here and to further 
 # facilitate the algorithm in the wrapper 
 
-class indicators:
+class DiggingIndicators:
 
     def __init__(self):
         #check for mechanical errors through the electrical current 
