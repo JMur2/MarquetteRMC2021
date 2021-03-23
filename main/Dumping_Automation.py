@@ -1,12 +1,7 @@
 import rospy
 import time 
 from std_msgs.msg import Int32
-#this way of performing automation is by assuming that the opcode sent were 11 to 13 is specified 
-#for dumping.
-#11: extend actuator 
-#12: dump bucket 
-#13: retract actuator 
-#14: stop
+from dumping_indicator import dumpingIndicator
 
 #TO-DO
 #---------------------------------------
@@ -18,7 +13,7 @@ from std_msgs.msg import Int32
 class Dumping_Automation_Wrapper:
 
     def __init__(self):
-        
+        self.indicators = dumpingIndicator
         self.opcode = -1
         
         self.publisher_Automation_Dumping = rospy.Publisher("automation_publisher", Int32, queue_size=1)
@@ -27,18 +22,8 @@ class Dumping_Automation_Wrapper:
     def callback_main(self, msg): 
         self.opcode = msg.data
         
-        if self.opcode == 11:
-            self.extend_actuator()
-            #declare a publishare to dumping 
-        elif self.opcode == 12: 
-            self.dump()
-            #declare a publishare to dumping 
-        elif self.opcode == 13: 
-            self.retract_actuator()
-            #declare a publishare to dumping 
-        elif self.opcode == 14: 
-            self.stop()
-            #declare a publishare to dumping 
+        if self.opcode == 1:
+            self.beginAutomation() 
             
     def extend_actuator(self):
         #add a timer using rospy
@@ -105,7 +90,20 @@ class Dumping_Automation_Wrapper:
             # data = Int32(data=control_opcode)
             # self.publisher_Automation_Dumping.publish(data)
         
-        
+    def beginAutomation(self):
+        if self.indicators.readyExtend():
+            self.extend_actuators()
+            self.indicators.SetDump()
+            self.indicators.endExtend()
+        elif self.indicators.readyDump():
+            self.dump()
+            self.indicators.SetRetract()
+            self.indicators.endDump()
+        elif self.indicators.ReadyRetract():
+            self.retract_actuator()
+            self.indicators.SetExtend()
+            self.indicators.endRetract()
+
     def stop(self):
         self.control_opcode = 16
         data = Int32(data=control_opcode)
