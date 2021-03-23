@@ -91,15 +91,17 @@ class Dumping_Automation_Wrapper:
             # self.publisher_Automation_Dumping.publish(data)
         
     def beginAutomation(self):
-        if self.indicators.readyExtend():
+        if self.indicators.readyExtend:
             self.extend_actuators()
             self.indicators.SetDump()
             self.indicators.endExtend()
-        elif self.indicators.readyDump():
+
+        elif self.indicators.readyDump:
             self.dump()
             self.indicators.SetRetract()
             self.indicators.endDump()
-        elif self.indicators.ReadyRetract():
+
+        elif self.indicators.readyRetract:
             self.retract_actuator()
             self.indicators.SetExtend()
             self.indicators.endRetract()
