@@ -13,6 +13,7 @@ class dumpingWrapperROS:
         self.opcode = -1
 
         rospy.Subscriber("main_manual", Int32, self.callback_main)
+        rospy.Subscriber("automation_publisher", Int32, self.callback_main)
         rospy.Subscriber("emergency_stop", Int32, self.callback_stop)
     
     def callback_main(self, msg):
