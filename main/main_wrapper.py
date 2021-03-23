@@ -31,6 +31,8 @@ class mainWrapperROS:
         self.publisher_automated = rospy.Publisher("main_automated", Int32, queue_size=1)
         self.emergency_stop = rospy.Publisher("emergency_stop", Int32, queue_size=10)
 
+        self.active_autonomy = ""
+
         # startup the GUI
         self.app = QtWidgets.QApplication(sys.argv)
         self.Dialog = QtWidgets.QDialog()
@@ -52,19 +54,12 @@ class mainWrapperROS:
     #
     # Automation controls are published with this publisher
     #-------------------------------------------------------------------------------------------
-    def publish_data_automated(self, event=None):
-        d = self.main.get_data()
-        data = Int32(data=d)
+    def publish_data_automated(self, event=None, op=none):
+       #d = self.main.get_data()
+        #data = Int32(data=d)
+        data = Int32(data=op)
         self.publisher_automated.publish(data)
 
-    #-------------------------------------------------------------------------------------------
-    # Publish an emergency stop
-    #
-    # In the event of an emergency, publish a stop command to all operations
-    #-------------------------------------------------------------------------------------------
-    def big_red_button(self):
-        data = Int32(data=1)
-        self.emergency_stop.publish(data)
     
     def keyPressEvent(self, event):
         if event.key() == Qt.Key_W:
@@ -218,22 +213,24 @@ class mainWrapperROS:
         self.E_stop.setGeometry(QtCore.QRect(500, 40, 111, 28))
         self.E_stop.setObjectName("E_stop")
         self.E_stop.clicked.connect(self.emergency_stop_handler)
+        self.E_stop.setAutoFillBackground(True)
+        self.E_stop.setStyleSheet("background-color: red;")
 
         #Autonomy for the different subsystems 
         self.A_Dumping = QtWidgets.QRadioButton(Dialog)
         self.A_Dumping.setGeometry(QtCore.QRect(1100, 120, 95, 20))
         self.A_Dumping.setObjectName("A_Dumping")
-        self.A_Dumping.toggled.connect(self.autonomy_S)
+        self.A_Dumping.toggled.connect(lambda:self.autonomy_S(self.A_Dumping))
         
         self.A_Locomotion = QtWidgets.QRadioButton(Dialog)
         self.A_Locomotion.setGeometry(QtCore.QRect(1100, 150, 95, 20))
         self.A_Locomotion.setObjectName("A_Locomotion")
-        self.A_Locomotion.toggled.connect(self.autonomy_S)
+        self.A_Locomotion.toggled.connect(lambda:self.autonomy_S(self.A_Dumping))
         
         self.A_Digging = QtWidgets.QRadioButton(Dialog)
         self.A_Digging.setGeometry(QtCore.QRect(1100, 180, 95, 20))
         self.A_Digging.setObjectName("A_Digging")
-        self.A_Digging.toggled.connect(self.autonomy_S)
+        self.A_Digging.toggled.connect(lambda:self.autonomy_S(self.A_Dumping))
         
         self.Initiate_A = QtWidgets.QPushButton(Dialog)
         self.Initiate_A.setGeometry(QtCore.QRect(1130, 220, 93, 28))
@@ -245,7 +242,6 @@ class mainWrapperROS:
         self.Loco_Right.setGeometry(QtCore.QRect(160, 180, 51, 28))
         self.Loco_Right.setObjectName("Loco_Right")
         self.Loco_Right.clicked.connect(self.right_loco)
-        #self.Loco_Right.keyPressEvent = self.keyPressEvent
 
         self.Loco_FW = QtWidgets.QPushButton(Dialog)
         self.Loco_FW.setGeometry(QtCore.QRect(90, 140, 51, 28))
@@ -344,12 +340,34 @@ class mainWrapperROS:
         self.Depth_Stop.setObjectName("Depth_Stop")
         self.Depth_Stop.clicked.connect(self.depth_stop)
 
+        self.Loco_Right.keyPressEvent = self.keyPressEvent
+        self.Loco_FW.keyPressEvent = self.keyPressEvent
+        self.Loco_Back.keyPressEvent = self.keyPressEvent
+        self.Loco_Left.keyPressEvent = self.keyPressEvent
+        self.Loco_stop.keyPressEvent = self.keyPressEvent
+
+        self.Dump.keyPressEvent = self.keyPressEvent
+        self.Retract_Dump.keyPressEvent = self.keyPressEvent
+        self.Dump_Stop.keyPressEvent = self.keyPressEvent
+        self.Extend_Actuator.keyPressEvent = self.keyPressEvent
+        self.Retract_Actuator.keyPressEvent = self.keyPressEvent
+        self.Actuator_Stop.keyPressEvent = self.keyPressEvent
+
+        self.Dig.keyPressEvent = self.keyPressEvent
+        self.unDig.keyPressEvent = self.keyPressEvent
+        self.Dig_CW.keyPressEvent = self.keyPressEvent
+        self.Dig_CCW.keyPressEvent = self.keyPressEvent
+        self.Pitch_stop.keyPressEvent = self.keyPressEvent
+        self.Dig_DeH.keyPressEvent = self.keyPressEvent
+        self.Dig_InH.keyPressEvent = self.keyPressEvent
+        self.Depth_Stop.keyPressEvent = self.keyPressEvent
+
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
-#-----------------------------------------------------------
-# Locomotion Button Handlers
-#-----------------------------------------------------------
+    #-----------------------------------------------------------
+    # Locomotion Button Handlers
+    #-----------------------------------------------------------
     def foward_loco(self):
         self.publish_data_manual(None, 0)
         #print("This is for foward Locomotion")
@@ -370,9 +388,9 @@ class mainWrapperROS:
         self.publish_data_manual(None, 4)
         #print("This is for stop Locomotion")
         
-#-----------------------------------------------------------
-# Digging Button Handlers
-#-----------------------------------------------------------
+    #-----------------------------------------------------------
+    # Digging Button Handlers
+    #-----------------------------------------------------------
     def dig_handler(self):
         self.publish_data_manual(None, 6)
         #print("This is for digging")
@@ -409,10 +427,9 @@ class mainWrapperROS:
         self.publish_data_manual(None, 14)
         #print("This is for stop pitch")
         
-        
-#-----------------------------------------------------------
-# Dumping Button Handlers
-#-----------------------------------------------------------
+    #-----------------------------------------------------------
+    # Dumping Button Handlers
+    #-----------------------------------------------------------
     def dump_handler(self):
         self.publish_data_manual(None, 15)
         #print("This is for stepper forward")
@@ -437,15 +454,30 @@ class mainWrapperROS:
         self.publish_data_manual(None, 20)
         #print("This is for actuator stop")
 
-#-----------------------------------------------------------
-# Handlers for Autonomy 
-#-----------------------------------------------------------       
-    def autonomy_S(self):
-        radio = self.sender()   #we can get the text and use it to check which radio 
-                                #button is clicked (radio.text())
-                                #print(radio.text())
+    #-----------------------------------------------------------
+    # Handlers for Autonomy 
+    #-----------------------------------------------------------       
+    def autonomy_S(self, b):
+        if b.text() == "Dumping":
+            self.active_autonomy = "Dumping"
+            print(b.text())
+        elif b.text() == "Locomotion":
+            self.active_autonomy = "Locomotion"
+            print(b.text())
+        elif b.text() == "Digging":
+            self.active_autonomy = "Digging"
+            print(b.text())
+
     def Begin_Autonomy(self):
-        x=1                     #communicate the autonomy call
+        if self.active_autonomy == "Dumping":
+            self.publish_data_automated(none, 1)
+            
+        elif self.active_autonomy == "Locomotion":
+            self.publish_data_automated(none, 2)
+            
+        elif self.active_autonomy == "Digging":
+            self.publish_data_automated(none, 3)
+            
         
     def setControl(self):
         radio = self.sender()
@@ -454,15 +486,18 @@ class mainWrapperROS:
     def set_opcode(self, opcode):
         self.holder = self.opcode
 
-#--
-#
-#--
+    #-------------------------------------------------------------------------------------------
+    # Publish an emergency stop
+    #
+    # In the event of an emergency, publish a stop command to all operations
+    #-------------------------------------------------------------------------------------------
     def emergency_stop_handler(self):
-        self.big_red_button()
+        data = Int32(data=1)
+        self.emergency_stop.publish(data)
 
-#--
-#
-#--
+    #-- 
+    #
+    #--
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
@@ -483,8 +518,8 @@ class mainWrapperROS:
         self.Retract_Actuator.setText(_translate("Dialog", "Retract"))
         self.Dump_Stop.setText(_translate("Dialog", "Stop"))
         self.Dig.setText(_translate("Dialog", "Dig"))
-        self.Dig_CCW.setText(_translate("Dialog", "CCW"))
-        self.Dig_CW.setText(_translate("Dialog", "CW"))
+        self.Dig_CCW.setText(_translate("Dialog", "Backward"))
+        self.Dig_CW.setText(_translate("Dialog", "Forward"))
         self.Dig_DeH.setText(_translate("Dialog", "Decrease "))
         self.Dig_InH.setText(_translate("Dialog", "Increase"))
         self.Loco_FW.setText(_translate("Dialog", "Foward"))
