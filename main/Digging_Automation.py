@@ -33,14 +33,17 @@ class Digging_Automation_Wrapper:
     
     def callback_gyroscope(self, msg):
         self.orientation = msg.data
+        self.indicators.check_maxAngle(self.orientation)
 
     def callback_height(self, msg):
         self.height = msg.data
-    
+        self.indicators.max_height(self.height)
+
     def callback_loadcell(self, msg):
         self.load = msg.data
         self.indicators.getload(self.load)
         
+
 
 
         
