@@ -9,6 +9,10 @@ from digging_indicator import DiggingIndicators
 #   Gyroscope
 #   height
 #   loadcell
+#2. add a funtion that changes the position of the pitch when it is at max 
+#3. update the stock indicators with the data 
+#       we can use subscribers orrrr ???
+#
 
 class Digging_Automation_Wrapper:
 
@@ -85,18 +89,32 @@ class Digging_Automation_Wrapper:
             #stop all of the operations and get ready to go back to the positioning of locomotion
             if self.indicators.bucket_full == True:
                 self.stop_operations()
-                self.indicators.check_stop()
-                self.indicators.begin_locomotion()
+                if self.indicators.operations_stoped == True:
+                    self.indicators.begin_locomotion()
                 pass
         
+
+        #-------------------------------------------------------------------------------
+        # (4) check if the load in the bucket is enough 
+        #-------------------------------------------------------------------------------
         if self.indicators.bucket_full == True:
                 self.stop_operations()
-                self.indicators.check_stop()
-                self.indicators.begin_locomotion()
+                if self.indicators.operations_stoped == True:
+                    self.indicators.begin_locomotion()
                 pass
+        
+        #-------------------------------------------------------------------------------
+        # (5) final step go back to locomotion position
+        #-------------------------------------------------------------------------------
+        if self.indicators.locomotion_position == True:
+            #do the operations required to go back to locmotion positioning
+            #This is when the auto is done
+            pass
+        
 
     def stop_operations(self):
         #set all of the motors to stop
+        self.indicators.check_stop()
         pass
             
 
@@ -109,12 +127,12 @@ class Digging_Automation_Wrapper:
         
     
 if __name__ == "__main__":
-    rospy.init_node("Dumping_Automation_Wrapper_node")
+    rospy.init_node("Digging_Automation_Wrapper_node")
 
-    digging_wrapper = Dumping_Automation_Wrapper()
+    digging_wrapper = Digging_Automation_Wrapper()
 
-    rospy.on_shutdown(Dumping_Automation.stop)
+    rospy.on_shutdown(Digging_Automation.stop)
 
-    rospy.loginfo("*** Dumping Automation node initialized successfully***")
+    rospy.loginfo("*** Digging Automation node initialized successfully***")
 
     rospy.spin()
