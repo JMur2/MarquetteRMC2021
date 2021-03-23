@@ -33,7 +33,11 @@ class locomotionWrapperROS:
                 self.locomotion.loco_config_check()
 
     def callback_stop(self):
-        self.stop()
+        try:
+            self.stop()
+            print("Successfully shutdown the Locomotion subsystem")
+        except:
+            print("Something went wrong with Locomotion shutdown")
 
     def stop(self):
         self.locomotion.loco_disengage_motors()

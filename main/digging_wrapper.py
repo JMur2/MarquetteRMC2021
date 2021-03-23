@@ -39,7 +39,11 @@ class diggingWrapperROS:
                 self.digging.stepper_stop()
     
     def callback_stop(self):
-        self.stop()
+        try:
+            self.stop()
+            print("Successfully shutdown the Digging subsystem")
+        except:
+            print("Something went wrong with Digging shutdown")
 
     def stop(self):
         self.digging.dig_disengage_depth()

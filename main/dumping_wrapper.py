@@ -34,7 +34,11 @@ class dumpingWrapperROS:
                 self.dumping.actuator_stop()
 
     def callback_stop(self):
-        self.stop()
+        try:
+            self.stop()
+            print("Successfully shutdown the Dumping subsystem")
+        except:
+            print("Something went wrong with Dumping shutdown")
 
     def stop(self):
         self.dumping.disable_stepper()
