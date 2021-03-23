@@ -73,6 +73,33 @@ class Digging_Automation_Wrapper:
         # (3) begin the automation
         #-------------------------------------------------------------------------------
         elif self.indicators.ready2dig == True  and self.indicators.bucket_full == False :
+            if self.indicators.digging_enough_material == True:
+                #continue the function
+                #this function can include to move the the height/pitch while digging as well
+                pass
+            elif self.indicators.maxHeight == False:
+                #increase height while it is moving the zipper 
+            elif self.indicators.mazAngle == False:
+                #increas the pitch angle while it is moving the zipper 
+                pass
+            #stop all of the operations and get ready to go back to the positioning of locomotion
+            if self.indicators.bucket_full == True:
+                self.stop_operations()
+                self.indicators.check_stop()
+                self.indicators.begin_locomotion()
+                pass
+        
+        if self.indicators.bucket_full == True:
+                self.stop_operations()
+                self.indicators.check_stop()
+                self.indicators.begin_locomotion()
+                pass
+
+    def stop_operations(self):
+        #set all of the motors to stop
+        pass
+            
+
             
 
         

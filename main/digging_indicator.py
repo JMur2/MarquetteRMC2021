@@ -8,6 +8,7 @@ class DiggingIndicators:
         #check for mechanical errors through the electrical current 
         #if any of this are true, then we muct stop the operation and recalculate
         #this will allow us to take different actions 
+        #THEY WERE ADDED TO THE ALGO BUT NOT TO THE CALLBACK
         self.Zipper_stock = False 
         self.pitch_stock = False 
         self.height_stock = False 
@@ -16,11 +17,13 @@ class DiggingIndicators:
         #variables to ensure that there are 
         #set timers to set the rover in the right position
         # then this become true
+        #ADDED TO THE ALGO
         self.ready_dig = False 
         
         #check for the load 
         #if bucket_full is true then we must stop all operations,
         #then set locomotion_position to true
+        
         self.bucket_full = False 
         self.locomotion_position = False 
         self.operations_stoped = False
