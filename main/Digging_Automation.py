@@ -45,6 +45,35 @@ class Digging_Automation_Wrapper:
         
 
 
+    def Automation(self):
+        #-------------------------------------------------------------------------------
+        # (1)first step to the automation is to check if any of the components are stock
+        #-------------------------------------------------------------------------------
+        if self.indicators.Zipper_stock == True:
+            # do the undig or dig untiil it is not stock 
+            pass
+        elif self.indicators.pitch_stock == True:
+            #try different pitch movements umtil unstock
+            pass
+        elif self.indicators.height_stock == True:
+            #try different things with height
+            pass
+
+        #-------------------------------------------------------------------------------
+        # (2)set the rover from locomotion position to digging position 
+        #-------------------------------------------------------------------------------
+        if self.indicators.ready2dig == False:
+            #raise the bugget
+            #set the pitch to the right position
+            #set the height to the right position
+            #Start moving the zipper
+            self.indicators.ready2dig()
+
+        #-------------------------------------------------------------------------------
+        # (3) begin the automation
+        #-------------------------------------------------------------------------------
+        elif self.indicators.ready2dig == True  and self.indicators.bucket_full == False :
+            
 
         
         
