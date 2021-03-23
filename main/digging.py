@@ -127,10 +127,13 @@ class Digging:
         self.odrv0.axis1.requested_state = AXIS_STATE_IDLE
 
     #--------------------------------------------------------------------
+    # Disengages the stepper motor by reseting the state
+    #--------------------------------------------------------------------
+    def dig_disengage_pitch(self):
+        self.ticcmd('-d', self.serial_num, '--reset')
+
+    #--------------------------------------------------------------------
     # Dumps all errors from the locomotion odrive
     #--------------------------------------------------------------------
     def dig_dump_errors(self):
         dump_errors(odrv0, True)
-
-    def dig_disengage_pitch(self):
-        self.ticcmd('-d', self.serial_num, '--reset')

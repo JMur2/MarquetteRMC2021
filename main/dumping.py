@@ -104,7 +104,7 @@ class Dumping:
         self.roboclaw.Close()
 
     #--------------------------------------------------------------------
-    # Disengages the stepper motor
+    # Disengages the stepper motor by reseting the state
     #--------------------------------------------------------------------
     def disable_stepper(self):
         self.ticcmd('-d', self.serial_num, '--reset')

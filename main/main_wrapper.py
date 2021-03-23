@@ -470,13 +470,13 @@ class mainWrapperROS:
 
     def Begin_Autonomy(self):
         if self.active_autonomy == "Dumping":
-            self.publish_data_automated(none, 1)
+            self.publish_data_automated(None, 1)
             
         elif self.active_autonomy == "Locomotion":
-            self.publish_data_automated(none, 2)
+            self.publish_data_automated(None, 2)
             
         elif self.active_autonomy == "Digging":
-            self.publish_data_automated(none, 3)
+            self.publish_data_automated(None, 3)
             
         
     def setControl(self):
