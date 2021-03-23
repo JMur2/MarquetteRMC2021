@@ -48,15 +48,9 @@ class Digging_Automation_Wrapper:
 
         
         
-    def stop(self):
-        self.control_opcode = 16
-        data = Int32(data=control_opcode)
-        self.publisher_Automation_Dumping.publish(data)
+    
         
-        # stop actuator
-        # self.control_opcode = 
-        # data = Int32(data=control_opcode)
-        # self.publisher_Automation_Dumping.publish(data)
+        
     
 if __name__ == "__main__":
     rospy.init_node("Dumping_Automation_Wrapper_node")
