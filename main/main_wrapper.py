@@ -206,9 +206,11 @@ class mainWrapperROS:
         self.unfold = QtWidgets.QPushButton(Dialog)
         self.unfold.setGeometry(QtCore.QRect(360, 40, 111, 28))
         self.unfold.setObjectName("unfold")
+
         self.Fold = QtWidgets.QPushButton(Dialog)
         self.Fold.setGeometry(QtCore.QRect(640, 40, 111, 28))
         self.Fold.setObjectName("Fold")
+
         self.E_stop = QtWidgets.QPushButton(Dialog)
         self.E_stop.setGeometry(QtCore.QRect(500, 40, 111, 28))
         self.E_stop.setObjectName("E_stop")
