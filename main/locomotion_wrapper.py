@@ -49,6 +49,6 @@ if __name__ == "__main__":
 
     rospy.on_shutdown(locomotion_wrapper.stop) 
 
-    rospy.loginfo("***Locomotion node initialized successfully***") 
+    rospy.loginfo("Locomotion node initialized successfully") 
 
     rospy.spin() 

@@ -51,6 +51,6 @@ if __name__ == "__main__":
 
     rospy.on_shutdown(dumping_wrapper.stop)
 
-    rospy.loginfo("***Dumping node initialized successfully***")
+    rospy.loginfo("Dumping node initialized successfully")
 
     rospy.spin()
