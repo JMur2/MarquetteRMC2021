@@ -41,6 +41,8 @@ class dumpingWrapperROS:
             print("Something went wrong with Dumping shutdown")
 
     def stop(self):
+        self.dumping.actuator_stop()
+
         self.dumping.disable_stepper()
         self.dumping.disable_roboclaw()
 

@@ -49,6 +49,8 @@ class Digging:
     #--------------------------------------------------------------------
     def zipper_stop(self):
         self.odrv0.axis1.controller.input_vel = 0
+        self.odrv0.axis1.controller.input_vel = 5
+        self.odrv0.axis1.controller.input_vel = 0
 
     #--------------------------------------------------------------------
     # Extends the zipper drive deeper into the ground
