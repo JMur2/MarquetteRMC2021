@@ -464,13 +464,13 @@ class mainWrapperROS:
         self.publish_data_manual(None, 15)
         #print("This is for stop pitch")
 
-    def setSpeed_one(self)
+    def setSpeed_one(self):
         self.publish_data_manual(None, 16)
     
-    def setSpeed_two(self)
+    def setSpeed_two(self):
         self.publish_data_manual(None, 17)
     
-    def setSpeed_three(self)
+    def setSpeed_three(self):
         self.publish_data_manual(None, 18)
         
     #-----------------------------------------------------------
