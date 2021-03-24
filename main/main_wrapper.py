@@ -445,31 +445,40 @@ class mainWrapperROS:
         self.publish_data_manual(None, 14)
         #print("This is for stop pitch")
         
-#-----------------------------------------------------------
-# Dumping Button Handlers
-#-----------------------------------------------------------
-    def dump_handler(self):
+    def setSpeed_one(self)
         self.publish_data_manual(None, 15)
+    
+    def setSpeed_two(self)
+        self.publish_data_manual(None, 16)
+    
+    def setSpeed_three(self)
+        self.publish_data_manual(None, 17)
+        
+    #-----------------------------------------------------------
+    # Dumping Button Handlers
+    #-----------------------------------------------------------
+    def dump_handler(self):
+        self.publish_data_manual(None, 18)
         #print("This is for stepper forward")
         
     def dump_retract(self):
-        self.publish_data_manual(None, 16)
+        self.publish_data_manual(None, 19)
         #print("This is for stepper backward")
         
     def store_stop(self):
-        self.publish_data_manual(None, 17)
+        self.publish_data_manual(None, 20)
         #print("This is for dump stop")
         
     def actuator_extend(self):
-        self.publish_data_manual(None, 18)
+        self.publish_data_manual(None, 21)
         #print("This is for actuator extend")
         
     def actuator_retract(self):
-        self.publish_data_manual(None, 19)
+        self.publish_data_manual(None, 22)
         #print("This is for actuator retract")
         
     def stop_actuator(self):
-        self.publish_data_manual(None, 20)
+        self.publish_data_manual(None, 23)
         #print("This is for actuator stop")
 
 #-----------------------------------------------------------
