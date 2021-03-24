@@ -30,7 +30,7 @@ class Dumping_Automation_Wrapper:
         #-----------------------
         # t_end = rospy.get_time() + 20 #rospy.get_time() returns float seconds /// this sets to loop for 20 seconds
         # while rospy.get_time() < t_end:
-            # self.control_opcode = 17
+            # self.control_opcode = 22
             # data = Int32(data=control_opcode)
             # self.publisher_Automation_Dumping.publish(data)
         
@@ -53,7 +53,7 @@ class Dumping_Automation_Wrapper:
             
         # t_end = rospy.get_time() + 20 #rospy.get_time() returns float seconds /// this sets to loop for 20 seconds
         # while rospy.get_time() < t_end:
-            # self.control_opcode = 15
+            # self.control_opcode = 19
             # data = Int32(data=control_opcode)
             # self.publisher_Automation_Dumping.publish(data)
         
@@ -62,7 +62,7 @@ class Dumping_Automation_Wrapper:
         #----------------------
         # t_end =time.time() + 20 #will run for 20 seconds 
         # while time.time() < t_end:
-            # self.control_opcode = 14
+            # self.control_opcode = 20
             # data = Int32(data=control_opcode)
             # self.publisher_Automation_Dumping.publish(data)
         
@@ -78,7 +78,7 @@ class Dumping_Automation_Wrapper:
         #-----------------------
         # t_end = rospy.get_time() + 20 #rospy.get_time() returns float seconds /// this sets to loop for 20 seconds
         # while rospy.get_time() < t_end:
-            # self.control_opcode = 18
+            # self.control_opcode = 24
             # data = Int32(data=control_opcode)
             # self.publisher_Automation_Dumping.publish(data)
             
@@ -86,7 +86,7 @@ class Dumping_Automation_Wrapper:
         #----------------------
         # t_end =time.time() + 20 #will run for 20 seconds 
         # while time.time() < t_end:
-            # self.control_opcode = 18
+            # self.control_opcode = 24
             # data = Int32(data=control_opcode)
             # self.publisher_Automation_Dumping.publish(data)
         
