@@ -294,7 +294,22 @@ class mainWrapperROS:
         self.Actuator_Stop.setObjectName("Actuator_Stop")
         self.Actuator_Stop.clicked.connect(self.stop_actuator)
 
-        #digging button declaration 
+        #digging button declaration
+        self.speed1 = QtWidgets.QPushButton(Dialog)
+        self.speed1.setGeometry(QtCore.QRect(330, 180, 91, 28))
+        self.speed1.setObjectName("speed1")
+        self.Dig.clicked.connect(self.setSpeed_one)
+
+        self.speed2 = QtWidgets.QPushButton(Dialog)
+        self.speed2.setGeometry(QtCore.QRect(440, 180, 91, 28))
+        self.speed2.setObjectName("speed2")
+        self.Dig.clicked.connect(self.setSpeed_two)
+
+        self.speed3 = QtWidgets.QPushButton(Dialog)
+        self.speed3.setGeometry(QtCore.QRect(550, 180, 91, 28))
+        self.speed3.setObjectName("speed3")
+        self.Dig.clicked.connect(self.setSpeed_three)
+
         self.Dig = QtWidgets.QPushButton(Dialog)
         self.Dig.setGeometry(QtCore.QRect(330, 140, 91, 28))
         self.Dig.setObjectName("Dig")
@@ -427,32 +442,41 @@ class mainWrapperROS:
     def pitch_stop(self):
         self.publish_data_manual(None, 14)
         #print("This is for stop pitch")
+    
+    def setSpeed_one(self)
+        self.publish_data_manual(None, 15)
+    
+    def setSpeed_two(self)
+        self.publish_data_manual(None, 16)
+    
+    def setSpeed_three(self)
+        self.publish_data_manual(None, 17)
         
     #-----------------------------------------------------------
     # Dumping Button Handlers
     #-----------------------------------------------------------
     def dump_handler(self):
-        self.publish_data_manual(None, 15)
+        self.publish_data_manual(None, 18)
         #print("This is for stepper forward")
         
     def dump_retract(self):
-        self.publish_data_manual(None, 16)
+        self.publish_data_manual(None, 19)
         #print("This is for stepper backward")
         
     def store_stop(self):
-        self.publish_data_manual(None, 17)
+        self.publish_data_manual(None, 20)
         #print("This is for dump stop")
         
     def actuator_extend(self):
-        self.publish_data_manual(None, 18)
+        self.publish_data_manual(None, 21)
         #print("This is for actuator extend")
         
     def actuator_retract(self):
-        self.publish_data_manual(None, 19)
+        self.publish_data_manual(None, 22)
         #print("This is for actuator retract")
         
     def stop_actuator(self):
-        self.publish_data_manual(None, 20)
+        self.publish_data_manual(None, 23)
         #print("This is for actuator stop")
 
     #-----------------------------------------------------------
