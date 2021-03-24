@@ -54,7 +54,7 @@ class mainWrapperROS:
     #
     # Automation controls are published with this publisher
     #-------------------------------------------------------------------------------------------
-    def publish_data_automated(self, event=None, op=none):
+    def publish_data_automated(self, event=None, op=None):
        #d = self.main.get_data()
         #data = Int32(data=d)
         data = Int32(data=op)
