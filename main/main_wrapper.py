@@ -96,7 +96,7 @@ class mainWrapperROS:
         font.setPointSize(16)
         #Labels of the GUI
         self.label = QtWidgets.QLabel(Dialog)
-        self.label.setGeometry(QtCore.QRect(20, 270, 151, 21))
+        self.label.setGeometry(QtCore.QRect(10, 310, 151, 21))
         self.label.setFont(font)
         self.label.setObjectName("label")
         self.label_MC = QtWidgets.QLabel(Dialog)
@@ -185,13 +185,13 @@ class mainWrapperROS:
         
         #Live Data
         self.LidarView = QtWidgets.QGraphicsView(Dialog)
-        self.LidarView.setGeometry(QtCore.QRect(10, 300, 951, 261))
+        self.LidarView.setGeometry(QtCore.QRect(10, 340, 951, 261))
         self.LidarView.setObjectName("LidarView")
         self.Feedback = QtWidgets.QListView(Dialog)
-        self.Feedback.setGeometry(QtCore.QRect(970, 300, 301, 261))
+        self.Feedback.setGeometry(QtCore.QRect(970, 340, 301, 261))
         self.Feedback.setObjectName("Feedback")
         self.check_Data = QtWidgets.QCheckBox(Dialog)
-        self.check_Data.setGeometry(QtCore.QRect(140, 270, 21, 20))
+        self.check_Data.setGeometry(QtCore.QRect(110, 310, 21, 20))
         self.check_Data.setText("")
         self.check_Data.setObjectName("check_Data")
         
