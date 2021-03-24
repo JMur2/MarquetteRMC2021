@@ -18,7 +18,7 @@ class locomotionWrapperROS:
     def callback_main(self, msg): 
         self.opcode = msg.data
 
-        if self.opcode >= 0 and self.opcode <= 5:
+        if self.opcode >= 0 and self.opcode <= 6:
             if self.opcode == 0:
                 self.locomotion.loco_forward()
             if self.opcode == 1:
@@ -29,9 +29,12 @@ class locomotionWrapperROS:
                 self.locomotion.loco_right()
             if self.opcode == 4:
                 self.locomotion.loco_stop()
+            #if self.opcode == 5:
+            #    self.locomotion.loco_config_check()
             if self.opcode == 5:
-                self.locomotion.loco_config_check()
-
+                self.locomotion.loco_engage_motors()
+            if self.opcode == 6:
+                self.locomotion.loco_disengage_motors()
     def callback_stop(self):
         try:
             self.stop()
