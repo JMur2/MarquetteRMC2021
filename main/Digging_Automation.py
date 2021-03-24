@@ -32,6 +32,7 @@ class Digging_Automation_Wrapper:
         self.opcode = msg.data
         
         if self.opcode == 2:
+            self.beginauton=True
             pass
         #run automation
     
@@ -83,7 +84,9 @@ class Digging_Automation_Wrapper:
                 pass
             elif self.indicators.maxHeight == False:
                 #increase height while it is moving the zipper 
-            elif self.indicators.mazAngle == False:
+                pass
+            elif self.indicators.maxAngle == False:
+                #when at max angle decrease
                 #increas the pitch angle while it is moving the zipper 
                 pass
             #stop all of the operations and get ready to go back to the positioning of locomotion
