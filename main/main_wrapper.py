@@ -87,7 +87,7 @@ class mainWrapperROS:
 
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(1288, 568)
+        Dialog.resize(1288, 611)
         font = QtGui.QFont()
         font.setPointSize(16)
         font = QtGui.QFont()
@@ -96,7 +96,7 @@ class mainWrapperROS:
         font.setPointSize(16)
         #Labels of the GUI
         self.label = QtWidgets.QLabel(Dialog)
-        self.label.setGeometry(QtCore.QRect(20, 270, 151, 21))
+        self.label.setGeometry(QtCore.QRect(10, 310, 151, 21))
         self.label.setFont(font)
         self.label.setObjectName("label")
         self.label_MC = QtWidgets.QLabel(Dialog)
@@ -126,10 +126,10 @@ class mainWrapperROS:
         self.label_7.setGeometry(QtCore.QRect(260, 150, 55, 16))
         self.label_7.setObjectName("label_7")
         self.label_8 = QtWidgets.QLabel(Dialog)
-        self.label_8.setGeometry(QtCore.QRect(260, 180, 31, 16))
+        self.label_8.setGeometry(QtCore.QRect(260, 230, 31, 16))
         self.label_8.setObjectName("label_8")
         self.label_9 = QtWidgets.QLabel(Dialog)
-        self.label_9.setGeometry(QtCore.QRect(260, 210, 55, 16))
+        self.label_9.setGeometry(QtCore.QRect(260, 270, 55, 16))
         self.label_9.setObjectName("label_9")
         self.label_10 = QtWidgets.QLabel(Dialog)
         self.label_10.setGeometry(QtCore.QRect(680, 150, 91, 16))
@@ -137,6 +137,9 @@ class mainWrapperROS:
         self.label_11 = QtWidgets.QLabel(Dialog)
         self.label_11.setGeometry(QtCore.QRect(680, 190, 91, 16))
         self.label_11.setObjectName("label_11")
+        self.label_12 = QtWidgets.QLabel(Dialog)
+        self.label_12.setGeometry(QtCore.QRect(250, 190, 71, 16))
+        self.label_12.setObjectName("label_12")
         
         #Lines 
         self.line = QtWidgets.QFrame(Dialog)
@@ -150,7 +153,7 @@ class mainWrapperROS:
         self.line_2.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line_2.setObjectName("line_2")
         self.line_3 = QtWidgets.QFrame(Dialog)
-        self.line_3.setGeometry(QtCore.QRect(1080, 10, 20, 251))
+        self.line_3.setGeometry(QtCore.QRect(1080, 10, 20, 281))
         self.line_3.setFrameShape(QtWidgets.QFrame.VLine)
         self.line_3.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line_3.setObjectName("line_3")
@@ -165,12 +168,12 @@ class mainWrapperROS:
         self.line_5.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line_5.setObjectName("line_5")
         self.line_6 = QtWidgets.QFrame(Dialog)
-        self.line_6.setGeometry(QtCore.QRect(230, 110, 20, 141))
+        self.line_6.setGeometry(QtCore.QRect(230, 110, 20, 181))
         self.line_6.setFrameShape(QtWidgets.QFrame.VLine)
         self.line_6.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line_6.setObjectName("line_6")
         self.line_7 = QtWidgets.QFrame(Dialog)
-        self.line_7.setGeometry(QtCore.QRect(650, 110, 20, 141))
+        self.line_7.setGeometry(QtCore.QRect(650, 110, 20, 181))
         self.line_7.setFrameShape(QtWidgets.QFrame.VLine)
         self.line_7.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line_7.setObjectName("line_7")
@@ -182,13 +185,13 @@ class mainWrapperROS:
         
         #Live Data
         self.LidarView = QtWidgets.QGraphicsView(Dialog)
-        self.LidarView.setGeometry(QtCore.QRect(10, 300, 951, 261))
+        self.LidarView.setGeometry(QtCore.QRect(10, 340, 951, 261))
         self.LidarView.setObjectName("LidarView")
         self.Feedback = QtWidgets.QListView(Dialog)
-        self.Feedback.setGeometry(QtCore.QRect(970, 300, 301, 261))
+        self.Feedback.setGeometry(QtCore.QRect(970, 340, 301, 261))
         self.Feedback.setObjectName("Feedback")
         self.check_Data = QtWidgets.QCheckBox(Dialog)
-        self.check_Data.setGeometry(QtCore.QRect(140, 270, 21, 20))
+        self.check_Data.setGeometry(QtCore.QRect(110, 310, 21, 20))
         self.check_Data.setText("")
         self.check_Data.setObjectName("check_Data")
         
@@ -196,21 +199,19 @@ class mainWrapperROS:
         self.MC_On = QtWidgets.QRadioButton(Dialog)
         self.MC_On.setGeometry(QtCore.QRect(10, 50, 171, 20))
         self.MC_On.setObjectName("MC_On")
-        self.MC_On.toggled.connect(self.setControl)
+        self.MC_On.toggled.connect(lambda:self.setControl(self.MC_On))
         self.AC_On = QtWidgets.QRadioButton(Dialog)
         self.AC_On.setGeometry(QtCore.QRect(1100, 60, 141, 20))
         self.AC_On.setObjectName("AC_On")
-        self.AC_On.toggled.connect(self.setControl)
+        self.AC_On.toggled.connect(lambda:self.setControl(self.AC_On))
         
         #General manual controls 
         self.unfold = QtWidgets.QPushButton(Dialog)
         self.unfold.setGeometry(QtCore.QRect(360, 40, 111, 28))
         self.unfold.setObjectName("unfold")
-
         self.Fold = QtWidgets.QPushButton(Dialog)
         self.Fold.setGeometry(QtCore.QRect(640, 40, 111, 28))
         self.Fold.setObjectName("Fold")
-
         self.E_stop = QtWidgets.QPushButton(Dialog)
         self.E_stop.setGeometry(QtCore.QRect(500, 40, 111, 28))
         self.E_stop.setObjectName("E_stop")
@@ -296,7 +297,22 @@ class mainWrapperROS:
         self.Actuator_Stop.setObjectName("Actuator_Stop")
         self.Actuator_Stop.clicked.connect(self.stop_actuator)
 
-        #digging button declaration 
+        #digging button declaration
+        self.speed1 = QtWidgets.QPushButton(Dialog)
+        self.speed1.setGeometry(QtCore.QRect(330, 180, 91, 28))
+        self.speed1.setObjectName("speed1")
+        self.Dig.clicked.connect(self.setSpeed_one)
+
+        self.speed2 = QtWidgets.QPushButton(Dialog)
+        self.speed2.setGeometry(QtCore.QRect(440, 180, 91, 28))
+        self.speed2.setObjectName("speed2")
+        self.Dig.clicked.connect(self.setSpeed_two)
+
+        self.speed3 = QtWidgets.QPushButton(Dialog)
+        self.speed3.setGeometry(QtCore.QRect(550, 180, 91, 28))
+        self.speed3.setObjectName("speed3")
+        self.Dig.clicked.connect(self.setSpeed_three)
+
         self.Dig = QtWidgets.QPushButton(Dialog)
         self.Dig.setGeometry(QtCore.QRect(330, 140, 91, 28))
         self.Dig.setObjectName("Dig")
@@ -313,32 +329,32 @@ class mainWrapperROS:
         self.dig_stop.clicked.connect(self.stop_dig)
         
         self.Dig_CCW = QtWidgets.QPushButton(Dialog)
-        self.Dig_CCW.setGeometry(QtCore.QRect(440, 170, 91, 28))
+        self.Dig_CCW.setGeometry(QtCore.QRect(440, 220, 91, 28))
         self.Dig_CCW.setObjectName("Dig_CCW")
         self.Dig_CCW.clicked.connect(self.pitch_ccw)
         
         self.Dig_CW = QtWidgets.QPushButton(Dialog)
-        self.Dig_CW.setGeometry(QtCore.QRect(330, 170, 91, 28))
+        self.Dig_CW.setGeometry(QtCore.QRect(330, 220, 91, 28))
         self.Dig_CW.setObjectName("Dig_CW")
         self.Dig_CW.clicked.connect(self.pitch_cw)
 
         self.Pitch_stop = QtWidgets.QPushButton(Dialog)
-        self.Pitch_stop.setGeometry(QtCore.QRect(550, 170, 91, 28))
+        self.Pitch_stop.setGeometry(QtCore.QRect(550, 220, 91, 28))
         self.Pitch_stop.setObjectName("Pitch_stop")
         self.Pitch_stop.clicked.connect(self.pitch_stop)
         
         self.Dig_DeH = QtWidgets.QPushButton(Dialog)
-        self.Dig_DeH.setGeometry(QtCore.QRect(440, 200, 91, 28))
+        self.Dig_DeH.setGeometry(QtCore.QRect(440, 260, 91, 28))
         self.Dig_DeH.setObjectName("Dig_DeH")
         self.Dig_DeH.clicked.connect(self.depth_decrease)
         
         self.Dig_InH = QtWidgets.QPushButton(Dialog)
-        self.Dig_InH.setGeometry(QtCore.QRect(330, 200, 93, 28))
+        self.Dig_InH.setGeometry(QtCore.QRect(330, 260, 93, 28))
         self.Dig_InH.setObjectName("Dig_InH")
         self.Dig_InH.clicked.connect(self.depth_increase)
         
         self.Depth_Stop = QtWidgets.QPushButton(Dialog)
-        self.Depth_Stop.setGeometry(QtCore.QRect(550, 200, 91, 28))
+        self.Depth_Stop.setGeometry(QtCore.QRect(550, 260, 91, 28))
         self.Depth_Stop.setObjectName("Depth_Stop")
         self.Depth_Stop.clicked.connect(self.depth_stop)
 
