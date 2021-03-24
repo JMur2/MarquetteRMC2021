@@ -266,6 +266,17 @@ class mainWrapperROS:
         self.Loco_stop.setObjectName("Loco_stop")
         self.Loco_stop.clicked.connect(self.stop_loco)
 
+        self.Loco_disengage = QtWidgets.QPushButton(Dialog)
+        self.Loco_disengage.setGeometry(QtCore.QRect(130, 260, 81, 28))
+        self.Loco_disengage.setObjectName("Loco_disengage")
+        self.Loco_disengage.clicked.connect(self.LocoDisengage)
+
+        self.Loco_engage = QtWidgets.QPushButton(Dialog)
+        self.Loco_engage.setGeometry(QtCore.QRect(20, 260, 81, 28))
+        self.Loco_engage.setObjectName("Loco_engage")
+        self.Loco_engage.clicked.connect(self.LocoEngage)
+
+
         #Dump buttton created
         self.Dump = QtWidgets.QPushButton(Dialog)
         self.Dump.setGeometry(QtCore.QRect(780, 180, 81, 28))
@@ -405,80 +416,88 @@ class mainWrapperROS:
     def stop_loco(self):
         self.publish_data_manual(None, 4)
         #print("This is for stop Locomotion")
+    
+    def LocoEngage(self):
+        self.publish_data_manual(None, 5)
+        #print("This is for stop Locomotion")
+
+    def LocoDisengage(self):
+        self.publish_data_manual(None, 6)
+        #print("This is for stop Locomotion")
         
 #-----------------------------------------------------------
 # Digging Button Handlers
 #-----------------------------------------------------------
     def dig_handler(self):
-        self.publish_data_manual(None, 6)
+        self.publish_data_manual(None, 7)
         #print("This is for digging")
         
     def undig_handler(self):
-        self.publish_data_manual(None, 7)
+        self.publish_data_manual(None, 8)
         #print("This is for undig")
         
     def stop_dig(self):
-        self.publish_data_manual(None, 8)
+        self.publish_data_manual(None, 9)
         #print("This is for stop digging")
 
     def depth_increase(self):
-        self.publish_data_manual(None, 9)
+        self.publish_data_manual(None, 10)
         #print("This is for depth increase")
         
     def depth_decrease(self):
-        self.publish_data_manual(None, 10)
+        self.publish_data_manual(None, 11)
         #print("This is for depth decrease")
     
     def depth_stop(self):
-        self.publish_data_manual(None, 11)
+        self.publish_data_manual(None, 12)
         #print("This is for depth stop")
 
     def pitch_ccw(self):
-        self.publish_data_manual(None, 12)
+        self.publish_data_manual(None, 13)
         #print("This is for stepper forward")
 
     def pitch_cw(self):
-        self.publish_data_manual(None, 13)
+        self.publish_data_manual(None, 14)
         #print("This is for stepper backward")
         
     def pitch_stop(self):
-        self.publish_data_manual(None, 14)
-        #print("This is for stop pitch")
-        
-    def setSpeed_one(self)
         self.publish_data_manual(None, 15)
-    
-    def setSpeed_two(self)
+        #print("This is for stop pitch")
+
+    def setSpeed_one(self)
         self.publish_data_manual(None, 16)
     
-    def setSpeed_three(self)
+    def setSpeed_two(self)
         self.publish_data_manual(None, 17)
+    
+    def setSpeed_three(self)
+        self.publish_data_manual(None, 18)
         
     #-----------------------------------------------------------
     # Dumping Button Handlers
     #-----------------------------------------------------------
     def dump_handler(self):
-        self.publish_data_manual(None, 18)
+        self.publish_data_manual(None, 19)
         #print("This is for stepper forward")
         
     def dump_retract(self):
-        self.publish_data_manual(None, 19)
+        self.publish_data_manual(None, 20)
         #print("This is for stepper backward")
         
     def store_stop(self):
-        self.publish_data_manual(None, 20)
+        self.publish_data_manual(None, 21)
         #print("This is for dump stop")
         
     def actuator_extend(self):
-        self.publish_data_manual(None, 21)
+        self.publish_data_manual(None, 22)
         #print("This is for actuator extend")
         
     def actuator_retract(self):
-        self.publish_data_manual(None, 22)
+        self.publish_data_manual(None, 23)
         #print("This is for actuator retract")
         
     def stop_actuator(self):
-        self.publish_data_manual(None, 23)
+        self.publish_data_manual(None, 24)
         #print("This is for actuator stop")
 
 #-----------------------------------------------------------
@@ -574,6 +593,8 @@ class mainWrapperROS:
         self.speed2.setText(_translate("Dialog", "Speed 2 (77)"))
         self.speed3.setText(_translate("Dialog", "Speed 3 (87)"))
         self.label_12.setText(_translate("Dialog", "Zipper Speed"))
+        self.Loco_disengage.setText(_translate("Dialog", "Disengage"))
+        self.Loco_engage.setText(_translate("Dialog", "Engage"))
 
 if __name__ == "__main__":
     rospy.init_node("main_node")
