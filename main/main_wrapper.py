@@ -312,17 +312,17 @@ class mainWrapperROS:
         self.speed1 = QtWidgets.QPushButton(Dialog)
         self.speed1.setGeometry(QtCore.QRect(330, 180, 91, 28))
         self.speed1.setObjectName("speed1")
-        self.Dig.clicked.connect(self.setSpeed_one)
+        self.speed1.clicked.connect(self.setSpeed_one)
 
         self.speed2 = QtWidgets.QPushButton(Dialog)
         self.speed2.setGeometry(QtCore.QRect(440, 180, 91, 28))
         self.speed2.setObjectName("speed2")
-        self.Dig.clicked.connect(self.setSpeed_two)
+        self.speed2.clicked.connect(self.setSpeed_two)
 
         self.speed3 = QtWidgets.QPushButton(Dialog)
         self.speed3.setGeometry(QtCore.QRect(550, 180, 91, 28))
         self.speed3.setObjectName("speed3")
-        self.Dig.clicked.connect(self.setSpeed_three)
+        self.speed3.clicked.connect(self.setSpeed_three)
 
         self.Dig = QtWidgets.QPushButton(Dialog)
         self.Dig.setGeometry(QtCore.QRect(330, 140, 91, 28))
