@@ -38,11 +38,11 @@ class diggingWrapperROS:
             if self.opcode == 14:
                 self.digging.stepper_stop()
             if self.opcode == 15:
-                self.speed = 67
+                self.speed = 20
             if self.opcode == 16:
-                self.speed = 77
+                self.speed = 50
             if self.opcode == 17:
-                self.speed = 87
+                self.speed = 67
     
     def callback_stop(self):
         try:
