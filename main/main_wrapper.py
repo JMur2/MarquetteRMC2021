@@ -31,7 +31,7 @@ class mainWrapperROS:
         self.publisher_automated = rospy.Publisher("main_automated", Int32, queue_size=1)
         self.emergency_stop = rospy.Publisher("emergency_stop", Int32, queue_size=10)
 
-        self.active_autonomy = ""
+        self.active_autonomy = "none"
 
         # startup the GUI
         self.app = QtWidgets.QApplication(sys.argv)
@@ -192,18 +192,18 @@ class mainWrapperROS:
         self.Feedback.setObjectName("Feedback")
         self.check_Data = QtWidgets.QCheckBox(Dialog)
         self.check_Data.setGeometry(QtCore.QRect(110, 310, 21, 20))
-        self.check_Data.setText("")
+        self.check_Data.setText("data goes here")
         self.check_Data.setObjectName("check_Data")
         
         #activate autonomy or manual control
         self.MC_On = QtWidgets.QRadioButton(Dialog)
         self.MC_On.setGeometry(QtCore.QRect(10, 50, 171, 20))
         self.MC_On.setObjectName("MC_On")
-        self.MC_On.toggled.connect(lambda:self.setControl(self.MC_On))
+        #self.MC_On.toggled.connect(lambda:self.setControl(self.MC_On))
         self.AC_On = QtWidgets.QRadioButton(Dialog)
         self.AC_On.setGeometry(QtCore.QRect(1100, 60, 141, 20))
         self.AC_On.setObjectName("AC_On")
-        self.AC_On.toggled.connect(lambda:self.setControl(self.AC_On))
+        #self.AC_On.toggled.connect(lambda:self.setControl(self.AC_On))
         
         #General manual controls 
         self.unfold = QtWidgets.QPushButton(Dialog)
@@ -217,7 +217,7 @@ class mainWrapperROS:
         self.E_stop.setObjectName("E_stop")
         self.E_stop.clicked.connect(self.emergency_stop_handler)
         self.E_stop.setAutoFillBackground(True)
-        self.E_stop.setStyleSheet("background-color: red;")
+        self.E_stop.setStyleSheet("background-color: red")
 
         #Autonomy for the different subsystems 
         self.A_Dumping = QtWidgets.QRadioButton(Dialog)
