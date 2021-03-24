@@ -593,6 +593,9 @@ class mainWrapperROS:
         self.Actuator_Stop.setText(_translate("Dialog", "Stop"))
         self.label_10.setText(_translate("Dialog", "Linear Actuator "))
         self.label_11.setText(_translate("Dialog", "Stepper Motor"))
+        self.speed1.setText(_translate("Dialog", "Speed 1 (67)"))
+        self.speed2.setText(_translate("Dialog", "Speed 2 (77)"))
+        self.speed3.setText(_translate("Dialog", "Speed 3 (87)"))
 
 if __name__ == "__main__":
     rospy.init_node("main_node")
