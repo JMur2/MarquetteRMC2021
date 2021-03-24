@@ -516,13 +516,16 @@ class mainWrapperROS:
 
     def Begin_Autonomy(self):
         if self.active_autonomy == "Dumping":
-            self.publish_data_automated(None, 1)
+            #self.publish_data_automated(None, 1)
+            print(self.active_autonomy)
             
         elif self.active_autonomy == "Locomotion":
-            self.publish_data_automated(None, 2)
+            #self.publish_data_automated(None, 2)
+            print(self.active_autonomy)
             
         elif self.active_autonomy == "Digging":
-            self.publish_data_automated(None, 3)
+            #self.publish_data_automated(None, 3)
+            print(self.active_autonomy)
             
         
     def setControl(self):
@@ -589,9 +592,9 @@ class mainWrapperROS:
         self.Actuator_Stop.setText(_translate("Dialog", "Stop"))
         self.label_10.setText(_translate("Dialog", "Linear Actuator "))
         self.label_11.setText(_translate("Dialog", "Stepper Motor"))
-        self.speed1.setText(_translate("Dialog", "Speed 1 (67)"))
-        self.speed2.setText(_translate("Dialog", "Speed 2 (77)"))
-        self.speed3.setText(_translate("Dialog", "Speed 3 (87)"))
+        self.speed1.setText(_translate("Dialog", "Speed 1 (20)"))
+        self.speed2.setText(_translate("Dialog", "Speed 2 (50)"))
+        self.speed3.setText(_translate("Dialog", "Speed 3 (67)"))
         self.label_12.setText(_translate("Dialog", "Zipper Speed"))
         self.Loco_disengage.setText(_translate("Dialog", "Disengage"))
         self.Loco_engage.setText(_translate("Dialog", "Engage"))
