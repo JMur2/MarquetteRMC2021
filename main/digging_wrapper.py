@@ -46,9 +46,11 @@ class diggingWrapperROS:
             if self.opcode == 18:
                 self.speed = 67
     
-    def callback_stop(self):
+    def callback_stop(self, msg):
+        self.opcode = msg.data
         try:
             self.stop()
+            print(self.opcode)
             print("Successfully shutdown the Digging subsystem")
         except:
             print("Something went wrong with Digging shutdown")

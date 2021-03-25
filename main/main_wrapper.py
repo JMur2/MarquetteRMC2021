@@ -311,17 +311,17 @@ class mainWrapperROS:
 
         #digging button declaration
         self.speed1 = QtWidgets.QPushButton(Dialog)
-        self.speed1.setGeometry(QtCore.QRect(330, 180, 91, 28))
+        self.speed1.setGeometry(QtCore.QRect(330, 220, 91, 28))
         self.speed1.setObjectName("speed1")
         self.speed1.clicked.connect(self.setSpeed_one)
 
         self.speed2 = QtWidgets.QPushButton(Dialog)
-        self.speed2.setGeometry(QtCore.QRect(440, 180, 91, 28))
+        self.speed2.setGeometry(QtCore.QRect(440, 220, 91, 28))
         self.speed2.setObjectName("speed2")
         self.speed2.clicked.connect(self.setSpeed_two)
 
         self.speed3 = QtWidgets.QPushButton(Dialog)
-        self.speed3.setGeometry(QtCore.QRect(550, 180, 91, 28))
+        self.speed3.setGeometry(QtCore.QRect(550, 220, 91, 28))
         self.speed3.setObjectName("speed3")
         self.speed3.clicked.connect(self.setSpeed_three)
 
@@ -340,18 +340,18 @@ class mainWrapperROS:
         self.dig_stop.setObjectName("dig_stop")
         self.dig_stop.clicked.connect(self.stop_dig)
         
-        self.Dig_CCW = QtWidgets.QPushButton(Dialog)
-        self.Dig_CCW.setGeometry(QtCore.QRect(440, 220, 91, 28))
-        self.Dig_CCW.setObjectName("Dig_CCW")
-        self.Dig_CCW.clicked.connect(self.pitch_ccw)
-        
         self.Dig_CW = QtWidgets.QPushButton(Dialog)
-        self.Dig_CW.setGeometry(QtCore.QRect(330, 220, 91, 28))
+        self.Dig_CW.setGeometry(QtCore.QRect(330, 180, 91, 28))
         self.Dig_CW.setObjectName("Dig_CW")
         self.Dig_CW.clicked.connect(self.pitch_cw)
 
+        self.Dig_CCW = QtWidgets.QPushButton(Dialog)
+        self.Dig_CCW.setGeometry(QtCore.QRect(440, 180, 91, 28))
+        self.Dig_CCW.setObjectName("Dig_CCW")
+        self.Dig_CCW.clicked.connect(self.pitch_ccw)
+
         self.Pitch_stop = QtWidgets.QPushButton(Dialog)
-        self.Pitch_stop.setGeometry(QtCore.QRect(550, 220, 91, 28))
+        self.Pitch_stop.setGeometry(QtCore.QRect(550, 180, 91, 28))
         self.Pitch_stop.setObjectName("Pitch_stop")
         self.Pitch_stop.clicked.connect(self.pitch_stop)
         
@@ -442,11 +442,11 @@ class mainWrapperROS:
         #print("This is for stop digging")
 
     def depth_increase(self):
-        self.publish_data_manual(None, 10)
+        self.publish_data_manual(None, 11)
         #print("This is for depth increase")
         
     def depth_decrease(self):
-        self.publish_data_manual(None, 11)
+        self.publish_data_manual(None, 10)
         #print("This is for depth decrease")
     
     def depth_stop(self):
@@ -454,11 +454,11 @@ class mainWrapperROS:
         #print("This is for depth stop")
 
     def pitch_ccw(self):
-        self.publish_data_manual(None, 13)
+        self.publish_data_manual(None, 14)
         #print("This is for stepper forward")
 
     def pitch_cw(self):
-        self.publish_data_manual(None, 14)
+        self.publish_data_manual(None, 13)
         #print("This is for stepper backward")
         
     def pitch_stop(self):
@@ -593,10 +593,10 @@ class mainWrapperROS:
         self.Actuator_Stop.setText(_translate("Dialog", "Stop"))
         self.label_10.setText(_translate("Dialog", "Linear Actuator "))
         self.label_11.setText(_translate("Dialog", "Stepper Motor"))
-        self.speed1.setText(_translate("Dialog", "Speed 1 (20)"))
-        self.speed2.setText(_translate("Dialog", "Speed 2 (50)"))
+        self.speed1.setText(_translate("Dialog", "Speed 1 (15)"))
+        self.speed2.setText(_translate("Dialog", "Speed 2 (40)"))
         self.speed3.setText(_translate("Dialog", "Speed 3 (67)"))
-        self.label_12.setText(_translate("Dialog", "Zipper Speed"))
+        self.label_12.setText(_translate("Dialog", "Pitch Speed"))
         self.Loco_disengage.setText(_translate("Dialog", "Disengage"))
         self.Loco_engage.setText(_translate("Dialog", "Engage"))
 

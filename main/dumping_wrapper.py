@@ -32,9 +32,12 @@ class dumpingWrapperROS:
             if self.opcode == 24:
                 self.dumping.actuator_stop()
 
-    def callback_stop(self):
+    def callback_stop(self, msg):
+        self.opcode = msg.data
         try:
+            
             self.stop()
+            print(self.opcode)
             print("Successfully shutdown the Dumping subsystem")
         except:
             print("Something went wrong with Dumping shutdown")
