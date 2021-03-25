@@ -9,7 +9,7 @@ class diggingWrapperROS:
 
     def __init__(self):
         self.digging = Digging()
-
+        self.speed = 20
         self.opcode = -1
 
         rospy.Subscriber("main_manual", Int32, self.callback_main)
@@ -19,16 +19,18 @@ class diggingWrapperROS:
         self.opcode = msg.data
 
         if self.opcode >= 7 and self.opcode <= 18:
+            #belt (dont change speed!!!)
             if self.opcode == 7:
-                self.digging.zipper_forward(self.speed)
+                self.digging.zipper_forward(8)
             if self.opcode == 8:
-                self.digging.zipper_back(self.speed)
+                self.digging.zipper_back(8)
             if self.opcode == 9:
                 self.digging.zipper_stop()
             if self.opcode == 10:
-                self.digging.depth_extend(30)
+                self.digging.depth_extend(self.speed)
             if self.opcode == 11:
-                self.digging.depth_retract(30)
+                self.digging.depth_retract(self.speed)
+            #pitch
             if self.opcode == 12:
                 self.digging.depth_stop()
             if self.opcode == 13:
