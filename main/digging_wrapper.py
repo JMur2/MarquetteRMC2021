@@ -9,7 +9,7 @@ class diggingWrapperROS:
 
     def __init__(self):
         self.digging = Digging()
-        self.speed = 67
+        self.speed = 0
         self.opcode = -1
 
         rospy.Subscriber("main_manual", Int32, self.callback_main)
@@ -18,38 +18,50 @@ class diggingWrapperROS:
     def callback_main(self, msg):
         self.opcode = msg.data
 
-        if self.opcode >= 6 and self.opcode <= 17:
-            if self.opcode == 6:
-                self.digging.zipper_forward(self.speed)
+        if self.opcode >= 7 and self.opcode <= 18:
+            #belt (dont change speed!!!)
             if self.opcode == 7:
-                self.digging.zipper_back(self.speed)
+                self.digging.zipper_forward(8)
             if self.opcode == 8:
-                self.digging.zipper_stop()
+                self.digging.zipper_back(8)
             if self.opcode == 9:
-                self.digging.depth_extend(30)
+                self.digging.zipper_stop()
             if self.opcode == 10:
-                self.digging.depth_retract(30)
+                self.digging.depth_extend(self.speed)
             if self.opcode == 11:
-                self.digging.depth_stop()
+                self.digging.depth_retract(self.speed)
+            #pitch
             if self.opcode == 12:
-                self.digging.stepper_forward(10)
+                self.digging.depth_stop()
             if self.opcode == 13:
-                self.digging.stepper_backward(10)
+                self.digging.stepper_forward(10)
             if self.opcode == 14:
-                self.digging.stepper_stop()
+                self.digging.stepper_backward(10)
             if self.opcode == 15:
-                self.speed = 67
+                self.digging.stepper_stop()
             if self.opcode == 16:
-                self.speed = 77
-            if self.opcode == 17:
-                self.speed = 87
+                self.speed = 15
+            if self.opcode == 16:
+                self.speed = 40
+            if self.opcode == 18:
+                self.speed = 67
     
-    def callback_stop(self):
-        self.stop()
+    def callback_stop(self, msg):
+        self.opcode = msg.data
+        try:
+            self.stop()
+            print(self.opcode)
+            print("Successfully shutdown the Digging subsystem")
+        except:
+            print("Something went wrong with Digging shutdown")
 
     def stop(self):
-        self.digging.depth_stop()
-        self.digging.zipper_stop()
+        self.digging.odrv0.axis0.controller.input_vel = 0
+        self.digging.odrv0.axis1.controller.input_vel = 0
+
+        self.digging.dig_disengage_depth()
+        self.digging.dig_disengage_zipper()
+        self.digging.dig_disengage_pitch()
 
 if __name__ == "__main__":
     rospy.init_node("digging_node")
@@ -58,6 +70,6 @@ if __name__ == "__main__":
 
     rospy.on_shutdown(digging_wrapper.stop)
 
-    rospy.loginfo("***Digging node initialized successfully***")
+    rospy.loginfo("Digging node initialized successfully")
 
     rospy.spin()
