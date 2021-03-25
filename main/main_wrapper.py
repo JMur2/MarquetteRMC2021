@@ -39,6 +39,7 @@ class mainWrapperROS:
         self.setupUi(self.Dialog)
         self.Dialog.show()
         sys.exit(self.app.exec_())
+        self.publish_data_manual(None, 6)
 
     #-------------------------------------------------------------------------------------------
     # Publish manual control data
