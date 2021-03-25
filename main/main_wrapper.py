@@ -32,14 +32,14 @@ class mainWrapperROS:
         self.emergency_stop = rospy.Publisher("emergency_stop", Int32, queue_size=10)
 
         self.active_autonomy = "none"
-
+        self.publish_data_manual(None, 6)
         # startup the GUI
         self.app = QtWidgets.QApplication(sys.argv)
         self.Dialog = QtWidgets.QDialog()
         self.setupUi(self.Dialog)
         self.Dialog.show()
         sys.exit(self.app.exec_())
-        self.publish_data_manual(None, 6)
+        
 
     #-------------------------------------------------------------------------------------------
     # Publish manual control data
