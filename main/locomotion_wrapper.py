@@ -35,9 +35,11 @@ class locomotionWrapperROS:
                 self.locomotion.loco_engage_motors()
             if self.opcode == 6:
                 self.locomotion.loco_disengage_motors()
-    def callback_stop(self):
+    def callback_stop(self, msg):
+        self.opcode = msg.data
         try:
             self.stop()
+            print(self.opcode)
             print("Successfully shutdown the Locomotion subsystem")
         except:
             print("Something went wrong with Locomotion shutdown")
