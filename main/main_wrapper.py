@@ -27,11 +27,12 @@ class mainWrapperROS:
     def __init__(self):
         self.main = Robot()
         
-        rospy.Subscriber("chatter", String, self.callback_sensor)
+        
         # establish the main set of publishers
         self.publisher_manual = rospy.Publisher("main_manual", Int32, queue_size=1)
         self.publisher_automated = rospy.Publisher("main_automated", Int32, queue_size=1)
         self.emergency_stop = rospy.Publisher("emergency_stop", Int32, queue_size=10)
+        rospy.Subscriber("chatter", String, self.callback_sensor)
 
         self.active_autonomy = "none"
         self.publish_data_manual(None, 6)
@@ -43,8 +44,7 @@ class mainWrapperROS:
         sys.exit(self.app.exec_())
         
     def callback_sensor(self, msg):
-        test_string = msg.data
-        print(test_String)
+        print(msg.data)
     #-------------------------------------------------------------------------------------------
     # Publish manual control data
     #
