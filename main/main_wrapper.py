@@ -530,8 +530,55 @@ class mainWrapperROS:
             
         
     def setControl(self):
-        radio = self.sender()
-        #print(radio.text())
+        if b.text() == "Activate Manual Controls":
+            self.Loco_Right.setEnabled(True)
+            self.Loco_Back.setEnabled(True)
+            self.Loco_Left.setEnabled(True)
+            self.Loco_FW.setEnabled(True)
+
+            self.Dig.setEnabled(True)
+            self.Dig_CCW.setEnabled(True)
+            self.Dig_CW.setEnabled(True)
+            self.dig_stop.setEnabled(True)
+            self.unDig.setEnabled(True)
+            self.Pitch_stop.setEnabled(True)
+            self.Dig_DeH.setEnabled(True)
+            self.Dig_InH.setEnabled(True)
+            self.Depth_Stop.setEnabled(True)
+
+            self.Dump.setEnabled(True)
+            self.Retract_Actuator.setEnabled(True)
+            self.Extend_Actuator.setEnabled(True)
+            self.Actuator_Stop.setEnabled(True)
+            self.Retract_Dump.setEnabled(True)
+            self.Dump_Stop.setEnabled(True)
+
+            self.Initiate_A.setEnabled(False)
+            pass
+        elif b.text() == "Activate Autonomy ":
+            self.Loco_Right.setEnabled(False)
+            self.Loco_Back.setEnabled(False)
+            self.Loco_Left.setEnabled(False)
+            self.Loco_FW.setEnabled(False)
+
+            self.Dig.setEnabled(False)
+            self.Dig_CCW.setEnabled(False)
+            self.Dig_CW.setEnabled(False)
+            self.dig_stop.setEnabled(False)
+            self.unDig.setEnabled(False)
+            self.Pitch_stop.setEnabled(False)
+            self.Dig_DeH.setEnabled(False)
+            self.Dig_InH.setEnabled(False)
+            self.Depth_Stop.setEnabled(False)
+
+            self.Dump.setEnabled(False)
+            self.Retract_Actuator.setEnabled(False)
+            self.Extend_Actuator.setEnabled(False)
+            self.Actuator_Stop.setEnabled(False)
+            self.Retract_Dump.setEnabled(False)
+            self.Dump_Stop.setEnabled(False)
+
+            self.Initiate_A.setEnabled(True)
 
     def set_opcode(self, opcode):
         self.holder = self.opcode
