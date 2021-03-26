@@ -12,6 +12,7 @@ import sys
 
 import rospy
 from std_msgs.msg import Int32
+from std_msgs.msg import String
 
 from main import Robot
 
@@ -25,7 +26,8 @@ class mainWrapperROS:
     #-------------------------------------------------------------------------------------------
     def __init__(self):
         self.main = Robot()
-
+        
+        rospy.Subscriber("chatter", String, self.callback_sensor)
         # establish the main set of publishers
         self.publisher_manual = rospy.Publisher("main_manual", Int32, queue_size=1)
         self.publisher_automated = rospy.Publisher("main_automated", Int32, queue_size=1)
@@ -40,7 +42,9 @@ class mainWrapperROS:
         self.Dialog.show()
         sys.exit(self.app.exec_())
         
-
+    def callback_sensor(self, msg):
+        test_string = msg.data
+        print(test_String)
     #-------------------------------------------------------------------------------------------
     # Publish manual control data
     #
