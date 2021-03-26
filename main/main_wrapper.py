@@ -200,11 +200,11 @@ class mainWrapperROS:
         self.MC_On = QtWidgets.QRadioButton(Dialog)
         self.MC_On.setGeometry(QtCore.QRect(10, 50, 171, 20))
         self.MC_On.setObjectName("MC_On")
-        #self.MC_On.toggled.connect(lambda:self.setControl(self.MC_On))
+        self.MC_On.toggled.connect(lambda:self.setControl(self.MC_On))
         self.AC_On = QtWidgets.QRadioButton(Dialog)
         self.AC_On.setGeometry(QtCore.QRect(1100, 60, 141, 20))
         self.AC_On.setObjectName("AC_On")
-        #self.AC_On.toggled.connect(lambda:self.setControl(self.AC_On))
+        self.AC_On.toggled.connect(lambda:self.setControl(self.AC_On))
         
         #General manual controls 
         self.unfold = QtWidgets.QPushButton(Dialog)
@@ -224,17 +224,17 @@ class mainWrapperROS:
         self.A_Dumping = QtWidgets.QRadioButton(Dialog)
         self.A_Dumping.setGeometry(QtCore.QRect(1100, 120, 95, 20))
         self.A_Dumping.setObjectName("A_Dumping")
-        #self.A_Dumping.toggled.connect(lambda:self.autonomy_S(self.A_Dumping))
+        self.A_Dumping.toggled.connect(lambda:self.autonomy_S(self.A_Dumping))
         
         self.A_Locomotion = QtWidgets.QRadioButton(Dialog)
         self.A_Locomotion.setGeometry(QtCore.QRect(1100, 150, 95, 20))
         self.A_Locomotion.setObjectName("A_Locomotion")
-        #self.A_Locomotion.toggled.connect(lambda:self.autonomy_S(self.A_Dumping))
+        self.A_Locomotion.toggled.connect(lambda:self.autonomy_S(self.A_Dumping))
         
         self.A_Digging = QtWidgets.QRadioButton(Dialog)
         self.A_Digging.setGeometry(QtCore.QRect(1100, 180, 95, 20))
         self.A_Digging.setObjectName("A_Digging")
-        #self.A_Digging.toggled.connect(lambda:self.autonomy_S(self.A_Dumping))
+        self.A_Digging.toggled.connect(lambda:self.autonomy_S(self.A_Dumping))
         
         self.Initiate_A = QtWidgets.QPushButton(Dialog)
         self.Initiate_A.setGeometry(QtCore.QRect(1130, 220, 93, 28))
