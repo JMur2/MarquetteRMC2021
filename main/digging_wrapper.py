@@ -21,9 +21,9 @@ class diggingWrapperROS:
         if self.opcode >= 7 and self.opcode <= 18:
             #belt (dont change speed!!!)
             if self.opcode == 7:
-                self.digging.zipper_forward(8)
+                self.digging.zipper_forward(5)
             if self.opcode == 8:
-                self.digging.zipper_back(8)
+                self.digging.zipper_back(5)
             if self.opcode == 9:
                 self.digging.zipper_stop()
             if self.opcode == 10:
