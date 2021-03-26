@@ -529,7 +529,7 @@ class mainWrapperROS:
             print(self.active_autonomy)
             
         
-    def setControl(self):
+    def setControl(self, b):
         if b.text() == "Activate Manual Controls":
             self.Loco_Right.setEnabled(True)
             self.Loco_Back.setEnabled(True)
