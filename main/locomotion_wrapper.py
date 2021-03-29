@@ -35,6 +35,7 @@ class locomotionWrapperROS:
                 self.locomotion.loco_engage_motors()
             if self.opcode == 6:
                 self.locomotion.loco_disengage_motors()
+    
     def callback_stop(self, msg):
         self.opcode = msg.data
         try:
