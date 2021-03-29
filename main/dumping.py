@@ -101,6 +101,8 @@ class Dumping:
     # Disables the roboclaw to communicate on the ACM1 port
     #--------------------------------------------------------------------
     def disable_roboclaw(self):
+        self.actuator_stop()
+        
         self.roboclaw.Close()
 
     #--------------------------------------------------------------------

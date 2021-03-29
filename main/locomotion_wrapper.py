@@ -46,8 +46,8 @@ class locomotionWrapperROS:
             print("Something went wrong with Locomotion shutdown")
 
     def stop(self):
-        self.locomotion.odrv1.axis0.controller.input_vel = 0
-        self.locomotion.odrv1.axis1.controller.input_vel = 0
+        # self.locomotion.odrv1.axis0.controller.input_vel = 0
+        # self.locomotion.odrv1.axis1.controller.input_vel = 0
 
         self.locomotion.loco_disengage_motors()
 

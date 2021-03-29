@@ -56,8 +56,8 @@ class diggingWrapperROS:
             print("Something went wrong with Digging shutdown")
 
     def stop(self):
-        self.digging.odrv0.axis0.controller.input_vel = 0
-        self.digging.odrv0.axis1.controller.input_vel = 0
+        # self.digging.odrv0.axis0.controller.input_vel = 0
+        # self.digging.odrv0.axis1.controller.input_vel = 0
 
         self.digging.dig_disengage_depth()
         self.digging.dig_disengage_zipper()

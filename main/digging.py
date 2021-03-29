@@ -9,6 +9,7 @@ from odrive.utils import dump_errors
 from odrive.enums import *
 import subprocess
 import yaml
+import time
 
 class Digging:
     #--------------------------------------------------------------------
@@ -114,6 +115,10 @@ class Digging:
     # Disengages the depth motor by setting their state
     #--------------------------------------------------------------------
     def dig_disengage_depth(self):
+        self.depth_stop()
+
+        time.sleep(0.1)
+
         self.odrv0.axis0.requested_state = AXIS_STATE_IDLE
 
     #--------------------------------------------------------------------
@@ -126,6 +131,10 @@ class Digging:
     # Disengages the zipper motor by setting their state
     #--------------------------------------------------------------------
     def dig_disengage_zipper(self):
+        self.zipper_stop()
+
+        time.sleep(0.1)
+
         self.odrv0.axis1.requested_state = AXIS_STATE_IDLE
 
     #--------------------------------------------------------------------

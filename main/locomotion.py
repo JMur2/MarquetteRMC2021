@@ -123,6 +123,10 @@ class Locomotion:
     # Disengages the locomotion motors by setting their state
     #--------------------------------------------------------------------
     def loco_disengage_motors(self):
+        self.loco_stop()
+
+        time.sleep(0.1)
+
         self.odrv1.axis0.requested_state = AXIS_STATE_IDLE
         self.odrv1.axis1.requested_state = AXIS_STATE_IDLE
 
