@@ -423,6 +423,10 @@ class mainWrapperROS:
         #print("This is for stop Locomotion")
     
     def LocoEngage(self):
+        self.Loco_Right.setEnabled(True)
+        self.Loco_Back.setEnabled(True)
+        self.Loco_Left.setEnabled(True)
+        self.Loco_FW.setEnabled(True)
         self.publish_data_manual(None, 5)
         #print("This is for stop Locomotion")
 
