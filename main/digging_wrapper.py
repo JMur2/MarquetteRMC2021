@@ -18,7 +18,7 @@ class diggingWrapperROS:
     def callback_main(self, msg):
         self.opcode = msg.data
 
-        if self.opcode >= 7 and self.opcode <= 18:
+        if self.opcode >= 7 and self.opcode <= 20:
             #belt (dont change speed!!!)
             if self.opcode == 7:
                 self.digging.zipper_forward(9)
@@ -41,10 +41,15 @@ class diggingWrapperROS:
                 self.digging.stepper_stop()
             if self.opcode == 16:
                 self.speed = 20
-            if self.opcode == 16:
+            if self.opcode == 17:
                 self.speed = 50
             if self.opcode == 18:
                 self.speed = 67
+            if self.opcode == 19:
+                #engage
+                pass
+            if self.opcode == 20:
+                self.stop()
     
     def callback_stop(self, msg):
         self.opcode = msg.data

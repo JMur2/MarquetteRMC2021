@@ -316,10 +316,12 @@ class mainWrapperROS:
         self.Engage_Dumping = QtWidgets.QPushButton(Dialog)
         self.Engage_Dumping.setGeometry(QtCore.QRect(860, 230, 111, 51))
         self.Engage_Dumping.setObjectName("Engage_Dumping")
+        self.Actuator_Stop.clicked.connect(self.EngageDumping)
 
         self.Disengage_Dumping = QtWidgets.QPushButton(Dialog)
         self.Disengage_Dumping.setGeometry(QtCore.QRect(1060, 230, 111, 51))
         self.Disengage_Dumping.setObjectName("Disengage_Dumping")
+        self.Actuator_Stop.clicked.connect(self.DisengageDumping)
 
         #digging button declaration
         self.speed1 = QtWidgets.QPushButton(Dialog)
@@ -385,10 +387,12 @@ class mainWrapperROS:
         self.Engage_Digging = QtWidgets.QPushButton(Dialog)
         self.Engage_Digging.setGeometry(QtCore.QRect(660, 160, 111, 51))
         self.Engage_Digging.setObjectName("Engage_Digging")
+        self.Depth_Stop.clicked.connect(self.EngageDigging)
 
         self.Disengage_Digging = QtWidgets.QPushButton(Dialog)
         self.Disengage_Digging.setGeometry(QtCore.QRect(660, 220, 111, 51))
         self.Disengage_Digging.setObjectName("Disengage_Digging")
+        self.Depth_Stop.clicked.connect(self.DisengageDigging)
 
         self.Loco_Right.keyPressEvent = self.keyPressEvent
         self.Loco_FW.keyPressEvent = self.keyPressEvent
@@ -504,33 +508,79 @@ class mainWrapperROS:
     
     def setSpeed_three(self):
         self.publish_data_manual(None, 18)
+
+    def EngageDigging(self):
+        self.Dig.setEnabled(True)
+        self.Dig_CCW.setEnabled(True)
+        self.Dig_CW.setEnabled(True)
+        self.dig_stop.setEnabled(True)
+        self.unDig.setEnabled(True)
+        self.Pitch_stop.setEnabled(True)
+        self.Dig_DeH.setEnabled(True)
+        self.Dig_InH.setEnabled(True)
+        self.Depth_Stop.setEnabled(True)
+        self.publish_data_manual(None, 19)
+    
+    def DisengageDigging(self):
+        self.Dig.setEnabled(False)
+        self.Dig_CCW.setEnabled(False)
+        self.Dig_CW.setEnabled(False)
+        self.dig_stop.setEnabled(False)
+        self.unDig.setEnabled(False)
+        self.Pitch_stop.setEnabled(False)
+        self.Dig_DeH.setEnabled(False)
+        self.Dig_InH.setEnabled(False)
+        self.Depth_Stop.setEnabled(False)
+        self.publish_data_manual(None, 20)
         
     #-----------------------------------------------------------
     # Dumping Button Handlers
     #-----------------------------------------------------------
     def dump_handler(self):
-        self.publish_data_manual(None, 19)
+        self.publish_data_manual(None, 21)
         #print("This is for stepper forward")
         
     def dump_retract(self):
-        self.publish_data_manual(None, 20)
+        self.publish_data_manual(None, 22)
         #print("This is for stepper backward")
         
     def store_stop(self):
-        self.publish_data_manual(None, 21)
+        self.publish_data_manual(None, 23)
         #print("This is for dump stop")
         
     def actuator_extend(self):
-        self.publish_data_manual(None, 22)
+        self.publish_data_manual(None, 24)
         #print("This is for actuator extend")
         
     def actuator_retract(self):
-        self.publish_data_manual(None, 23)
+        self.publish_data_manual(None, 25)
         #print("This is for actuator retract")
         
     def stop_actuator(self):
-        self.publish_data_manual(None, 24)
+        self.publish_data_manual(None, 26)
         #print("This is for actuator stop")
+
+    def EngageDumping(self):
+        self.Dump.setEnabled(True)
+        self.Retract_Actuator.setEnabled(True)
+        self.Extend_Actuator.setEnabled(True)
+        self.Actuator_Stop.setEnabled(True)
+        self.Retract_Dump.setEnabled(True)
+        self.Dump_Stop.setEnabled(True)
+        self.publish_data_manual(None, 27)
+        #print("This is for actuator retract")
+        
+    def DisengageDumping(self):
+        self.Dump.setEnabled(False)
+        self.Retract_Actuator.setEnabled(False)
+        self.Extend_Actuator.setEnabled(False)
+        self.Actuator_Stop.setEnabled(False)
+        self.Retract_Dump.setEnabled(False)
+        self.Dump_Stop.setEnabled(False)
+        self.publish_data_manual(None, 28)
+
+        #print("This is for actuator stop")
+
 
 #-----------------------------------------------------------
 # Handlers for Autonomy 
