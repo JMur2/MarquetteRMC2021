@@ -35,7 +35,7 @@ class Digging:
     #--------------------------------------------------------------------
     def zipper_forward(self, speed):
         print("\n belt foward current pull:  \n")
-        print(self.odriv0.axis1.motor.current_control.Iq_measured)
+        print(self.odrv0.axis1.motor.current_control.Iq_measured)
         self.odrv0.axis1.controller.input_vel = -speed
 
     #--------------------------------------------------------------------
@@ -46,7 +46,7 @@ class Digging:
     #--------------------------------------------------------------------
     def zipper_back(self, speed):
         print("\n belt backwards pull:  \n")
-        print(self.odriv0.axis1.motor.current_control.Iq_measured)
+        print(self.odrv0.axis1.motor.current_control.Iq_measured)
         self.odrv0.axis1.controller.input_vel = speed
 
     #--------------------------------------------------------------------
@@ -70,7 +70,7 @@ class Digging:
     #--------------------------------------------------------------------
     def depth_extend(self, speed):
         print("\n depth extend current pull:  \n")
-        print(self.odriv0.axis0.motor.current_control.Iq_measured)
+        print(self.odrv0.axis0.motor.current_control.Iq_measured)
         self.odrv0.axis0.controller.input_vel = speed
 
     #--------------------------------------------------------------------
@@ -80,7 +80,7 @@ class Digging:
     #--------------------------------------------------------------------
     def depth_retract(self, speed):
         print("\n depth retract current pull:  \n")
-        print(self.odriv0.axis0.motor.current_control.Iq_measured)
+        print(self.odrv0.axis0.motor.current_control.Iq_measured)
         self.odrv0.axis0.controller.input_vel = -speed
 
     #--------------------------------------------------------------------
