@@ -316,12 +316,12 @@ class mainWrapperROS:
         self.Engage_Dumping = QtWidgets.QPushButton(Dialog)
         self.Engage_Dumping.setGeometry(QtCore.QRect(860, 230, 111, 51))
         self.Engage_Dumping.setObjectName("Engage_Dumping")
-        self.Actuator_Stop.clicked.connect(self.EngageDumping)
+        self.Engage_Dumping.clicked.connect(self.EngageDumping)
 
         self.Disengage_Dumping = QtWidgets.QPushButton(Dialog)
         self.Disengage_Dumping.setGeometry(QtCore.QRect(1060, 230, 111, 51))
         self.Disengage_Dumping.setObjectName("Disengage_Dumping")
-        self.Actuator_Stop.clicked.connect(self.DisengageDumping)
+        self.Disengage_Dumping.clicked.connect(self.DisengageDumping)
 
         #digging button declaration
         self.speed1 = QtWidgets.QPushButton(Dialog)
@@ -387,12 +387,12 @@ class mainWrapperROS:
         self.Engage_Digging = QtWidgets.QPushButton(Dialog)
         self.Engage_Digging.setGeometry(QtCore.QRect(660, 160, 111, 51))
         self.Engage_Digging.setObjectName("Engage_Digging")
-        self.Depth_Stop.clicked.connect(self.EngageDigging)
+        self.Engage_Digging.clicked.connect(self.EngageDigging)
 
         self.Disengage_Digging = QtWidgets.QPushButton(Dialog)
         self.Disengage_Digging.setGeometry(QtCore.QRect(660, 220, 111, 51))
         self.Disengage_Digging.setObjectName("Disengage_Digging")
-        self.Depth_Stop.clicked.connect(self.DisengageDigging)
+        self.Disengage_Digging.clicked.connect(self.DisengageDigging)
 
         self.Loco_Right.keyPressEvent = self.keyPressEvent
         self.Loco_FW.keyPressEvent = self.keyPressEvent
