@@ -34,6 +34,8 @@ class Digging:
     # param: speed -- set the speed of belt movement (max at 67)
     #--------------------------------------------------------------------
     def zipper_forward(self, speed):
+        print("\n belt foward current pull:  \n")
+        print(self.odriv0.axis1.motor.current_control.Iq_measured)
         self.odrv0.axis1.controller.input_vel = -speed
 
     #--------------------------------------------------------------------
@@ -43,6 +45,8 @@ class Digging:
     # param: speed -- set the speed of belt movement (max at 67)
     #--------------------------------------------------------------------
     def zipper_back(self, speed):
+        print("\n belt backwards pull:  \n")
+        print(self.odriv0.axis1.motor.current_control.Iq_measured)
         self.odrv0.axis1.controller.input_vel = speed
 
     #--------------------------------------------------------------------
@@ -65,6 +69,8 @@ class Digging:
     # param: speed -- set the speed of depth adjustment (max at 50)
     #--------------------------------------------------------------------
     def depth_extend(self, speed):
+        print("\n depth extend current pull:  \n")
+        print(self.odriv0.axis0.motor.current_control.Iq_measured)
         self.odrv0.axis0.controller.input_vel = speed
 
     #--------------------------------------------------------------------
@@ -73,6 +79,8 @@ class Digging:
     # param: speed -- set the speed of the depth adjustment (max at 50)
     #--------------------------------------------------------------------
     def depth_retract(self, speed):
+        print("\n depth retract current pull:  \n")
+        print(self.odriv0.axis0.motor.current_control.Iq_measured)
         self.odrv0.axis0.controller.input_vel = -speed
 
     #--------------------------------------------------------------------
@@ -128,7 +136,7 @@ class Digging:
     #--------------------------------------------------------------------
     def dig_disengage_depth(self):
         self.depth_stop()
-
+        
         time.sleep(0.1)
 
         self.odrv0.axis0.requested_state = AXIS_STATE_IDLE
@@ -137,6 +145,7 @@ class Digging:
     # Engages the zipper motor by setting their state
     #--------------------------------------------------------------------
     def dig_engage_zipper(self):
+        
         self.odrv0.axis1.requested_state = AXIS_STATE_CLOSED_LOOP_CONTROL
 
     #--------------------------------------------------------------------
