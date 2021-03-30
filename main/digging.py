@@ -34,7 +34,7 @@ class Digging:
     # param: speed -- set the speed of belt movement (max at 67)
     #--------------------------------------------------------------------
     def zipper_forward(self, speed):
-        self.odrv0.axis1.controller.input_vel = (-1 * speed)
+        self.odrv0.axis1.controller.input_vel = -speed
 
     #--------------------------------------------------------------------
     # Move the zipper backward, to get it unstuck in the case of digging 
@@ -50,7 +50,13 @@ class Digging:
     #--------------------------------------------------------------------
     def zipper_stop(self):
         self.odrv0.axis1.controller.input_vel = 0
+
+        time.sleep(0.1)
+
         self.odrv0.axis1.controller.input_vel = 5
+
+        time.sleep(0.1)
+
         self.odrv0.axis1.controller.input_vel = 0
 
     #--------------------------------------------------------------------
@@ -67,14 +73,20 @@ class Digging:
     # param: speed -- set the speed of the depth adjustment (max at 50)
     #--------------------------------------------------------------------
     def depth_retract(self, speed):
-        self.odrv0.axis0.controller.input_vel = (-1 * speed)
+        self.odrv0.axis0.controller.input_vel = -speed
 
     #--------------------------------------------------------------------
     # Stops adjusting the depth of the zipper
     #--------------------------------------------------------------------
     def depth_stop(self):
         self.odrv0.axis0.controller.input_vel = 0
+
+        time.sleep(0.1)
+
         self.odrv0.axis0.controller.input_vel = 5
+
+        time.sleep(0.1)
+
         self.odrv0.axis0.controller.input_vel = 0
 
     #--------------------------------------------------------------------
