@@ -52,12 +52,15 @@ class diggingWrapperROS:
     
     def callback_stop(self, msg):
         self.opcode = msg.data
-        try:
-            self.stop()
-            print(self.opcode)
-            print("Successfully shutdown the Digging subsystem")
-        except:
-            print("Something went wrong with Digging shutdown")
+        if self.opcode == 1:
+            try:
+                self.stop()
+                print(self.opcode)
+                print("Successfully shutdown the Digging subsystem")
+            except:
+                print("Something went wrong with Digging shutdown")
+        elif self.opcode == 2:
+            self.engage()
 
     def stop(self):
         self.digging.dig_disengage_depth()

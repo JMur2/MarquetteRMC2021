@@ -27,6 +27,7 @@ class mainWrapperROS:
     def __init__(self):
         self.main = Robot()
         
+        self.stop_bool = True
         
         # establish the main set of publishers
         self.publisher_manual = rospy.Publisher("main_manual", Int32, queue_size=1)
@@ -65,7 +66,6 @@ class mainWrapperROS:
         data = Int32(data=op)
         self.publisher_automated.publish(data)
 
-    
     def keyPressEvent(self, event):
         if event.key() == Qt.Key_W:
             print("w") # forward
@@ -670,7 +670,60 @@ class mainWrapperROS:
     # In the event of an emergency, publish a stop command to all operations
     #-------------------------------------------------------------------------------------------
     def emergency_stop_handler(self):
-        data = Int32(data=1)
+        if self.stop_bool:
+            data = Int32(data=1)
+
+            self.stop_bool = False
+
+            self.Loco_Right.setEnabled(False)
+            self.Loco_Back.setEnabled(False)
+            self.Loco_Left.setEnabled(False)
+            self.Loco_FW.setEnabled(False)
+
+            self.Dig.setEnabled(False)
+            self.Dig_CCW.setEnabled(False)
+            self.Dig_CW.setEnabled(False)
+            self.dig_stop.setEnabled(False)
+            self.unDig.setEnabled(False)
+            self.Pitch_stop.setEnabled(False)
+            self.Dig_DeH.setEnabled(False)
+            self.Dig_InH.setEnabled(False)
+            self.Depth_Stop.setEnabled(False)
+
+            self.Dump.setEnabled(False)
+            self.Retract_Actuator.setEnabled(False)
+            self.Extend_Actuator.setEnabled(False)
+            self.Actuator_Stop.setEnabled(False)
+            self.Retract_Dump.setEnabled(False)
+            self.Dump_Stop.setEnabled(False)
+
+        elif not self.stop_bool:
+            data = Int32(data=2)
+
+            self.stop_bool = True
+
+            self.Loco_Right.setEnabled(True)
+            self.Loco_Back.setEnabled(True)
+            self.Loco_Left.setEnabled(True)
+            self.Loco_FW.setEnabled(True)
+
+            self.Dig.setEnabled(True)
+            self.Dig_CCW.setEnabled(True)
+            self.Dig_CW.setEnabled(True)
+            self.dig_stop.setEnabled(True)
+            self.unDig.setEnabled(True)
+            self.Pitch_stop.setEnabled(True)
+            self.Dig_DeH.setEnabled(True)
+            self.Dig_InH.setEnabled(True)
+            self.Depth_Stop.setEnabled(True)
+
+            self.Dump.setEnabled(True)
+            self.Retract_Actuator.setEnabled(True)
+            self.Extend_Actuator.setEnabled(True)
+            self.Actuator_Stop.setEnabled(True)
+            self.Retract_Dump.setEnabled(True)
+            self.Dump_Stop.setEnabled(True)
+
         self.emergency_stop.publish(data)
 
 #--

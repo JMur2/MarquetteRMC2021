@@ -38,12 +38,15 @@ class locomotionWrapperROS:
     
     def callback_stop(self, msg):
         self.opcode = msg.data
-        try:
-            self.stop()
-            print(self.opcode)
-            print("Successfully shutdown the Locomotion subsystem")
-        except:
-            print("Something went wrong with Locomotion shutdown")
+        if self.opcode == 1:
+            try:
+                self.stop()
+                print(self.opcode)
+                print("Successfully shutdown the Locomotion subsystem")
+            except:
+                print("Something went wrong with Locomotion shutdown")
+        elif self.opcode == 2:
+            self.locomotion.loco_engage_motors()
 
     def stop(self):
         self.locomotion.loco_disengage_motors()
