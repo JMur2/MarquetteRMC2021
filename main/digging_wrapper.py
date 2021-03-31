@@ -46,8 +46,7 @@ class diggingWrapperROS:
             if self.opcode == 18:
                 self.speed = 67
             if self.opcode == 19:
-                #engage
-                pass
+                self.engage()
             if self.opcode == 20:
                 self.stop()
     
@@ -64,6 +63,11 @@ class diggingWrapperROS:
         self.digging.dig_disengage_depth()
         self.digging.dig_disengage_zipper()
         self.digging.dig_disengage_pitch()
+
+    def engage(self):
+        self.digging.dig_engage_depth()
+        self.digging.dig_engage_zipper()
+        
 
 if __name__ == "__main__":
     rospy.init_node("digging_node")

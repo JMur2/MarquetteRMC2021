@@ -32,8 +32,7 @@ class dumpingWrapperROS:
             if self.opcode == 26:
                 self.dumping.actuator_stop()
             if self.opcode == 27:
-                #engage
-                pass
+                self.engage()
             if self.opcode == 28:
                 self.stop()
 
@@ -52,6 +51,9 @@ class dumpingWrapperROS:
 
         self.dumping.disable_stepper()
         self.dumping.disable_roboclaw()
+    
+    def engage(self):
+        self.dumping.enable_roboclaw()
 
 if __name__ == "__main__":
     rospy.init_node("dumping_node")
