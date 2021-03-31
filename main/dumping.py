@@ -94,7 +94,7 @@ class Dumping:
     # Enables the roboclaw to communicate on the ACM1 port
     #--------------------------------------------------------------------
     def enable_roboclaw(self):
-        self.roboclaw = Roboclaw("/dev/ttyACM1", 38400)
+        self.roboclaw = Roboclaw("/dev/ttyACM0", 38400)
         self.roboclaw.Open()
 
     #--------------------------------------------------------------------
@@ -103,9 +103,9 @@ class Dumping:
     def disable_roboclaw(self):
         self.actuator_stop()
         
-        # time.sleep(0.1)
+        time.sleep(0.1)
 
-        # self.roboclaw.Close()
+        self.roboclaw.Close()
 
     #--------------------------------------------------------------------
     # Disengages the stepper motor by reseting the state
