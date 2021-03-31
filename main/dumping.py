@@ -103,9 +103,9 @@ class Dumping:
     def disable_roboclaw(self):
         self.actuator_stop()
         
-        time.sleep(0.1)
+        # time.sleep(0.1)
 
-        self.roboclaw.Close()
+        # self.roboclaw.Close()
 
     #--------------------------------------------------------------------
     # Disengages the stepper motor by reseting the state
