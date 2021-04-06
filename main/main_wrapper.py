@@ -44,14 +44,7 @@ class mainWrapperROS:
         self.Dialog = QtWidgets.QDialog()
         self.setupUi(self.Dialog)
         self.Dialog.show()
-        sys.exit(self.ui_shutdown())
-        
-    #-------------------------------------------------------------------------------------------
-    # Runs when the GUI is closed, shuts down the program
-    #-------------------------------------------------------------------------------------------
-    def ui_shutdown(self):
-        self.app.exec_()
-        sys.exit(0)
+        sys.exit(self.app.exec_())
     
     #-------------------------------------------------------------------------------------------
     # Prints sensor data - for testing
