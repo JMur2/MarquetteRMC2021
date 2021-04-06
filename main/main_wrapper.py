@@ -304,8 +304,6 @@ class mainWrapperROS:
         self.Disengage_Dumping.clicked.connect(self.DisengageDumping)
 
         #digging button declaration
-        
-
         self.Dig = QtWidgets.QPushButton(Dialog)
         self.Dig.setGeometry(QtCore.QRect(330, 140, 91, 28))
         self.Dig.setObjectName("Dig")
@@ -733,7 +731,7 @@ class mainWrapperROS:
         self.Loco_Back.setText(_translate("Dialog", "Back"))
         self.Loco_Left.setText(_translate("Dialog", "Left"))
         self.label_7.setText(_translate("Dialog", "Zipper"))
-        self.label_8.setText(_translate("Dialog", "Pitch"))
+        self.label_8.setText(_translate("Dialog", "Depth Speed"))
         self.label_9.setText(_translate("Dialog", "Depth"))
         self.unDig.setText(_translate("Dialog", "Undig"))
         self.dig_stop.setText(_translate("Dialog", "Stop"))
@@ -753,13 +751,13 @@ class mainWrapperROS:
         self.speed1.setText(_translate("Dialog", "Speed 1 (15)"))
         self.speed2.setText(_translate("Dialog", "Speed 2 (40)"))
         self.speed3.setText(_translate("Dialog", "Speed 3 (67)"))
-        self.label_12.setText(_translate("Dialog", "Depth Speed"))
+        self.label_12.setText(_translate("Dialog", "Pitch"))
         self.Loco_disengage.setText(_translate("Dialog", "Disengage"))
         self.Loco_engage.setText(_translate("Dialog", "Engage"))
-        self.Engage_Digging.setText(_translate("Dialog", "Engaege Digging"))
-        self.Disengage_Digging.setText(_translate("Dialog", "Disengaege Digging"))
-        self.Engage_Dumping.setText(_translate("Dialog", "Engaege Dumping"))
-        self.Disengage_Dumping.setText(_translate("Dialog", "Disengaege Dumping"))
+        self.Engage_Digging.setText(_translate("Dialog", "Engage Digging"))
+        self.Disengage_Digging.setText(_translate("Dialog", "Disengage Digging"))
+        self.Engage_Dumping.setText(_translate("Dialog", "Engage Dumping"))
+        self.Disengage_Dumping.setText(_translate("Dialog", "Disengage Dumping"))
 
 if __name__ == "__main__":
     rospy.init_node("main_node")
