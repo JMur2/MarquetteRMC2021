@@ -74,8 +74,6 @@ class mainWrapperROS:
     # Automation controls are published with this publisher
     #-------------------------------------------------------------------------------------------
     def publish_data_automated(self, event=None, op=None):
-       #d = self.main.get_data()
-        #data = Int32(data=d)
         data = Int32(data=op)
         self.publisher_automated.publish(data)
 
@@ -432,23 +430,23 @@ class mainWrapperROS:
         #print("This is for stop Locomotion")
     
     def LocoEngage(self):
+        # enable buttons
         self.Loco_Right.setEnabled(True)
         self.Loco_Back.setEnabled(True)
         self.Loco_Left.setEnabled(True)
         self.Loco_FW.setEnabled(True)
+        # engage
         self.publish_data_manual(None, 5)
-        #print("This is for stop Locomotion")
 
     def LocoDisengage(self):
-        #disable buttons
+        # disable buttons
         self.Loco_Right.setEnabled(False)
         self.Loco_Back.setEnabled(False)
         self.Loco_Left.setEnabled(False)
         self.Loco_FW.setEnabled(False)
-        #stop-
+        # stop everything
         self.publish_data_manual(None, 4)
         self.publish_data_manual(None, 6)
-        #print("This is for stop Locomotion")
         
 #-----------------------------------------------------------
 # Digging Button Handlers
@@ -715,9 +713,9 @@ class mainWrapperROS:
 
         self.emergency_stop.publish(data)
 
-#--
-#
-#--
+    #--
+    #
+    #--
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
