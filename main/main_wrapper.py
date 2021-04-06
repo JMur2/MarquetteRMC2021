@@ -311,20 +311,7 @@ class mainWrapperROS:
         self.Disengage_Dumping.clicked.connect(self.DisengageDumping)
 
         #digging button declaration
-        self.speed1 = QtWidgets.QPushButton(Dialog)
-        self.speed1.setGeometry(QtCore.QRect(330, 220, 91, 28))
-        self.speed1.setObjectName("speed1")
-        self.speed1.clicked.connect(self.setSpeed_one)
-
-        self.speed2 = QtWidgets.QPushButton(Dialog)
-        self.speed2.setGeometry(QtCore.QRect(440, 220, 91, 28))
-        self.speed2.setObjectName("speed2")
-        self.speed2.clicked.connect(self.setSpeed_two)
-
-        self.speed3 = QtWidgets.QPushButton(Dialog)
-        self.speed3.setGeometry(QtCore.QRect(550, 220, 91, 28))
-        self.speed3.setObjectName("speed3")
-        self.speed3.clicked.connect(self.setSpeed_three)
+        
 
         self.Dig = QtWidgets.QPushButton(Dialog)
         self.Dig.setGeometry(QtCore.QRect(330, 140, 91, 28))
@@ -381,6 +368,21 @@ class mainWrapperROS:
         self.Disengage_Digging.setObjectName("Disengage_Digging")
         self.Disengage_Digging.clicked.connect(self.DisengageDigging)
 
+        self.speed1 = QtWidgets.QPushButton(Dialog)
+        self.speed1.setGeometry(QtCore.QRect(330, 220, 91, 28))
+        self.speed1.setObjectName("speed1")
+        self.speed1.clicked.connect(self.setSpeed_one)
+
+        self.speed2 = QtWidgets.QPushButton(Dialog)
+        self.speed2.setGeometry(QtCore.QRect(440, 220, 91, 28))
+        self.speed2.setObjectName("speed2")
+        self.speed2.clicked.connect(self.setSpeed_two)
+
+        self.speed3 = QtWidgets.QPushButton(Dialog)
+        self.speed3.setGeometry(QtCore.QRect(550, 220, 91, 28))
+        self.speed3.setObjectName("speed3")
+        self.speed3.clicked.connect(self.setSpeed_three)
+
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
@@ -413,6 +415,7 @@ class mainWrapperROS:
         self.Loco_Back.setEnabled(True)
         self.Loco_Left.setEnabled(True)
         self.Loco_FW.setEnabled(True)
+        self.Loco_stop.setEnabled(True)
         # engage
         self.publish_data_manual(None, 5)
 
@@ -422,6 +425,7 @@ class mainWrapperROS:
         self.Loco_Back.setEnabled(False)
         self.Loco_Left.setEnabled(False)
         self.Loco_FW.setEnabled(False)
+        self.Loco_stop.setEnabled(False)
         # stop everything
         self.publish_data_manual(None, 4)
         self.publish_data_manual(None, 6)
@@ -484,6 +488,9 @@ class mainWrapperROS:
         self.Dig_DeH.setEnabled(True)
         self.Dig_InH.setEnabled(True)
         self.Depth_Stop.setEnabled(True)
+        self.speed1.setEnabled(True)
+        self.speed2.setEnabled(True)
+        self.speed3.setEnabled(True)
         self.publish_data_manual(None, 19)
     
     def DisengageDigging(self):
@@ -496,6 +503,9 @@ class mainWrapperROS:
         self.Dig_DeH.setEnabled(False)
         self.Dig_InH.setEnabled(False)
         self.Depth_Stop.setEnabled(False)
+        self.speed1.setEnabled(False)
+        self.speed2.setEnabled(False)
+        self.speed3.setEnabled(False)
         self.publish_data_manual(None, 20)
         
     #-----------------------------------------------------------
@@ -581,6 +591,7 @@ class mainWrapperROS:
             self.Loco_Back.setEnabled(True)
             self.Loco_Left.setEnabled(True)
             self.Loco_FW.setEnabled(True)
+            self.Loco_stop.setEnabled(True)
 
             self.Dig.setEnabled(True)
             self.Dig_CCW.setEnabled(True)
@@ -591,6 +602,9 @@ class mainWrapperROS:
             self.Dig_DeH.setEnabled(True)
             self.Dig_InH.setEnabled(True)
             self.Depth_Stop.setEnabled(True)
+            self.speed1.setEnabled(True)
+            self.speed2.setEnabled(True)
+            self.speed3.setEnabled(True)
 
             self.Dump.setEnabled(True)
             self.Retract_Actuator.setEnabled(True)
@@ -606,6 +620,7 @@ class mainWrapperROS:
             self.Loco_Back.setEnabled(False)
             self.Loco_Left.setEnabled(False)
             self.Loco_FW.setEnabled(False)
+            self.Loco_stop.setEnabled(False)
 
             self.Dig.setEnabled(False)
             self.Dig_CCW.setEnabled(False)
@@ -616,6 +631,9 @@ class mainWrapperROS:
             self.Dig_DeH.setEnabled(False)
             self.Dig_InH.setEnabled(False)
             self.Depth_Stop.setEnabled(False)
+            self.speed1.setEnabled(False)
+            self.speed2.setEnabled(False)
+            self.speed3.setEnabled(False)
 
             self.Dump.setEnabled(False)
             self.Retract_Actuator.setEnabled(False)
@@ -742,7 +760,7 @@ class mainWrapperROS:
         self.speed1.setText(_translate("Dialog", "Speed 1 (15)"))
         self.speed2.setText(_translate("Dialog", "Speed 2 (40)"))
         self.speed3.setText(_translate("Dialog", "Speed 3 (67)"))
-        self.label_12.setText(_translate("Dialog", "Pitch Speed"))
+        self.label_12.setText(_translate("Dialog", "Depth Speed"))
         self.Loco_disengage.setText(_translate("Dialog", "Disengage"))
         self.Loco_engage.setText(_translate("Dialog", "Engage"))
         self.Engage_Digging.setText(_translate("Dialog", "Engaege Digging"))
