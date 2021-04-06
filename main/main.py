@@ -11,10 +11,12 @@ from dumping import Dumping
 class Robot:
 
     def __init__(self):
-        self.state = "manual"
+        pass
+    # def __init__(self):
+    #     self.state = "manual"
 
-    def get_state(self):
-        return state
+    # def get_state(self):
+    #     return state
 
-    def set_state(self, state):
-        self.state = state
+    # def set_state(self, state):
+    #     self.state = state
