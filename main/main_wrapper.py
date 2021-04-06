@@ -381,28 +381,6 @@ class mainWrapperROS:
         self.Disengage_Digging.setObjectName("Disengage_Digging")
         self.Disengage_Digging.clicked.connect(self.DisengageDigging)
 
-        self.Loco_Right.keyPressEvent = self.keyPressEvent
-        self.Loco_FW.keyPressEvent = self.keyPressEvent
-        self.Loco_Back.keyPressEvent = self.keyPressEvent
-        self.Loco_Left.keyPressEvent = self.keyPressEvent
-        self.Loco_stop.keyPressEvent = self.keyPressEvent
-
-        self.Dump.keyPressEvent = self.keyPressEvent
-        self.Retract_Dump.keyPressEvent = self.keyPressEvent
-        self.Dump_Stop.keyPressEvent = self.keyPressEvent
-        self.Extend_Actuator.keyPressEvent = self.keyPressEvent
-        self.Retract_Actuator.keyPressEvent = self.keyPressEvent
-        self.Actuator_Stop.keyPressEvent = self.keyPressEvent
-
-        self.Dig.keyPressEvent = self.keyPressEvent
-        self.unDig.keyPressEvent = self.keyPressEvent
-        self.Dig_CW.keyPressEvent = self.keyPressEvent
-        self.Dig_CCW.keyPressEvent = self.keyPressEvent
-        self.Pitch_stop.keyPressEvent = self.keyPressEvent
-        self.Dig_DeH.keyPressEvent = self.keyPressEvent
-        self.Dig_InH.keyPressEvent = self.keyPressEvent
-        self.Depth_Stop.keyPressEvent = self.keyPressEvent
-
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
