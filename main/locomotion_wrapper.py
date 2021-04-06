@@ -29,8 +29,6 @@ class locomotionWrapperROS:
                 self.locomotion.loco_right()
             if self.opcode == 4:
                 self.locomotion.loco_stop()
-            #if self.opcode == 5:
-            #    self.locomotion.loco_config_check()
             if self.opcode == 5:
                 self.locomotion.loco_engage_motors()
             if self.opcode == 6:

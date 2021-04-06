@@ -24,7 +24,7 @@ class dumpingWrapperROS:
             if self.opcode == 22:
                 self.dumping.stepper_backward()
             if self.opcode == 23:
-                self.dumping.stepper_stop()
+                self.dumping.disable_stepper()
             if self.opcode == 24:
                 self.dumping.actuator_extend()
             if self.opcode == 25:

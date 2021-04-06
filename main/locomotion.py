@@ -103,16 +103,6 @@ class Locomotion:
         self.odrv1.axis1.controller.input_vel = 0
 
     #--------------------------------------------------------------------
-    # Perform error checking on locomotion system
-    #
-    # Still a WIP
-    #
-    # TODO: Finalize any locomotion checks and put here
-    #--------------------------------------------------------------------
-    def loco_config_check(self):
-        pass
-
-    #--------------------------------------------------------------------
     # Engages the locomotion motors by setting their state
     #--------------------------------------------------------------------
     def loco_engage_motors(self):

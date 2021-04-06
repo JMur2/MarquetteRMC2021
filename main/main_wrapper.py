@@ -27,7 +27,8 @@ class mainWrapperROS:
     def __init__(self):
         self.main = Robot()
         
-        self.stop_bool = True
+        # used to track emergency stop state for re-engaging after a stop
+        self.stop_bool = True  
         
         # establish the main set of publishers
         self.publisher_manual = rospy.Publisher("main_manual", Int32, queue_size=1)
@@ -37,13 +38,18 @@ class mainWrapperROS:
 
         self.active_autonomy = "none"
         self.publish_data_manual(None, 6)
+
         # startup the GUI
         self.app = QtWidgets.QApplication(sys.argv)
         self.Dialog = QtWidgets.QDialog()
         self.setupUi(self.Dialog)
         self.Dialog.show()
-        sys.exit(self.app.exec_())
+        sys.exit(self.ui_shutdown())
         
+    def ui_shutdown(self):
+        self.app.exec_()
+        sys.exit(0)
+    
     def callback_sensor(self, msg):
         print(msg.data)
     #-------------------------------------------------------------------------------------------
@@ -665,7 +671,7 @@ class mainWrapperROS:
         self.holder = self.opcode
 
     #-------------------------------------------------------------------------------------------
-    # Publish an emergency stop
+    # Publish an emergency stop event
     #
     # In the event of an emergency, publish a stop command to all operations
     #-------------------------------------------------------------------------------------------
