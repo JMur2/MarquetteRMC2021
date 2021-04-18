@@ -10,4 +10,6 @@
 
     <node name="dumping_node" pkg="main" type="dumping_wrapper.py" output="screen">
     </node>
+
+    <include file="$(find sick_safetyscanners)/launch/sick_safetyscanners.launch">
 </launch>
