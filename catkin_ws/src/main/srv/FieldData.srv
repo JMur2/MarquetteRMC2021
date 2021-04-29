@@ -1,0 +1,6 @@
+
+---
+
+main/FieldMsg[] fields
+string device_name
+main/MonitoringCaseMsg[] monitoring_cases

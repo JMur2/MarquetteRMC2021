@@ -1,0 +1,19 @@
+\subsubsection usage Usage
+\verbatim
+<node name="dynamic_reconfigure_node" pkg="sick_safetyscanners" type="dynamic_reconfigure_node">
+  <param name="frame_id" type="str" value="scan" />
+  <param name="skip" type="int" value="0" />
+  <param name="angle_start" type="double" value="0.0" />
+  <param name="angle_end" type="double" value="0.0" />
+  <param name="time_offset" type="double" value="0.0" />
+  <param name="expected_frequency" type="double" value="20.0" />
+  <param name="min_intensities" type="double" value="0.0" />
+  <param name="channel_enabled" type="bool" value="True" />
+  <param name="general_system_state" type="bool" value="True" />
+  <param name="derived_settings" type="bool" value="True" />
+  <param name="measurement_data" type="bool" value="True" />
+  <param name="intrusion_data" type="bool" value="True" />
+  <param name="application_io_data" type="bool" value="True" />
+</node>
+\endverbatim
+

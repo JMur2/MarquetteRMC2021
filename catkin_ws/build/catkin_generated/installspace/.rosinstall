@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/mars/catkin_ws/install/setup.sh
