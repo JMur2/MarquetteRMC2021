@@ -1,0 +1,4 @@
+This folder contains testing documents for the digging subsystem and its components.
+
+digging.py is designed with a keyboard input system that only works on Windows environments
+digging2.py is designed for use on Linux/Ubuntu (termios import is only found on linux systems)

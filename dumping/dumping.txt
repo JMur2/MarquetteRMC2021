@@ -1,0 +1,4 @@
+This folder contains testing documents for the dumping subsystem and its components.
+
+stepTest.py is a file that tests the use of a stepper motor with the use of ticcmd.
+    - Search for pololu ticcmd for more information about this

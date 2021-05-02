@@ -1,0 +1,1 @@
+This folder is a temporary copy of the catkin_ws used on the UDOO.

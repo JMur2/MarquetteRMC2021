@@ -1,0 +1,4 @@
+This folder contains skeleton files for testing pieces of automation.
+
+Because of time constraints these were never tested to their fullest potential, 
+but they are still important for the system and potential automation
