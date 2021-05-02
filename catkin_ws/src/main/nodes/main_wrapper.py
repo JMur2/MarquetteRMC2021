@@ -35,6 +35,7 @@ class mainWrapperROS:
         self.publisher_automated = rospy.Publisher("main_automated", Int32, queue_size=1)
         self.emergency_stop = rospy.Publisher("emergency_stop", Int32, queue_size=10)
         rospy.Subscriber("chatter", String, self.callback_sensor)
+        rospy.Subscriber("raw_data", String, self.callback_sensor)
 
         self.active_autonomy = "none"
         self.publish_data_manual(None, 6)
