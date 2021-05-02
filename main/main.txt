@@ -1,0 +1,10 @@
+This folder is the central point of the robot and the architecture.  It contains all of the ROS nodes (they all have wrapper in the name) 
+for the system, and all of the subsystem control files which contain all of the possible operations for that system.  
+
+digging and digging_wrapper
+
+dumping and dumping_wrapper (and roboclaw)
+
+locomotion and locomotion_wrapper
+
+main and main_wrapper

@@ -1,0 +1,7 @@
+This folder contains testing files for the locomotion subsystems and its components.
+
+locomotion.py is a basic test file that runs the locomotion motors forward for 5 seconds
+locomotion2.py tests the use of keyboard controls for the robot - works only on Windows environments
+no_listener_test.py test the use of keyboard controls for the robot without a Windows only listener - works only on Ubuntu environments
+locomotion_digging_test.py tests the use of both the locomotion and digging motors with the keyboard - works only on Windows environments
+    NOTE - the odrives are found using the serial number of each - new controllers or not having 2 connected will cause issues

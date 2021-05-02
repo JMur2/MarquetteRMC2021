@@ -1,0 +1,1 @@
+This folder contains all files created and used for locomotion automation through a system called move_base.
