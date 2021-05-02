@@ -1,0 +1,1 @@
+This folder is a support module that allows us to use the roboclaw controller for the linear actuator.
