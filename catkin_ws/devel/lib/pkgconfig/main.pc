@@ -1,0 +1,8 @@
+prefix=/home/mars/catkin_ws/devel
+
+Name: main
+Description: Description of main
+Version: 1.0.1
+Cflags: -I/home/mars/catkin_ws/devel/include -I/home/mars/catkin_ws/src/main/include -I/usr/include
+Libs: -L${prefix}/lib -lmain_core /usr/lib/x86_64-linux-gnu/libboost_system.so /usr/lib/x86_64-linux-gnu/libboost_thread.so /usr/lib/x86_64-linux-gnu/libboost_chrono.so /usr/lib/x86_64-linux-gnu/libboost_date_time.so /usr/lib/x86_64-linux-gnu/libboost_atomic.so /usr/lib/x86_64-linux-gnu/libpthread.so
+Requires: dynamic_reconfigure message_runtime roscpp sensor_msgs std_msgs

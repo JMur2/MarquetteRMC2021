@@ -31,9 +31,9 @@ if __name__ == '__main__':
             if char.lower() == "q":
                 break
             elif char.lower() == "w":
-                odrv0.axis0.controller.input_vel = 67
+                odrv0.axis0.controller.input_vel = 15
             elif char.lower() == "s":
-                odrv0.axis0.controller.input_vel = -67
+                odrv0.axis0.controller.input_vel = -15
             elif char.lower() == "x":
                 odrv0.axis0.controller.input_vel = 0
     finally:

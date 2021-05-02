@@ -7,7 +7,7 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+import sys
 
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
@@ -371,14 +371,20 @@ class Ui_Dialog(object):
         self.Fold.setText(_translate("Dialog", "Fold"))
         self.E_stop.setText(_translate("Dialog", "Emergency Stop"))
 
+    def __init__(self):
+        self.app = QtWidgets.QApplication(sys.argv)
+        self.Dialog = QtWidgets.QDialog()
+        #self.ui = Ui_Dialog()
+        self.setupUi(self.Dialog)
+        self.Dialog.show()
+        sys.exit(self.app.exec_())
 
 
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    Dialog = QtWidgets.QDialog()
-    ui = Ui_Dialog()
-    ui.setupUi(Dialog)
-    Dialog.show()
-    sys.exit(app.exec_())
+# if __name__ == "__main__":
+#     import sys
+#     app = QtWidgets.QApplication(sys.argv)
+#     Dialog = QtWidgets.QDialog()
+#     ui = Ui_Dialog()
+#     ui.setupUi(Dialog)
+#     Dialog.show()
+#     sys.exit(app.exec_())

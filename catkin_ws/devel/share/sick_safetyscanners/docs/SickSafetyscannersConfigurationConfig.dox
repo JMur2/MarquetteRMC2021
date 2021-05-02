@@ -1,0 +1,18 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~frame_id" : \b [str] Frame name of the laserscan topic min: , default: scan, max: 
+- \b "~skip" : \b [int] The number of scans to skip between each measured scan.  For a 25Hz laser, setting 'skip' to 0 makes it publish at 25Hz, 'skip' to 1 makes it publish at 12.5Hz. min: 0, default: 0, max: 100
+- \b "~angle_start" : \b [double] Start angle for sensor in radians, if both start and end angle are 0, all angles are taken in account. min: -2.3998, default: 0.0, max: 2.3998
+- \b "~angle_end" : \b [double] End angle for sensor in radians, if both start and end angle are 0, all angles are taken in account. min: -2.3998, default: 0.0, max: 2.3998
+- \b "~time_offset" : \b [double] An offset to add to the time stamp before publication of a scan [s]. min: -0.25, default: 0.0, max: 0.25
+- \b "~expected_frequency" : \b [double] Expected scanner frequency. min: 0.0, default: 20.0, max: 100.0
+- \b "~min_intensities" : \b [double] Minimum required intensities for valid measurement points min: 0.0, default: 0.0, max: 255.0
+- \b "~channel_enabled" : \b [bool] Enable Channel min: False, default: True, max: True
+- \b "~general_system_state" : \b [bool] Publish general system state min: False, default: True, max: True
+- \b "~derived_settings" : \b [bool] Publish derived settings min: False, default: True, max: True
+- \b "~measurement_data" : \b [bool] Publish measurement data min: False, default: True, max: True
+- \b "~intrusion_data" : \b [bool] Publish intrusion data min: False, default: True, max: True
+- \b "~application_io_data" : \b [bool] Publish application io data min: False, default: True, max: True
+
