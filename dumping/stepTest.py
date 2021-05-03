@@ -1,3 +1,6 @@
+"""
+Should work on any environment, see the Pololu Tic website or the folder with a similar name for more details
+"""
 import subprocess
 import yaml
 import time

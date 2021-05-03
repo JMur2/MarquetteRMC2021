@@ -1,16 +1,17 @@
 """
 @created: 10-7-2020
+
+Tests both locomotion and digging motors at once.
+
+Works on Windows environments only
+
+NOTE: Because the code is looking for 2 odrives with specific serial numbers, not having the 2 correct motor controllers
+will cause this program to fail and/or crash
 """
 import odrive
 import time
 import math
 import py_compile
-
-# import ../odrive_ros/scr/odrive_ros/odrive_interface
-# import sys
-# import logging
-# import serial
-# from serial.serialutil import SerialException
 
 from odrive.enums import *
 from pynput import keyboard

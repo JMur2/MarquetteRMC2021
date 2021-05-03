@@ -1,6 +1,8 @@
 """
 A new test scenario for robot control without pynput
 
+Works on Ubuntu environments only
+
 @created: 10-11-2020
 """
 import odrive

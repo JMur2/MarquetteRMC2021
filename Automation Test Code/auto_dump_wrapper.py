@@ -5,10 +5,9 @@ from std_msgs.msg import Int32
 
 class autoDumpingWrapperROS:
 
-    def __init__(self):
-        #content object
- 
-        self.auto_dump_publisher = rospy.Publisher("auto_dig", Int32, queue_size=1)
+    def __init__(self): 
+        # publish data
+        self.auto_dump_publisher = rospy.Publisher("auto_dump", Int32, queue_size=1)
 
         #subscribers to sensor data and Main
         rospy.Subscriber("main_automated", Int32, self.callback_main)
@@ -36,6 +35,7 @@ class autoDumpingWrapperROS:
         pass
 
 if __name__ =="__main__":
+    # standard ROS node setup
     rospy.init("autonomy_dumping_node")
 
     auto_dump_wrapper = autoDumpingWrapperROS()

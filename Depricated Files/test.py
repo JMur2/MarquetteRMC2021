@@ -1,6 +1,10 @@
 """
 A file to test aspects of the overall architecture
 
+DEPRICTAED
+
+Only works on Ubuntu/Linux environments
+
 @created: 10-7-2020
 """
 

@@ -1,5 +1,7 @@
 """
 @created: 10-7-2020
+
+Works on Windows environments only
 """
 
 import odrive

@@ -2,7 +2,9 @@
 # -*- coding: utf-8 -*-
 """
 The second locomotion test file for testing our robot's locomotion.
-Attempting to include keyboard operations to the motor's output, allowinf direct control over motion.
+Attempting to include keyboard operations to the motor's output, allowing direct control over motion.
+
+Works on Windows environments
 
 @created: Oct 4, 2020
 """

@@ -1,3 +1,8 @@
+"""
+@created: 10-13-20
+
+Works on Ubuntu/Linux environments only
+"""
 import odrive
 from odrive.enums import *
 import time

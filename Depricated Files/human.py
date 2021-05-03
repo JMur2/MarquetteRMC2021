@@ -1,6 +1,8 @@
 """
 This file contains all aspects of human control over the robot.
 
+DEPRICATED, no longer needed
+
 @created: 10-25-2020
 """
 import time

@@ -18,5 +18,8 @@ def dump_algorithm():
 if __name__ == "__main__":
     """
     Super basic testing algorithm for the dumping
+
+    Using the actuators and the stepper motor, this algorithm can run to extend, dump, and retract the bucket.
+    The timings used in the sleep() calls are the lowest they can go without bad interactions
     """
     dump_algorithm()

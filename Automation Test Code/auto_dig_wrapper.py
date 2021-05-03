@@ -6,8 +6,7 @@ from std_msgs.msg import Int32
 class autoDiggingWrapperROS:
 
     def __init__(self):
-        #content object
-
+        # publish data
         self.auto_dig_publisher = rospy.Publisher("auto_dig", Int32, queue_size=1)
 
         #subscribers to sensor data and Main
@@ -36,6 +35,7 @@ class autoDiggingWrapperROS:
         pass
 
 if __name__ =="__main__":
+    # standard ROS node setup
     rospy.init("autonomy_digging_node")
 
     auto_dig_wrapper = autoDiggingWrapperROS()
